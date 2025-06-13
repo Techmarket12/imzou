@@ -4,7 +4,7 @@ export default function AboutSection() {
       icon: "fas fa-users",
       title: "Équipe Experte",
       description: "Techniciens formés et certifiés",
-      color: "bg-[#59D14C]"
+      color: "bg-[#27851E]"
     },
     {
       icon: "fas fa-leaf",

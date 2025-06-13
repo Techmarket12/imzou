@@ -80,7 +80,7 @@ export default function ContactSection() {
       icon: "fas fa-phone",
       title: "Téléphone",
       value: "+32 xx xxx xx xx",
-      color: "bg-[#59D14C]"
+      color: "bg-[#27851E]"
     },
     {
       icon: "fas fa-envelope",
@@ -195,7 +195,7 @@ export default function ContactSection() {
                 <Button 
                   type="submit" 
                   disabled={contactMutation.isPending}
-                  className="w-full bg-[#59D14C] hover:bg-[#4CBE3F] text-white py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2"
+                  className="w-full bg-[#27851E] hover:bg-[#1F6B15] text-white py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center space-x-2"
                 >
                   {contactMutation.isPending ? (
                     <>
@@ -244,9 +244,9 @@ export default function ContactSection() {
               </div>
             </div>
             
-            <div className="bg-[#59D14C]/10 rounded-xl p-6">
+            <div className="bg-[#27851E]/10 rounded-xl p-6">
               <h4 className="text-xl font-semibold mb-3 flex items-center">
-                <i className="fas fa-gift text-[#59D14C] mr-2"></i>
+                <i className="fas fa-gift text-[#27851E] mr-2"></i>
                 Devis Gratuit
               </h4>
               <p className="text-gray-300">
