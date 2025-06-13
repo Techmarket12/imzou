@@ -55,7 +55,7 @@ export default function HeroSection() {
           {/* Right side - Large Circular Video taking more space and extending UP */}
           <div className="lg:col-span-8 relative overflow-hidden h-full">
             {/* Large circular video positioned to extend slightly beyond top and right */}
-            <div className="absolute left-16 -top-40 -right-4">
+            <div className="absolute left-16 -top-40 -right-8">
               <div className="w-[900px] h-[900px] rounded-full overflow-hidden shadow-2xl relative">
                 <video
                   autoPlay
