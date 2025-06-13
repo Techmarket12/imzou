@@ -27,14 +27,10 @@ export default function HeroSection() {
             <div className="lg:col-span-4 space-y-8 pl-2 lg:pl-4">
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-white block">Votre Habitat</span>
-                  <span className="text-white block">vous protège &</span>
-                  <span className="text-[#27851E] block">
-                    Nous protégeons
-                  </span>
-                  <span className="text-[#27851E] block">
-                    votre Habitat
-                  </span>
+                  <span className="text-[#849FE1] block">Votre Habitat</span>
+                  <span className="text-[#849FE1] block">vous protège &</span>
+                  <span className="text-[#59D14C] block">Nous protégeons</span>
+                  <span className="text-[#59D14C] block">votre Habitat</span>
                 </h1>
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">
@@ -47,7 +43,7 @@ export default function HeroSection() {
               </div>
 
               <Button
-                className="bg-[#27851E] hover:bg-[#1F6B15] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                className="bg-[#59D14C] hover:bg-[#4CBE3F] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 onClick={() => scrollToSection("contact")}
               >
                 <i className="fas fa-phone mr-2"></i>
@@ -122,16 +118,14 @@ export default function HeroSection() {
             <span className="text-white">Votre Habitat vous</span>
             <br />
             <span className="text-white">protège & </span>
-            <span className="text-[#27851E]">Nous</span>
+            <span className="text-[#59D14C]">Nous</span>
             <br />
-            <span className="text-[#27851E]">
-              protégeons votre Habitat
-            </span>
+            <span className="text-[#59D14C]">protégeons votre Habitat</span>
           </h1>
 
           <p className="text-gray-300 mb-6 leading-relaxed">
             L'entreprise{" "}
-            <span className="font-semibold text-[#27851E]">
+            <span className="font-semibold text-[#59D14C]">
               Aqua-BOB-L'éponge
             </span>{" "}
             est votre prestataire de confiance pour le nettoyage de toiture.
@@ -140,7 +134,7 @@ export default function HeroSection() {
           </p>
 
           <Button
-            className="bg-[#27851E] hover:bg-[#1F6B15] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit"
+            className="bg-[#59D14C] hover:bg-[#4CBE3F] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit"
             onClick={() => scrollToSection("contact")}
           >
             <i className="fas fa-envelope mr-2"></i>
