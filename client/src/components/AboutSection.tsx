@@ -17,7 +17,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-black">
+    <section id="about" className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>

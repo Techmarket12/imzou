@@ -61,7 +61,7 @@ export default function GallerySection() {
   ];
 
   return (
-    <section id="realisations" className="py-20 bg-black">
+    <section id="realisations" className="py-20 bg-gradient-to-r from-slate-900 to-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Nos Réalisations</h2>

@@ -21,7 +21,7 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section className="py-20 bg-black">
+    <section className="py-20 bg-gradient-to-r from-gray-800 via-slate-800 to-gray-900">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
