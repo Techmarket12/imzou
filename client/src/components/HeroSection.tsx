@@ -45,11 +45,11 @@ export default function HeroSection() {
             </Button>
           </div>
           
-          {/* Right side - Circular Video */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Large circular video container */}
-              <div className="w-96 h-96 lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden shadow-2xl border-4 border-white/20 relative">
+          {/* Right side - Large Circular Video that extends beyond viewport */}
+          <div className="lg:col-span-6 relative overflow-hidden">
+            <div className="absolute -right-32 lg:-right-48 top-1/2 transform -translate-y-1/2">
+              {/* Very large circular video container that extends beyond screen */}
+              <div className="w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] rounded-full overflow-hidden shadow-2xl border-4 border-white/20 relative">
                 <video 
                   autoPlay 
                   muted 
