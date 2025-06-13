@@ -51,7 +51,7 @@ export default function WhyChooseUsSection() {
               alt="Équipe professionnelle de nettoyage en action" 
               className="rounded-xl shadow-lg w-full h-auto" 
             />
-            <div className="absolute -bottom-6 -left-6 bg-[#59D14C] text-white p-6 rounded-xl shadow-lg">
+            <div className="absolute -bottom-6 -left-6 bg-[#27851E] text-white p-6 rounded-xl shadow-lg">
               <div className="text-center">
                 <div className="text-3xl font-bold">15+</div>
                 <div className="text-sm">Années d'expérience</div>

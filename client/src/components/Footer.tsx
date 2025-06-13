@@ -41,7 +41,7 @@ export default function Footer() {
               Votre partenaire de confiance pour le nettoyage professionnel en Wallonie et à Bruxelles.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-8 h-8 bg-[#59D14C] rounded-full flex items-center justify-center hover:bg-[#4CBE3F] transition-colors">
+              <a href="#" className="w-8 h-8 bg-[#27851E] rounded-full flex items-center justify-center hover:bg-[#1F6B15] transition-colors">
                 <i className="fab fa-facebook-f text-white text-sm"></i>
               </a>
               <a href="#" className="w-8 h-8 bg-[hsl(199,89%,48%)] rounded-full flex items-center justify-center hover:bg-[hsl(199,89%,44%)] transition-colors">
