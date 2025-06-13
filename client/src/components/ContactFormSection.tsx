@@ -138,7 +138,7 @@ export default function ContactFormSection() {
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Demandez votre <span className="text-[hsl(160,84%,39%)]">devis gratuit</span>
+              Demandez votre <span className="text-[#59D14C]">devis gratuit</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Obtenez une estimation personnalisée pour vos travaux de nettoyage. 
@@ -253,8 +253,8 @@ export default function ContactFormSection() {
                     <div
                       className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
                         dragActive 
-                          ? "border-[hsl(160,84%,39%)] bg-gray-700" 
-                          : "border-gray-600 hover:border-[hsl(160,84%,39%)] bg-gray-700"
+                          ? "border-[#59D14C] bg-gray-700" 
+                          : "border-gray-600 hover:border-[#59D14C] bg-gray-700"
                       }`}
                       onDragEnter={handleDrag}
                       onDragLeave={handleDrag}
@@ -311,7 +311,7 @@ export default function ContactFormSection() {
                   <Button
                     type="submit"
                     disabled={submitMutation.isPending}
-                    className="w-full bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white py-3 text-lg font-semibold"
+                    className="w-full bg-[#59D14C] hover:bg-[#4CBE3F] text-white py-3 text-lg font-semibold"
                   >
                     {submitMutation.isPending ? (
                       <>

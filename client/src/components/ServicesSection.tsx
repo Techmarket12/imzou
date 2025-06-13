@@ -1,53 +1,65 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const services = [
   {
     id: "toiture",
     title: "Nettoyage de Toiture",
-    description: "Redonnez éclat et longévité à votre toiture avec notre technologie vapeur haute pression.",
+    description:
+      "Redonnez éclat et longévité à votre toiture avec notre technologie vapeur haute pression.",
     features: [
       "Démoussage complet",
       "Traitement anti-mousse",
       "Nettoyage des gouttières",
-      "Inspection gratuite"
+      "Inspection gratuite",
     ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image:
+      "https://media.discordapp.net/attachments/1086348722159484928/1382706144056967359/AJfQ9KS2eqv_ZV1aRHu0gDN4P46BqovFZjvlcQAHU3n7HPrlGpKOEEtM58LnvLHuQ1O7InuSH_SWbeQkEJ7GJtd286991CYzpaog7qm0qc6qIWFQuWEYtRA_S45SaLlSsYGSS4pKPUeLDgWe7ScMZRMarfxTbGVTgcTPmqR09H_r02gVbuSnlQs1024.png?ex=684cc9b2&is=684b7832&hm=68c97c0bb355e4021f492477f01a05edd010bed7e2b813c8c9aa748a906a47e8&=&format=webp&quality=lossless&width=930&height=930",
     price: "À partir de 8€/m²",
     duration: "1-2 jours",
-    icon: "fas fa-home"
+    icon: "fas fa-home",
   },
   {
     id: "facade",
     title: "Nettoyage de Façade",
-    description: "Ravivez l'aspect neuf de votre façade grâce à nos techniques de nettoyage respectueuses.",
+    description:
+      "Ravivez l'aspect neuf de votre façade grâce à nos techniques de nettoyage respectueuses.",
     features: [
       "Nettoyage haute pression",
       "Traitement des traces",
       "Protection anti-salissure",
-      "Tous types de matériaux"
+      "Tous types de matériaux",
     ],
-    image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image:
+      "https://cdn.discordapp.com/attachments/1086348722159484928/1383009818767261696/AJfQ9KTYs8lp2SUNrq00ZDv9mJ6GERIfkMldtQz375-ed577Ya92Ps2BrL4hxfO0oDkBOa6SQMaClIX3qIpMBjr_0pVsCxYfwnERUM3oeYxqETGW2SVwL0RvBQdHJrMctJGnH7qELMQiEXhLY9bBd7lwJBMlC1Jr6MGWpjnpfj9cJi1W2WcK9Qs1024.png?ex=684d3bc3&is=684bea43&hm=f402a98b3cdb37be3bd3d1ba65972f84feba365de3acf0bf1858d5031baa6b7e&",
     price: "À partir de 12€/m²",
     duration: "1-3 jours",
-    icon: "fas fa-building"
+    icon: "fas fa-building",
   },
   {
     id: "terrasse",
     title: "Nettoyage de Terrasse",
-    description: "Retrouvez une terrasse impeccable et sécurisée pour profiter pleinement de vos extérieurs.",
+    description:
+      "Retrouvez une terrasse impeccable et sécurisée pour profiter pleinement de vos extérieurs.",
     features: [
       "Démoussage profond",
       "Nettoyage joints",
       "Traitement anti-glisse",
-      "Finition protective"
+      "Finition protective",
     ],
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image:
+      "https://media.discordapp.net/attachments/1086348722159484928/1382734753773387786/AJfQ9KTVkAFGgspGYpN6Zpn2DuRljdDkCDItMRAlvrR15T9mdtEU3QhUGN-rxix74o3xArtjtfUiBJtDfxc9HieGFgDN68HNtxMdTu-MoW_mnPsg9Z5Ly20rYSI-lP6eThOWpLhdfrm7OFkdPwmaPQg12ajlZWcApCO55afDijK9kARe38qG3Qs1024.png?ex=684ce457&is=684b92d7&hm=496119527350e8ee803fdfd214b20acccce45d0b30b93351cc69128b53e49d11&=&format=webp&quality=lossless&width=930&height=930",
     price: "À partir de 15€/m²",
     duration: "1 jour",
-    icon: "fas fa-th-large"
-  }
+    icon: "fas fa-th-large",
+  },
 ];
 
 export default function ServicesSection() {
@@ -65,18 +77,23 @@ export default function ServicesSection() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Nos <span className="text-[hsl(160,84%,39%)]">Services Experts</span>
+              Nos{" "}
+              <span className="text-[hsl(160,84%,39%)]">Services Experts</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Découvrez notre gamme complète de services de nettoyage écologique. 
-              Chaque intervention est réalisée avec des équipements professionnels et des techniques respectueuses de l'environnement.
+              Découvrez notre gamme complète de services de nettoyage
+              écologique. Chaque intervention est réalisée avec des équipements
+              professionnels et des techniques respectueuses de l'environnement.
             </p>
           </div>
 
           {/* Services Grid */}
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gray-700/90 backdrop-blur-sm">
+              <Card
+                key={service.id}
+                className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gray-700/90 backdrop-blur-sm"
+              >
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={service.image}
@@ -90,7 +107,10 @@ export default function ServicesSection() {
                     </Badge>
                   </div>
                   <div className="absolute top-4 right-4">
-                    <Badge variant="secondary" className="bg-white/90 text-gray-800">
+                    <Badge
+                      variant="secondary"
+                      className="bg-white/90 text-gray-800"
+                    >
                       {service.duration}
                     </Badge>
                   </div>
@@ -114,7 +134,10 @@ export default function ServicesSection() {
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
+                        <li
+                          key={idx}
+                          className="flex items-center text-gray-300"
+                        >
                           <i className="fas fa-chevron-right text-[hsl(160,84%,39%)] mr-3 text-sm"></i>
                           {feature}
                         </li>
@@ -126,7 +149,9 @@ export default function ServicesSection() {
                   <div className="flex items-center justify-between p-4 bg-gray-600 rounded-lg">
                     <div>
                       <p className="text-sm text-gray-300">Tarif indicatif</p>
-                      <p className="text-xl font-bold text-[hsl(160,84%,39%)]">{service.price}</p>
+                      <p className="text-xl font-bold text-[hsl(160,84%,39%)]">
+                        {service.price}
+                      </p>
                     </div>
                     <div className="text-right">
                       <p className="text-sm text-gray-300">Devis gratuit</p>
@@ -136,15 +161,15 @@ export default function ServicesSection() {
 
                   {/* Actions */}
                   <div className="space-y-3">
-                    <Button 
+                    <Button
                       className="w-full bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white font-semibold py-3"
                       onClick={scrollToContact}
                     >
                       <i className="fas fa-envelope mr-2"></i>
                       Demander un devis
                     </Button>
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="w-full border-[hsl(160,84%,39%)] text-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,39%)] hover:text-white"
                     >
                       <i className="fas fa-info-circle mr-2"></i>
@@ -162,10 +187,11 @@ export default function ServicesSection() {
               Vous hésitez entre plusieurs services ?
             </h3>
             <p className="text-xl mb-8 opacity-90">
-              Nos experts vous conseillent gratuitement pour choisir la solution la plus adaptée à vos besoins.
+              Nos experts vous conseillent gratuitement pour choisir la solution
+              la plus adaptée à vos besoins.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+              <Button
                 size="lg"
                 className="bg-white text-[hsl(160,84%,39%)] hover:bg-gray-100 font-semibold px-8"
                 onClick={scrollToContact}
@@ -173,7 +199,7 @@ export default function ServicesSection() {
                 <i className="fas fa-phone mr-2"></i>
                 Consultation gratuite
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
                 className="border-white text-white hover:bg-white hover:text-[hsl(160,84%,39%)] font-semibold px-8"
