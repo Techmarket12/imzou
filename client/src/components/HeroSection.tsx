@@ -88,8 +88,23 @@ export default function HeroSection() {
 
       {/* Mobile version */}
       <div className="lg:hidden relative min-h-screen">
-        {/* Top section with video */}
-        <div className="relative h-[60vh] overflow-hidden">
+        {/* Dark navbar at top */}
+        <div className="relative bg-gray-900 h-16 flex items-center justify-between px-4 z-30">
+          <div className="flex items-center">
+            <img 
+              src={logoPath} 
+              alt="Aqua-BOB-L'éponge" 
+              className="h-10 w-10 object-contain"
+            />
+            <span className="text-white font-semibold ml-2 text-sm">Aqua-BOB-L'éponge</span>
+          </div>
+          <div className="text-white">
+            <i className="fas fa-bars text-xl"></i>
+          </div>
+        </div>
+
+        {/* Video section */}
+        <div className="relative h-[50vh] overflow-hidden">
           <video
             autoPlay
             muted
@@ -104,27 +119,19 @@ export default function HeroSection() {
             />
           </video>
 
-          {/* Logo overlay centered */}
-          <div className="absolute top-8 left-1/2 transform -translate-x-1/2">
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden">
-              <img 
-                src={logoPath} 
-                alt="Aqua-BOB-L'éponge" 
-                className="w-full h-full object-contain p-1"
-              />
-            </div>
-          </div>
-
           {/* Play button */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="w-16 h-16 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
               <i className="fas fa-play text-white text-xl ml-1"></i>
             </div>
           </div>
+
+          {/* Gradient overlay at bottom of video */}
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-900 to-transparent"></div>
         </div>
 
-        {/* Bottom section with gradient and content */}
-        <div className="relative bg-gradient-to-t from-gray-900 via-gray-800/95 to-gray-800/80 p-6 min-h-[40vh] flex flex-col justify-center">
+        {/* Bottom section with content */}
+        <div className="relative bg-gray-900 p-6 min-h-[35vh] flex flex-col justify-center">
           <h1 className="text-3xl font-bold leading-tight mb-4">
             <span className="text-white">Votre Habitat vous</span><br />
             <span className="text-white">protège & </span>
