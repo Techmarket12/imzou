@@ -39,9 +39,10 @@ export default function HeroSection() {
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">
                   L'entreprise <strong>Aqua-BOB-L'éponge</strong> est votre
-                  prestataire de confiance pour le nettoyage de toiture. Nous vous
-                  proposons une solution de nettoyage à l'extérieur à la vapeur et
-                  sans produit chimique à Tournai-en-Brie et ses alentours.
+                  prestataire de confiance pour le nettoyage de toiture. Nous
+                  vous proposons une solution de nettoyage à l'extérieur à la
+                  vapeur et sans produit chimique à Tournai-en-Brie et ses
+                  alentours.
                 </p>
               </div>
 
@@ -90,27 +91,12 @@ export default function HeroSection() {
       <div className="lg:hidden relative min-h-screen">
         {/* Dark navbar at top */}
         <div className="relative bg-gray-900 h-16 flex items-center justify-between px-4 z-30">
-          <div className="flex items-center">
-            <img 
-              src={logoPath} 
-              alt="Aqua-BOB-L'éponge" 
-              className="h-10 w-10 object-contain"
-            />
-            <span className="text-white font-semibold ml-2 text-sm">Aqua-BOB-L'éponge</span>
-          </div>
-          <div className="text-white">
-            <i className="fas fa-bars text-xl"></i>
-          </div>
+          <div className="flex items-center"></div>
         </div>
 
         {/* Video section */}
         <div className="relative h-[50vh] overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            className="w-full h-full object-cover"
-          >
+          <video autoPlay muted loop className="w-full h-full object-cover">
             <source src={videoPath} type="video/mp4" />
             <img
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
@@ -133,16 +119,26 @@ export default function HeroSection() {
         {/* Bottom section with content */}
         <div className="relative bg-gray-900 p-6 min-h-[35vh] flex flex-col justify-center">
           <h1 className="text-3xl font-bold leading-tight mb-4">
-            <span className="text-white">Votre Habitat vous</span><br />
+            <span className="text-white">Votre Habitat vous</span>
+            <br />
             <span className="text-white">protège & </span>
-            <span className="text-[hsl(160,84%,39%)]">Nous</span><br />
-            <span className="text-[hsl(160,84%,39%)]">protégeons votre Habitat</span>
+            <span className="text-[hsl(160,84%,39%)]">Nous</span>
+            <br />
+            <span className="text-[hsl(160,84%,39%)]">
+              protégeons votre Habitat
+            </span>
           </h1>
-          
+
           <p className="text-gray-300 mb-6 leading-relaxed">
-            L'entreprise <span className="font-semibold text-[hsl(160,84%,39%)]">Aqua-BOB-L'éponge</span> est votre prestataire de confiance pour le nettoyage de toiture. Nous vous proposons une solution de nettoyage à l'extérieur à la vapeur et sans produit chimique à Tournai-en-Brie et ses alentours.
+            L'entreprise{" "}
+            <span className="font-semibold text-[hsl(160,84%,39%)]">
+              Aqua-BOB-L'éponge
+            </span>{" "}
+            est votre prestataire de confiance pour le nettoyage de toiture.
+            Nous vous proposons une solution de nettoyage à l'extérieur à la
+            vapeur et sans produit chimique à Tournai-en-Brie et ses alentours.
           </p>
-          
+
           <Button
             className="bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit"
             onClick={() => scrollToSection("contact")}
