@@ -89,6 +89,14 @@
   .animate-slide-up {
     animation: slideUp 0.8s ease-out;
   }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .backdrop-filter {
+    backdrop-filter: blur(10px);
+  }
 }
 
 @keyframes fadeIn {
