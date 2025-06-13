@@ -11,44 +11,24 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Video Background */}
-      <div className="absolute inset-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          className="w-full h-full object-cover"
-          style={{ filter: 'brightness(0.7)' }}
-        >
-          <source src={videoPath} type="video/mp4" />
-          {/* Fallback image */}
-          <img 
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" 
-            alt="Vue aérienne d'un nettoyage de toiture avec tuiles oranges" 
-            className="w-full h-full object-cover" 
-          />
-        </video>
-        
-        {/* Organic overlay shape like the inspiration */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
-        <div className="absolute bottom-0 right-0 w-3/5 h-3/5 bg-gradient-to-tl from-black/50 to-transparent rounded-tl-[200px]"></div>
-      </div>
+    <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-green-900">
+      {/* Background gradients */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
           {/* Left side - Text content */}
-          <div className="space-y-8">
+          <div className="lg:col-span-6 space-y-8 lg:pr-12">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 <span className="text-white block">Votre Habitat</span>
                 <span className="text-white block">vous protège &</span>
                 <span className="text-[hsl(160,84%,39%)] block">Nous protégeons</span>
                 <span className="text-[hsl(160,84%,39%)] block">votre Habitat</span>
               </h1>
               
-              <p className="text-xl text-gray-200 max-w-lg leading-relaxed">
+              <p className="text-lg text-gray-200 max-w-lg leading-relaxed">
                 L'entreprise <strong>Aqua-BOB-L'éponge</strong> est votre prestataire de confiance pour le 
                 nettoyage de toiture. Nous vous proposons une solution de nettoyage 
                 à l'extérieur à la vapeur et sans produit chimique à Tournai-en-Brie et 
@@ -65,14 +45,33 @@ export default function HeroSection() {
             </Button>
           </div>
           
-          {/* Right side - Logo */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
-              <img 
-                src={logoPath} 
-                alt="Logo Aqua-BOB-L'éponge" 
-                className="w-80 h-auto"
-              />
+          {/* Right side - Circular Video */}
+          <div className="lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Large circular video container */}
+              <div className="w-96 h-96 lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden shadow-2xl border-4 border-white/20 relative">
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  className="w-full h-full object-cover"
+                >
+                  <source src={videoPath} type="video/mp4" />
+                  {/* Fallback image */}
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                    alt="Vue aérienne d'un nettoyage de toiture avec tuiles oranges" 
+                    className="w-full h-full object-cover" 
+                  />
+                </video>
+                
+                {/* Play button overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
+                    <i className="fas fa-play text-white text-2xl ml-1"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
