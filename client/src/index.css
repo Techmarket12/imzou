@@ -13,11 +13,11 @@
   --card-foreground: hsl(20, 14.3%, 4.1%);
   --border: hsl(20, 5.9%, 90%);
   --input: hsl(20, 5.9%, 90%);
-  --primary: #27851E;
+  --primary: #59D14C;
   --primary-foreground: hsl(0, 0%, 98%);
   --secondary: hsl(60, 4.8%, 95.9%);
   --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: #27851E;
+  --accent: #59D14C;
   --accent-foreground: hsl(0, 0%, 98%);
   --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
@@ -26,7 +26,7 @@
   
   /* Custom colors for Aqua-BOB */
   --navy: hsl(220, 26%, 14%);
-  --aqua: #27851E;
+  --aqua: #59D14C;
   --sky: hsl(199, 89%, 48%);
   --neutral: hsl(215, 16%, 47%);
 }
@@ -42,7 +42,7 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 15.9%);
   --input: hsl(240, 3.7%, 15.9%);
-  --primary: #27851E;
+  --primary: #59D14C;
   --primary-foreground: hsl(0, 0%, 98%);
   --secondary: hsl(240, 3.7%, 15.9%);
   --secondary-foreground: hsl(0, 0%, 98%);
