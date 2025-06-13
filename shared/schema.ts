@@ -13,9 +13,16 @@ export const contactRequests = pgTable("contact_requests", {
   firstName: text("first_name").notNull(),
   lastName: text("last_name").notNull(),
   email: text("email").notNull(),
-  phone: text("phone"),
-  service: text("service").notNull(),
+  phone: text("phone").notNull(),
+  address: text("address").notNull(),
+  city: text("city").notNull(),
+  postalCode: text("postal_code").notNull(),
+  serviceType: text("service_type").notNull(),
+  propertyType: text("property_type"),
+  surfaceArea: text("surface_area"),
   message: text("message"),
+  urgency: text("urgency"),
+  images: text("images").array(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
