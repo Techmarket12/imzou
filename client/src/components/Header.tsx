@@ -23,10 +23,11 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { label: "Accueil", href: "accueil" },
-    { label: "Nettoyage Toitures", href: "services" },
-    { label: "Nettoyage Façades", href: "realisations" },
-    { label: "Nettoyage Terrasses", href: "about" },
+    { label: "Accueil", href: "accueil", id: "nav-accueil" },
+    { label: "Nettoyage Toitures", href: "services", id: "nav-toitures" },
+    { label: "Nettoyage Façades", href: "realisations", id: "nav-facades" },
+    { label: "Nettoyage Terrasses", href: "terrasses", id: "nav-terrasses" },
+    { label: "Nettoyage extérieur Entreprises", href: "entreprises", id: "nav-entreprises" },
   ];
 
   return (
@@ -35,8 +36,8 @@ export default function Header() {
         isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <nav className="w-full px-0 py-4">
+        <div className="flex items-center justify-between px-6">
           {/* Logo */}
           <div className="flex items-center">
             <img
@@ -50,7 +51,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <button
-                key={item.href}
+                key={item.id}
                 onClick={() => scrollToSection(item.href)}
                 className="text-white/90 hover:text-white text-lg font-medium transition-colors relative group"
               >
@@ -93,7 +94,7 @@ export default function Header() {
               <div className="flex flex-col space-y-6 mt-8">
                 {navigationItems.map((item) => (
                   <button
-                    key={item.href}
+                    key={item.id}
                     onClick={() => scrollToSection(item.href)}
                     className="text-white hover:text-[#59D14C] transition-colors text-left"
                   >
