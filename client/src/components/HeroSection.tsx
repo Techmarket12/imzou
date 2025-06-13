@@ -16,10 +16,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-2 pt-20">
-        <div className="grid lg:grid-cols-12 gap-4 items-center min-h-[80vh]">
+      <div className="relative z-10 w-full pt-20">
+        <div className="grid lg:grid-cols-12 gap-2 items-center min-h-[80vh]">
           {/* Left side - Text content (smaller space) */}
-          <div className="lg:col-span-4 space-y-8 lg:pr-4">
+          <div className="lg:col-span-4 space-y-8 pl-4 lg:pl-8">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 <span className="text-white block">Votre Habitat</span>
