@@ -13,16 +13,16 @@ export default function HeroSection() {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-green-900"
+      className="relative h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-green-900"
     >
       {/* Background gradients */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
 
       {/* Content */}
       <div className="relative z-10 w-full pt-20">
-        <div className="grid lg:grid-cols-12 gap-2 items-center min-h-[80vh]">
+        <div className="grid lg:grid-cols-12 gap-2 items-center h-[90vh]">
           {/* Left side - Text content (smaller space) */}
-          <div className="lg:col-span-4 space-y-8 pl-4 lg:pl-8">
+          <div className="lg:col-span-4 space-y-8 pl-2 lg:pl-4">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 <span className="text-white block">Votre Habitat</span>
@@ -54,9 +54,9 @@ export default function HeroSection() {
 
           {/* Right side - Large Circular Video taking more space and extending UP */}
           <div className="lg:col-span-8 relative overflow-hidden h-full">
-            {/* Huge circular video positioned to extend beyond top and slightly right */}
-            <div className="absolute left-1/3 -top-64 -right-12">
-              <div className="w-[1000px] h-[1000px] rounded-full overflow-hidden shadow-2xl relative">
+            {/* Large circular video positioned to extend slightly beyond top and right */}
+            <div className="absolute left-16 -top-40 -right-4">
+              <div className="w-[900px] h-[900px] rounded-full overflow-hidden shadow-2xl relative">
                 <video
                   autoPlay
                   muted
@@ -72,8 +72,8 @@ export default function HeroSection() {
                   />
                 </video>
 
-                {/* Play button overlay positioned in visible area */}
-                <div className="absolute top-80 left-32">
+                {/* Play button overlay positioned in center of visible area */}
+                <div className="absolute top-72 left-72 transform -translate-x-1/2 -translate-y-1/2">
                   <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
                     <i className="fas fa-play text-white text-2xl ml-1"></i>
                   </div>
