@@ -59,15 +59,15 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
+    <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Nos <span className="text-[hsl(160,84%,39%)]">Services Experts</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Découvrez notre gamme complète de services de nettoyage écologique. 
               Chaque intervention est réalisée avec des équipements professionnels et des techniques respectueuses de l'environnement.
             </p>
@@ -76,7 +76,7 @@ export default function ServicesSection() {
           {/* Services Grid */}
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
+              <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-0 bg-gray-700/90 backdrop-blur-sm">
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={service.image}
@@ -97,10 +97,10 @@ export default function ServicesSection() {
                 </div>
 
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-2xl text-gray-900 group-hover:text-[hsl(160,84%,39%)] transition-colors">
+                  <CardTitle className="text-2xl text-white group-hover:text-[hsl(160,84%,39%)] transition-colors">
                     {service.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-600 text-base leading-relaxed">
+                  <CardDescription className="text-gray-300 text-base leading-relaxed">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
@@ -108,13 +108,13 @@ export default function ServicesSection() {
                 <CardContent className="space-y-6">
                   {/* Features */}
                   <div className="space-y-3">
-                    <h4 className="font-semibold text-gray-900 flex items-center">
+                    <h4 className="font-semibold text-white flex items-center">
                       <i className="fas fa-check-circle text-[hsl(160,84%,39%)] mr-2"></i>
                       Prestations incluses
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
+                        <li key={idx} className="flex items-center text-gray-300">
                           <i className="fas fa-chevron-right text-[hsl(160,84%,39%)] mr-3 text-sm"></i>
                           {feature}
                         </li>
@@ -123,13 +123,13 @@ export default function ServicesSection() {
                   </div>
 
                   {/* Price */}
-                  <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                  <div className="flex items-center justify-between p-4 bg-gray-600 rounded-lg">
                     <div>
-                      <p className="text-sm text-gray-500">Tarif indicatif</p>
+                      <p className="text-sm text-gray-300">Tarif indicatif</p>
                       <p className="text-xl font-bold text-[hsl(160,84%,39%)]">{service.price}</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm text-gray-500">Devis gratuit</p>
+                      <p className="text-sm text-gray-300">Devis gratuit</p>
                       <i className="fas fa-calculator text-2xl text-gray-400"></i>
                     </div>
                   </div>
