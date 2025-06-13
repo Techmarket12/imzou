@@ -25,8 +25,8 @@ export default function WhyChooseUsSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-[hsl(220,26%,14%)] mb-6">Pourquoi Choisir Aqua-BOB-L'éponge ?</h2>
-            <p className="text-xl text-[hsl(215,16%,47%)] mb-8">
+            <h2 className="text-4xl font-bold text-white mb-6">Pourquoi Choisir Aqua-BOB-L'éponge ?</h2>
+            <p className="text-xl text-gray-300 mb-8">
               Plus de 15 ans d'expérience dans le nettoyage professionnel en Wallonie et à Bruxelles.
             </p>
             
@@ -37,8 +37,8 @@ export default function WhyChooseUsSection() {
                     <i className={`${advantage.icon} text-white`}></i>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-[hsl(220,26%,14%)] mb-2">{advantage.title}</h3>
-                    <p className="text-[hsl(215,16%,47%)]">{advantage.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{advantage.title}</h3>
+                    <p className="text-gray-300">{advantage.description}</p>
                   </div>
                 </div>
               ))}
