@@ -1,0 +1,29 @@
+Proposition pour la section "Hero" de votre site "Aqua-BOB-L'éponge" (inspirée de l'image fournie) :
+
+Header (Barre de navigation) :
+
+Fond : Un bleu nuit très foncé ou noir (#1A202C ou un similaire à celui de l'image fournie) pour une sensation premium et sérieuse.
+Logo : Votre logo "Aqua-BOB-L'éponge", positionné en haut à gauche. Il sera clair (blanc ou une version lumineuse de vos bleus/verts) pour bien ressortir sur le fond sombre.
+Liens de navigation (texte blanc ou gris clair) :
+Accueil
+Nettoyage Toiture
+Nettoyage Terrasse
+Nettoyage Façade
+Nos Réalisations
+Qui Sommes-Nous ?
+Contact
+Bouton d'appel à l'action (CTA) : Un bouton "Demander un Devis Gratuit" ou "Contactez-nous" avec un fond vert aqua lumineux (votre couleur secondaire) et texte blanc. Placé à droite, avec une petite icône de téléphone ou de bulle de discussion.
+Effet : Le header restera fixe en haut de la page.
+Section Hero Principale (Contenu au-dessus de la vidéo) :
+
+Fond : Une vidéo en arrière-plan (celle que nous avons discutée, avec le drone en haute altitude et le nettoyage vapeur du toit en tuiles oranges).
+Overlay : Un calque sombre (bleu nuit ou noir transparent) par-dessus la vidéo, avec une opacité d'environ 40-60%. La forme de cet overlay pourrait être similaire à celle de l'image (une vague ou une courbe organique en bas à gauche remontant vers le centre), pour un effet visuel intéressant.
+Contenu Textuel (Aligné à gauche, positionné sur la partie sombre de l'overlay) :
+Titre Principal (H1) : "Votre Extérieur. Notre Expertise. Votre Sérénité." (Couleur : Blanc éclatant, avec un ou deux mots clés (ex: "Expertise" ou "Sérénité") en vert aqua pour attirer l'œil). La police de caractères doit être moderne et lisible, peut-être une police sans-serif.
+Sous-Titre (H2 ou paragraphe) : "Aqua-BOB-L'éponge : Spécialistes du nettoyage et de la protection des toitures, terrasses et façades en Wallonie & à Bruxelles." (Couleur : Blanc ou gris très clair).
+Bouton d'appel à l'action (CTA) : Un bouton "Demander un Devis Gratuit" ou "Découvrir Nos Services" en dessous du texte.
+Style : Fond vert aqua lumineux, texte blanc. Une petite icône (par exemple, une icône de flèche ou de bulle de discussion) pourrait être ajoutée.
+Effet au survol : Léger changement de couleur ou d'opacité.
+Cette approche reproduit le style visuel impactant du site que vous avez aimé, tout en l'adaptant à votre marque Aqua-BOB-L'éponge.
+
+Qu'en pensez-vous pour le haut de la page d'accueil ?
