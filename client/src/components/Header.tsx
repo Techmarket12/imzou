@@ -52,7 +52,7 @@ export default function Header() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-white/90 hover:text-white text-sm font-medium transition-colors relative group"
+                className="text-white/90 hover:text-white text-lg font-medium transition-colors relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#27851E] transition-all group-hover:w-full"></span>

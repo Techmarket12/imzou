@@ -70,12 +70,7 @@ export default function HeroSection() {
                     />
                   </video>
 
-                  {/* Play button overlay positioned in center of visible area */}
-                  <div className="absolute top-72 left-72 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
-                      <i className="fas fa-play text-white text-2xl ml-1"></i>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -102,14 +97,8 @@ export default function HeroSection() {
           </video>
 
           {/* Play button */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="w-16 h-16 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
-              <i className="fas fa-play text-white text-xl ml-1"></i>
-            </div>
-          </div>
 
           {/* Gradient overlay at bottom of video */}
-          <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-900 to-transparent"></div>
         </div>
 
         {/* Bottom section with content */}
