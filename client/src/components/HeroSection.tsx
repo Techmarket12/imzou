@@ -18,8 +18,8 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-20">
         <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
-          {/* Left side - Text content */}
-          <div className="lg:col-span-6 space-y-8 lg:pr-12">
+          {/* Left side - Text content (smaller space) */}
+          <div className="lg:col-span-4 space-y-8 lg:pr-8">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 <span className="text-white block">Votre Habitat</span>
@@ -45,11 +45,11 @@ export default function HeroSection() {
             </Button>
           </div>
           
-          {/* Right side - Extra Large Circular Video extending beyond screen */}
-          <div className="lg:col-span-6 relative overflow-hidden h-full">
-            {/* Massive circular video positioned to show only bottom-left portion */}
-            <div className="absolute right-0 -top-32">
-              <div className="w-[1200px] h-[1200px] rounded-full overflow-hidden shadow-2xl relative">
+          {/* Right side - Large Circular Video taking more space and extending UP */}
+          <div className="lg:col-span-8 relative overflow-hidden h-full">
+            {/* Huge circular video positioned to extend beyond top of screen */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 -top-64">
+              <div className="w-[1000px] h-[1000px] rounded-full overflow-hidden shadow-2xl relative">
                 <video 
                   autoPlay 
                   muted 
@@ -65,8 +65,8 @@ export default function HeroSection() {
                   />
                 </video>
                 
-                {/* Play button overlay positioned in visible area */}
-                <div className="absolute top-80 left-20">
+                {/* Play button overlay positioned in center of visible area */}
+                <div className="absolute top-96 left-1/2 transform -translate-x-1/2">
                   <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
                     <i className="fas fa-play text-white text-2xl ml-1"></i>
                   </div>
