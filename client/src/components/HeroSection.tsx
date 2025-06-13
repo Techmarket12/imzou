@@ -13,7 +13,7 @@ export default function HeroSection() {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-green-900"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-green-900 pb-16"
     >
       {/* Desktop version */}
       <div className="hidden lg:flex lg:items-center lg:h-screen">
@@ -102,7 +102,7 @@ export default function HeroSection() {
         </div>
 
         {/* Bottom section with content */}
-        <div className="relative bg-gray-900 p-6 min-h-[50vh] flex flex-col justify-center">
+        <div className="relative bg-gray-900 p-6 pb-16 min-h-[50vh] flex flex-col justify-center">
           <h1 className="text-3xl font-bold leading-tight mb-4">
             <span className="text-white">Votre Habitat vous</span>
             <br />
