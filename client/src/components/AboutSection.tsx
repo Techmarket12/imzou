@@ -22,7 +22,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="@assets/image_1749796477890.png" 
+              src={aboutImagePath} 
               alt="Aqua-BOB-L'éponge - Nettoyage professionnel de toiture"
               className="rounded-xl shadow-lg w-full h-auto" 
             />

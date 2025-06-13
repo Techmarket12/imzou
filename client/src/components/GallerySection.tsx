@@ -1,51 +1,71 @@
 import { Button } from "@/components/ui/button";
+import galleryImage1 from "@assets/image_1749796907502.png";
+import galleryImage2 from "@assets/image_1749797136347.png";
+import galleryImage3 from "@assets/image_1749797561345.png";
+import galleryImage4 from "@assets/image_1749797669448.png";
+import galleryImage5 from "@assets/image_1749797801845.png";
+import galleryImage6 from "@assets/image_1749797965900.png";
+import galleryImage7 from "@assets/image_1749798146289.png";
+import galleryImage8 from "@assets/image_1749798328274.png";
 
 export default function GallerySection() {
   const portfolioItems = [
     {
-      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: galleryImage1,
       title: "Nettoyage Toiture",
       location: "Wavre, Wallonie",
       alt: "Avant/après nettoyage de toiture"
     },
     {
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: galleryImage2,
       title: "Nettoyage Terrasse",
       location: "Bruxelles",
       alt: "Terrasse moderne après nettoyage haute pression"
     },
     {
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: galleryImage3,
       title: "Nettoyage Façade",
       location: "Namur, Wallonie",
       alt: "Façade de bâtiment après nettoyage professionnel"
     },
     {
-      image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: galleryImage4,
       title: "Nettoyage Complet",
       location: "Charleroi, Wallonie",
       alt: "Extérieur de maison moderne après nettoyage complet"
     },
     {
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: galleryImage5,
       title: "Dallage Pierre",
       location: "Louvain-la-Neuve",
       alt: "Dallage en pierre impeccable après nettoyage"
     },
     {
-      image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+      image: galleryImage6,
       title: "Nettoyage Professionnel",
       location: "Liège, Wallonie",
       alt: "Équipement de nettoyage haute pression en action"
+    },
+    {
+      image: galleryImage7,
+      title: "Rénovation Toiture",
+      location: "Tournai, Wallonie",
+      alt: "Toiture rénovée après traitement complet"
+    },
+    {
+      image: galleryImage8,
+      title: "Nettoyage Industriel",
+      location: "Mons, Wallonie",
+      alt: "Nettoyage industriel haute pression"
     }
   ];
 
   return (
-    <section id="realisations" className="py-20 bg-white">
+    <section id="realisations" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[hsl(220,26%,14%)] mb-4">Nos Réalisations</h2>
-          <p className="text-xl text-[hsl(215,16%,47%)] max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Nos Réalisations</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Découvrez quelques-unes de nos interventions récentes. Des résultats qui parlent d'eux-mêmes.
           </p>
         </div>
@@ -58,7 +78,7 @@ export default function GallerySection() {
                 alt={item.alt}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,26%,14%)]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="font-semibold">{item.title}</h3>
                   <p className="text-sm">{item.location}</p>

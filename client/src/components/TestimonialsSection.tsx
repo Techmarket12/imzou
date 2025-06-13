@@ -29,16 +29,16 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[hsl(220,26%,14%)] mb-4">Ce Que Disent Nos Clients</h2>
-          <p className="text-xl text-[hsl(215,16%,47%)]">La satisfaction de nos clients est notre priorité absolue</p>
+          <h2 className="text-4xl font-bold text-white mb-4">Ce Que Disent Nos Clients</h2>
+          <p className="text-xl text-gray-300">La satisfaction de nos clients est notre priorité absolue</p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-white rounded-xl shadow-lg">
+            <Card key={index} className="bg-gray-900 border-gray-800 rounded-xl shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-center mb-4">
                   <div className="flex text-yellow-400">
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
                     ))}
                   </div>
                 </div>
-                <p className="text-[hsl(215,16%,47%)] mb-6 italic">
+                <p className="text-gray-300 mb-6 italic">
                   "{testimonial.review}"
                 </p>
                 <div className="flex items-center">
@@ -55,8 +55,8 @@ export default function TestimonialsSection() {
                     {testimonial.initials}
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-semibold text-[hsl(220,26%,14%)]">{testimonial.name}</h4>
-                    <p className="text-sm text-[hsl(215,16%,47%)]">{testimonial.location}</p>
+                    <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                    <p className="text-sm text-gray-400">{testimonial.location}</p>
                   </div>
                 </div>
               </CardContent>
