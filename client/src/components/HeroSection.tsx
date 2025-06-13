@@ -54,9 +54,9 @@ export default function HeroSection() {
 
           {/* Right side - Large Circular Video taking more space and extending UP */}
           <div className="lg:col-span-8 relative overflow-hidden h-full">
-            {/* Huge circular video positioned to extend beyond top and right of screen */}
-            <div className="absolute left-1/4 -top-64 -right-32">
-              <div className="w-[1200px] h-[1200px] rounded-full overflow-hidden shadow-2xl relative">
+            {/* Huge circular video positioned to extend beyond top and slightly right */}
+            <div className="absolute left-1/3 -top-64 -right-12">
+              <div className="w-[1000px] h-[1000px] rounded-full overflow-hidden shadow-2xl relative">
                 <video
                   autoPlay
                   muted
@@ -73,7 +73,7 @@ export default function HeroSection() {
                 </video>
 
                 {/* Play button overlay positioned in visible area */}
-                <div className="absolute top-80 left-40">
+                <div className="absolute top-80 left-32">
                   <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
                     <i className="fas fa-play text-white text-2xl ml-1"></i>
                   </div>
