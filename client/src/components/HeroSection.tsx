@@ -45,11 +45,11 @@ export default function HeroSection() {
             </Button>
           </div>
           
-          {/* Right side - Very Large Circular Video that takes half the hero */}
+          {/* Right side - Extra Large Circular Video extending beyond screen */}
           <div className="lg:col-span-6 relative overflow-hidden h-full">
-            {/* Enormous circular video positioned to show only left portion */}
-            <div className="absolute -right-64 top-1/2 transform -translate-y-1/2">
-              <div className="w-[900px] h-[900px] rounded-full overflow-hidden shadow-2xl relative">
+            {/* Massive circular video positioned to show only bottom-left portion */}
+            <div className="absolute right-0 -top-32">
+              <div className="w-[1200px] h-[1200px] rounded-full overflow-hidden shadow-2xl relative">
                 <video 
                   autoPlay 
                   muted 
@@ -66,7 +66,7 @@ export default function HeroSection() {
                 </video>
                 
                 {/* Play button overlay positioned in visible area */}
-                <div className="absolute inset-0 flex items-center justify-start pl-32">
+                <div className="absolute top-80 left-20">
                   <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
                     <i className="fas fa-play text-white text-2xl ml-1"></i>
                   </div>
