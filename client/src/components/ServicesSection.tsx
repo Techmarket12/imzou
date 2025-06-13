@@ -78,7 +78,7 @@ export default function ServicesSection() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Nos{" "}
-              <span className="text-[hsl(160,84%,39%)]">Services Experts</span>
+              <span className="text-[#59D14C]">Services Experts</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Découvrez notre gamme complète de services de nettoyage
@@ -101,7 +101,7 @@ export default function ServicesSection() {
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-[hsl(160,84%,39%)] text-white px-3 py-1">
+                    <Badge className="bg-[#59D14C] text-white px-3 py-1">
                       <i className={`${service.icon} mr-2`}></i>
                       Service {index + 1}
                     </Badge>
@@ -117,7 +117,7 @@ export default function ServicesSection() {
                 </div>
 
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-2xl text-white group-hover:text-[hsl(160,84%,39%)] transition-colors">
+                  <CardTitle className="text-2xl text-white group-hover:text-[#59D14C] transition-colors">
                     {service.title}
                   </CardTitle>
                   <CardDescription className="text-gray-300 text-base leading-relaxed">
@@ -129,7 +129,7 @@ export default function ServicesSection() {
                   {/* Features */}
                   <div className="space-y-3">
                     <h4 className="font-semibold text-white flex items-center">
-                      <i className="fas fa-check-circle text-[hsl(160,84%,39%)] mr-2"></i>
+                      <i className="fas fa-check-circle text-[#59D14C] mr-2"></i>
                       Prestations incluses
                     </h4>
                     <ul className="space-y-2">
@@ -138,7 +138,7 @@ export default function ServicesSection() {
                           key={idx}
                           className="flex items-center text-gray-300"
                         >
-                          <i className="fas fa-chevron-right text-[hsl(160,84%,39%)] mr-3 text-sm"></i>
+                          <i className="fas fa-chevron-right text-[#59D14C] mr-3 text-sm"></i>
                           {feature}
                         </li>
                       ))}
@@ -149,7 +149,7 @@ export default function ServicesSection() {
                   <div className="flex items-center justify-between p-4 bg-gray-600 rounded-lg">
                     <div>
                       <p className="text-sm text-gray-300">Tarif indicatif</p>
-                      <p className="text-xl font-bold text-[hsl(160,84%,39%)]">
+                      <p className="text-xl font-bold text-[#59D14C]">
                         {service.price}
                       </p>
                     </div>
@@ -162,7 +162,7 @@ export default function ServicesSection() {
                   {/* Actions */}
                   <div className="space-y-3">
                     <Button
-                      className="w-full bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white font-semibold py-3"
+                      className="w-full bg-[#59D14C] hover:bg-[#4CBE3F] text-white font-semibold py-3"
                       onClick={scrollToContact}
                     >
                       <i className="fas fa-envelope mr-2"></i>
@@ -170,7 +170,7 @@ export default function ServicesSection() {
                     </Button>
                     <Button
                       variant="outline"
-                      className="w-full border-[hsl(160,84%,39%)] text-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,39%)] hover:text-white"
+                      className="w-full border-[#59D14C] text-[#59D14C] hover:bg-[#59D14C] hover:text-white"
                     >
                       <i className="fas fa-info-circle mr-2"></i>
                       En savoir plus
@@ -182,7 +182,7 @@ export default function ServicesSection() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="text-center bg-gradient-to-r from-[hsl(160,84%,39%)] to-[hsl(160,84%,45%)] rounded-2xl p-12 text-white">
+          <div className="text-center bg-gradient-to-r from-[#59D14C] to-[hsl(160,84%,45%)] rounded-2xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">
               Vous hésitez entre plusieurs services ?
             </h3>
@@ -193,7 +193,7 @@ export default function ServicesSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-white text-[hsl(160,84%,39%)] hover:bg-gray-100 font-semibold px-8"
+                className="bg-white text-[#59D14C] hover:bg-gray-100 font-semibold px-8"
                 onClick={scrollToContact}
               >
                 <i className="fas fa-phone mr-2"></i>
@@ -202,7 +202,7 @@ export default function ServicesSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[hsl(160,84%,39%)] font-semibold px-8"
+                className="border-white text-white hover:bg-white hover:text-[#59D14C] font-semibold px-8"
               >
                 <i className="fas fa-whatsapp mr-2"></i>
                 WhatsApp
