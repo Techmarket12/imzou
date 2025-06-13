@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-[hsl(160,84%,39%)] to-[hsl(199,89%,48%)] rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-[#59D14C] to-[hsl(199,89%,48%)] rounded-full flex items-center justify-center">
                 <i className="fas fa-water text-white"></i>
               </div>
               <span className="text-lg font-bold">Aqua-BOB-L'éponge</span>
@@ -41,7 +41,7 @@ export default function Footer() {
               Votre partenaire de confiance pour le nettoyage professionnel en Wallonie et à Bruxelles.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-8 h-8 bg-[hsl(160,84%,39%)] rounded-full flex items-center justify-center hover:bg-[hsl(160,84%,35%)] transition-colors">
+              <a href="#" className="w-8 h-8 bg-[#59D14C] rounded-full flex items-center justify-center hover:bg-[#4CBE3F] transition-colors">
                 <i className="fab fa-facebook-f text-white text-sm"></i>
               </a>
               <a href="#" className="w-8 h-8 bg-[hsl(199,89%,48%)] rounded-full flex items-center justify-center hover:bg-[hsl(199,89%,44%)] transition-colors">
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={index}>
                   <button 
                     onClick={() => scrollToSection(service.href)}
-                    className="hover:text-[hsl(160,84%,39%)] transition-colors text-left"
+                    className="hover:text-[#59D14C] transition-colors text-left"
                   >
                     {service.label}
                   </button>
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li key={index}>
                   <button 
                     onClick={() => item.href !== "#" && scrollToSection(item.href)}
-                    className="hover:text-[hsl(160,84%,39%)] transition-colors text-left"
+                    className="hover:text-[#59D14C] transition-colors text-left"
                   >
                     {item.label}
                   </button>

@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
       initials: "MC",
       rating: 5,
       review: "Travail impeccable sur notre toiture. L'équipe d'Aqua-BOB est professionnelle et le résultat dépasse nos attentes. Notre toit ressemble à neuf !",
-      color: "bg-[hsl(160,84%,39%)]"
+      color: "bg-[#59D14C]"
     },
     {
       name: "Pierre L.",
