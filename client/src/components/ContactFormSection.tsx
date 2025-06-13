@@ -132,22 +132,84 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section id="contact" className="py-16 bg-black">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Demandez votre <span className="text-[#59D14C]">devis gratuit</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Obtenez une estimation personnalisée pour vos travaux de nettoyage. 
-              Notre équipe vous contactera dans les 24h pour une évaluation gratuite.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left content */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Demandez votre <span className="text-[#59D14C]">devis gratuit</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Obtenez une estimation personnalisée pour vos travaux de nettoyage. 
+                Notre équipe vous contactera dans les 24h pour une évaluation gratuite.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-clock text-white"></i>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Réponse rapide</h3>
+                  <p className="text-gray-300">Devis personnalisé sous 24h maximum</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-calculator text-white"></i>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Estimation gratuite</h3>
+                  <p className="text-gray-300">Aucun frais pour l'évaluation de vos besoins</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-handshake text-white"></i>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Sans engagement</h3>
+                  <p className="text-gray-300">Aucune obligation d'achat après le devis</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Toute la Belgique</h3>
+                  <p className="text-gray-300">Interventions en Wallonie et à Bruxelles</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gray-900 p-6 rounded-xl">
+              <h4 className="text-lg font-semibold text-white mb-4">Nos coordonnées</h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <i className="fas fa-phone text-[#59D14C]"></i>
+                  <span className="text-gray-300">+32 123 456 789</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <i className="fas fa-envelope text-[#59D14C]"></i>
+                  <span className="text-gray-300">contact@aqua-bob-leponge.be</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <i className="fas fa-clock text-[#59D14C]"></i>
+                  <span className="text-gray-300">Lun-Ven: 8h-18h | Sam: 8h-12h</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Form */}
-          <div className="max-w-2xl mx-auto">
+          {/* Right form */}
+          <div>
             <Card className="bg-gray-800 border-gray-700 shadow-xl">
               <CardHeader>
                 <CardTitle className="text-2xl text-white">
