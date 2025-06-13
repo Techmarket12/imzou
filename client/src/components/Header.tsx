@@ -24,28 +24,28 @@ export default function Header() {
 
   const navigationItems = [
     { label: "Accueil", href: "accueil" },
-    { label: "Nos prestations", href: "services" },
-    { label: "Nos réalisations", href: "realisations" },
-    { label: "Prop'Habitat Guadeloupe", href: "about" },
-    { label: "Devenir franchisé", href: "franchise" },
-    { label: "Couverture", href: "couverture" },
+    { label: "Nettoyage Toitures", href: "services" },
+    { label: "Nettoyage Façades", href: "realisations" },
+    { label: "Nettoyage Terrasses", href: "about" },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
+      }`}
+    >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src={logoPath} 
-              alt="Aqua-BOB-L'éponge" 
+            <img
+              src={logoPath}
+              alt="Aqua-BOB-L'éponge"
               className="h-12 w-auto"
             />
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -59,18 +59,18 @@ export default function Header() {
               </button>
             ))}
           </div>
-          
+
           {/* Right side buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button 
+            <Button
               variant="outline"
-              className="border border-white/30 text-white hover:bg-white hover:text-black px-4 py-2 text-sm"
+              className="border border-white/30  hover:bg-white hover:text-black px-4 py-2 text-sm"
             >
               <i className="fas fa-info-circle mr-2"></i>
               Infos pratiques
             </Button>
-            
-            <Button 
+
+            <Button
               className="bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white px-6 py-2 font-semibold text-sm"
               onClick={() => scrollToSection("contact")}
             >
@@ -78,7 +78,7 @@ export default function Header() {
               Contactez-nous
             </Button>
           </div>
-          
+
           {/* Mobile Menu */}
           <Sheet>
             <SheetTrigger asChild>
@@ -86,7 +86,10 @@ export default function Header() {
                 <i className="fas fa-bars text-xl"></i>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-black/95 border-l border-white/10">
+            <SheetContent
+              side="right"
+              className="bg-black/95 border-l border-white/10"
+            >
               <div className="flex flex-col space-y-6 mt-8">
                 {navigationItems.map((item) => (
                   <button
@@ -97,7 +100,7 @@ export default function Header() {
                     {item.label}
                   </button>
                 ))}
-                <Button 
+                <Button
                   className="bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white mt-4"
                   onClick={() => scrollToSection("contact")}
                 >
