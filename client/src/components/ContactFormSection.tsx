@@ -132,7 +132,7 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section id="contact" className="py-16 bg-black">
+    <section id="contact" className="py-16 bg-gradient-to-br from-slate-800 via-gray-900 to-slate-900">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left content */}
