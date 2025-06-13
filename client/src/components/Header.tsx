@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import logoPath from "@assets/image_1749795372312.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,26 +24,26 @@ export default function Header() {
 
   const navigationItems = [
     { label: "Accueil", href: "accueil" },
-    { label: "Nettoyage Toiture", href: "toiture" },
-    { label: "Nettoyage Terrasse", href: "terrasse" },
-    { label: "Nettoyage Façade", href: "facade" },
-    { label: "Nos Réalisations", href: "realisations" },
-    { label: "Qui Sommes-Nous ?", href: "about" },
-    { label: "Contact", href: "contact" },
+    { label: "Nos prestations", href: "services" },
+    { label: "Nos réalisations", href: "realisations" },
+    { label: "Prop'Habitat Guadeloupe", href: "about" },
+    { label: "Devenir franchisé", href: "franchise" },
+    { label: "Couverture", href: "couverture" },
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? "bg-[hsl(220,26%,14%)]/95 backdrop-blur-sm shadow-lg" : "bg-[hsl(220,26%,14%)]"
+      isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
     }`}>
-      <nav className="container mx-auto px-4 py-4">
+      <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-gradient-to-br from-[hsl(160,84%,39%)] to-[hsl(199,89%,48%)] rounded-full flex items-center justify-center">
-              <i className="fas fa-water text-white text-xl"></i>
-            </div>
-            <span className="text-white text-xl font-bold">Aqua-BOB-L'éponge</span>
+          <div className="flex items-center">
+            <img 
+              src={logoPath} 
+              alt="Aqua-BOB-L'éponge" 
+              className="h-12 w-auto"
+            />
           </div>
           
           {/* Desktop Navigation */}
@@ -51,21 +52,32 @@ export default function Header() {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-white hover:text-[hsl(160,84%,39%)] transition-colors"
+                className="text-white/90 hover:text-white text-sm font-medium transition-colors relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[hsl(160,84%,39%)] transition-all group-hover:w-full"></span>
               </button>
             ))}
           </div>
           
-          {/* CTA Button */}
-          <Button 
-            className="hidden lg:flex bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white px-6 py-3 rounded-lg font-semibold transition-colors items-center space-x-2"
-            onClick={() => scrollToSection("contact")}
-          >
-            <i className="fas fa-phone"></i>
-            <span>Demander un Devis Gratuit</span>
-          </Button>
+          {/* Right side buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Button 
+              variant="outline"
+              className="border border-white/30 text-white hover:bg-white hover:text-black px-4 py-2 text-sm"
+            >
+              <i className="fas fa-info-circle mr-2"></i>
+              Infos pratiques
+            </Button>
+            
+            <Button 
+              className="bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white px-6 py-2 font-semibold text-sm"
+              onClick={() => scrollToSection("contact")}
+            >
+              <i className="fas fa-phone mr-2"></i>
+              Contactez-nous
+            </Button>
+          </div>
           
           {/* Mobile Menu */}
           <Sheet>
@@ -74,7 +86,7 @@ export default function Header() {
                 <i className="fas fa-bars text-xl"></i>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-[hsl(220,26%,14%)] border-l border-white/10">
+            <SheetContent side="right" className="bg-black/95 border-l border-white/10">
               <div className="flex flex-col space-y-6 mt-8">
                 {navigationItems.map((item) => (
                   <button
@@ -89,7 +101,7 @@ export default function Header() {
                   className="bg-[hsl(160,84%,39%)] hover:bg-[hsl(160,84%,35%)] text-white mt-4"
                   onClick={() => scrollToSection("contact")}
                 >
-                  Demander un Devis Gratuit
+                  Contactez-nous
                 </Button>
               </div>
             </SheetContent>
