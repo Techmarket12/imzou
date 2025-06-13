@@ -45,29 +45,31 @@ export default function HeroSection() {
             </Button>
           </div>
           
-          {/* Right side - Large Circular Video */}
-          <div className="lg:col-span-6 flex justify-end items-center relative">
-            {/* Large circular video that partially extends beyond screen */}
-            <div className="w-[600px] h-[600px] rounded-full overflow-hidden shadow-2xl border-4 border-white/20 relative transform translate-x-24">
-              <video 
-                autoPlay 
-                muted 
-                loop 
-                className="w-full h-full object-cover"
-              >
-                <source src={videoPath} type="video/mp4" />
-                {/* Fallback image */}
-                <img 
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
-                  alt="Vue aérienne d'un nettoyage de toiture avec tuiles oranges" 
-                  className="w-full h-full object-cover" 
-                />
-              </video>
-              
-              {/* Play button overlay */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
-                  <i className="fas fa-play text-white text-2xl ml-1"></i>
+          {/* Right side - Very Large Circular Video that takes half the hero */}
+          <div className="lg:col-span-6 relative overflow-hidden h-full">
+            {/* Enormous circular video positioned to show only left portion */}
+            <div className="absolute -right-64 top-1/2 transform -translate-y-1/2">
+              <div className="w-[900px] h-[900px] rounded-full overflow-hidden shadow-2xl relative">
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  className="w-full h-full object-cover"
+                >
+                  <source src={videoPath} type="video/mp4" />
+                  {/* Fallback image */}
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                    alt="Vue aérienne d'un nettoyage de toiture avec tuiles oranges" 
+                    className="w-full h-full object-cover" 
+                  />
+                </video>
+                
+                {/* Play button overlay positioned in visible area */}
+                <div className="absolute inset-0 flex items-center justify-start pl-32">
+                  <div className="w-20 h-20 bg-black/50 rounded-full flex items-center justify-center cursor-pointer hover:bg-black/70 transition-all">
+                    <i className="fas fa-play text-white text-2xl ml-1"></i>
+                  </div>
                 </div>
               </div>
             </div>
