@@ -55,7 +55,7 @@ export default function Header() {
                 className="text-white/90 hover:text-white text-sm font-medium transition-colors relative group"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#59D14C] transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#27851E] transition-all group-hover:w-full"></span>
               </button>
             ))}
           </div>
@@ -71,7 +71,7 @@ export default function Header() {
             </Button>
 
             <Button
-              className="bg-[#59D14C] hover:bg-[#4CBE3F] text-white px-6 py-2 font-semibold text-sm"
+              className="bg-[#27851E] hover:bg-[#1F6B15] text-white px-6 py-2 font-semibold text-sm"
               onClick={() => scrollToSection("contact")}
             >
               <i className="fas fa-phone mr-2"></i>
@@ -101,7 +101,7 @@ export default function Header() {
                   </button>
                 ))}
                 <Button
-                  className="bg-[#59D14C] hover:bg-[#4CBE3F] text-white mt-4"
+                  className="bg-[#27851E] hover:bg-[#1F6B15] text-white mt-4"
                   onClick={() => scrollToSection("contact")}
                 >
                   Contactez-nous

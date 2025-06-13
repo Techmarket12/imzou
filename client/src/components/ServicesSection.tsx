@@ -101,7 +101,7 @@ export default function ServicesSection() {
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-[#59D14C] text-white px-3 py-1">
+                    <Badge className="bg-[#27851E] text-white px-3 py-1">
                       <i className={`${service.icon} mr-2`}></i>
                       Service {index + 1}
                     </Badge>
@@ -162,7 +162,7 @@ export default function ServicesSection() {
                   {/* Actions */}
                   <div className="space-y-3">
                     <Button
-                      className="w-full bg-[#59D14C] hover:bg-[#4CBE3F] text-white font-semibold py-3"
+                      className="w-full bg-[#27851E] hover:bg-[#1F6B15] text-white font-semibold py-3"
                       onClick={scrollToContact}
                     >
                       <i className="fas fa-envelope mr-2"></i>
@@ -170,7 +170,7 @@ export default function ServicesSection() {
                     </Button>
                     <Button
                       variant="outline"
-                      className="w-full border-[#59D14C] text-[#59D14C] hover:bg-[#59D14C] hover:text-white"
+                      className="w-full border-[#27851E] text-[#27851E] hover:bg-[#27851E] hover:text-white"
                     >
                       <i className="fas fa-info-circle mr-2"></i>
                       En savoir plus

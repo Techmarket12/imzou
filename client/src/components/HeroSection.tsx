@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import logoPath from "@assets/image_1749795372312.png";
-import videoPath from "@assets/Toiture_Nettoyage_Haute_Pression_1749795362619.mp4";
+import videoPath from "@assets/Toiture_Nettoyage_Haute_Pression_1749794531300.mp4";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -43,7 +43,7 @@ export default function HeroSection() {
               </div>
 
               <Button
-                className="bg-[#59D14C] hover:bg-[#4CBE3F] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                className="bg-[#27851E] hover:bg-[#1F6B15] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 onClick={() => scrollToSection("contact")}
               >
                 <i className="fas fa-phone mr-2"></i>
@@ -134,7 +134,7 @@ export default function HeroSection() {
           </p>
 
           <Button
-            className="bg-[#59D14C] hover:bg-[#4CBE3F] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit"
+            className="bg-[#27851E] hover:bg-[#1F6B15] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit"
             onClick={() => scrollToSection("contact")}
           >
             <i className="fas fa-envelope mr-2"></i>
