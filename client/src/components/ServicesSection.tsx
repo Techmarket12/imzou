@@ -325,10 +325,9 @@ export default function ServicesSection() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#59D14C] font-semibold px-8"
+                className="bg-[#25D366] text-white hover:bg-[#1eb855] border-0 font-semibold px-8"
               >
-                <i className="fas fa-whatsapp mr-2"></i>
+                <i className="fab fa-whatsapp mr-2"></i>
                 WhatsApp
               </Button>
             </div>
