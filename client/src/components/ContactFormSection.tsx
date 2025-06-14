@@ -198,7 +198,7 @@ export default function ContactFormSection() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-envelope text-[#59D14C]"></i>
-                  <span className="text-gray-300">contact@aqua-bob-leponge.be</span>
+                  <span className="text-gray-300">contact@aqua-toiture-facade.be</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-clock text-[#59D14C]"></i>

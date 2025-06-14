@@ -57,7 +57,7 @@ export default function ServiceAreasSection() {
             Nos Zones d'<span className="text-[#59D14C]">Intervention</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Aqua-BOB-L'éponge intervient dans toute la région de Bruxelles et les deux provinces du Brabant pour vos travaux de nettoyage professionnel.
+            aqua-toiture-facade intervient dans toute la région de Bruxelles et les deux provinces du Brabant pour vos travaux de nettoyage professionnel.
           </p>
         </div>
 

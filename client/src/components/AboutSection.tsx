@@ -31,7 +31,7 @@ export default function AboutSection() {
           <div>
             <h2 className="text-4xl font-bold text-white mb-6">Qui Sommes-Nous ?</h2>
             <p className="text-xl text-gray-300 mb-6">
-              Aqua-BOB-L'éponge est une entreprise familiale belge spécialisée dans le nettoyage professionnel depuis plus de 15 ans.
+              aqua-toiture-facade est une entreprise familiale belge spécialisée dans le nettoyage professionnel depuis plus de 15 ans.
             </p>
             <p className="text-gray-300 mb-6">
               Basés en Wallonie, nous intervenons dans toute la région wallonne et à Bruxelles pour offrir des services de nettoyage et de protection de qualité supérieure pour vos toitures, terrasses et façades.

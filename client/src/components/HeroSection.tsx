@@ -115,7 +115,7 @@ export default function HeroSection() {
           <p className="text-gray-300 mb-6 leading-relaxed">
             L'entreprise{" "}
             <span className="font-semibold text-[#59D14C]">
-              Aqua-BOB-L'éponge
+              aqua-toiture-facade
             </span>{" "}
             est votre prestataire de confiance pour le nettoyage de toiture.
             Nous vous proposons une solution de nettoyage à l'extérieur à la
