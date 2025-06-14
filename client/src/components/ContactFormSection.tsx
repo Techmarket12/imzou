@@ -21,6 +21,14 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
+// Import images for before/after comparisons
+import beforeToiture from "@assets/image_1749797801845.png";
+import afterToiture from "@assets/image_1749796907502.png";
+import beforeFacade from "@assets/image_1749797136347.png";
+import afterFacade from "@assets/image_1749797965900.png";
+import beforeTerrasse from "@assets/image_1749797669448.png";
+import afterTerrasse from "@assets/image_1749797561345.png";
+
 interface ContactFormData {
   firstName: string;
   lastName: string;
@@ -35,6 +43,73 @@ interface ContactFormData {
   message: string;
   urgency: string;
   images: File[];
+}
+
+// Component for Before/After image comparison
+function BeforeAfterComparison({ beforeImg, afterImg, title }: { beforeImg: string, afterImg: string, title: string }) {
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleMouseDown = () => setIsDragging(true);
+  const handleMouseUp = () => setIsDragging(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
+    setSliderPosition(percentage);
+  };
+
+  return (
+    <div className="relative group">
+      <h4 className="text-white font-semibold mb-3 text-center">{title}</h4>
+      <div 
+        className="relative w-full h-48 overflow-hidden rounded-xl cursor-col-resize"
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseUp}
+      >
+        {/* After image (background) */}
+        <img 
+          src={afterImg} 
+          alt="Après" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        
+        {/* Before image (clipped) */}
+        <div 
+          className="absolute inset-0 overflow-hidden"
+          style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+        >
+          <img 
+            src={beforeImg} 
+            alt="Avant" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Slider line */}
+        <div 
+          className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
+          style={{ left: `${sliderPosition}%` }}
+        >
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
+            <i className="fas fa-arrows-alt-h text-gray-600 text-xs"></i>
+          </div>
+        </div>
+
+        {/* Labels */}
+        <div className="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+          Avant
+        </div>
+        <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+          Après
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function ContactFormSection() {
@@ -56,6 +131,24 @@ export default function ContactFormSection() {
   });
 
   const [dragActive, setDragActive] = useState(false);
+
+  const beforeAfterData = [
+    {
+      title: "Nettoyage de Toiture",
+      beforeImg: beforeToiture,
+      afterImg: afterToiture
+    },
+    {
+      title: "Nettoyage de Façade", 
+      beforeImg: beforeFacade,
+      afterImg: afterFacade
+    },
+    {
+      title: "Nettoyage de Terrasse",
+      beforeImg: beforeTerrasse,
+      afterImg: afterTerrasse
+    }
+  ];
 
   const submitMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
@@ -158,114 +251,38 @@ export default function ContactFormSection() {
                 Demandez votre{" "}
                 <span className="text-[#59D14C]">devis gratuit</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Obtenez une estimation personnalisée pour vos travaux de
-                nettoyage. Notre équipe vous contactera dans les 24h pour une
-                évaluation gratuite.
-              </p>
             </div>
 
+            {/* Before/After comparisons */}
             <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-clock text-white"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    Réponse rapide
-                  </h3>
-                  <p className="text-gray-300">
-                    Devis personnalisé sous 24h maximum
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-calculator text-white"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    Estimation gratuite
-                  </h3>
-                  <p className="text-gray-300">
-                    Aucun frais pour l'évaluation de vos besoins
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-handshake text-white"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    Sans engagement
-                  </h3>
-                  <p className="text-gray-300">
-                    Aucune obligation d'achat après le devis
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
-                  <i className="fas fa-map-marker-alt text-white"></i>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    Toute la Belgique
-                  </h3>
-                  <p className="text-gray-300">
-                    Interventions à Bruxelles capital, Brabant wallon et Brabant
-                    flamand.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gray-900 p-6 rounded-xl">
-              <h4 className="text-lg font-semibold text-white mb-4">
-                Nos coordonnées
-              </h4>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <i className="fas fa-phone text-[#59D14C]"></i>
-                  <span className="text-gray-300">+32 123 456 789</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <i className="fas fa-envelope text-[#59D14C]"></i>
-                  <span className="text-gray-300">
-                    contact@aqua-toiture-facade.be
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <i className="fas fa-clock text-[#59D14C]"></i>
-                  <span className="text-gray-300">
-                    Lun-Ven: 8h-18h | Sam: 8h-12h
-                  </span>
-                </div>
-              </div>
+              {beforeAfterData.map((item, index) => (
+                <BeforeAfterComparison
+                  key={index}
+                  beforeImg={item.beforeImg}
+                  afterImg={item.afterImg}
+                  title={item.title}
+                />
+              ))}
             </div>
           </div>
 
-          {/* Right form */}
-          <div>
+          {/* Right form - Reduced height */}
+          <div className="space-y-6">
             <Card className="bg-gray-800 border-gray-700 shadow-xl">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-xl text-white">
                   Demandez votre devis gratuit
                 </CardTitle>
-                <CardDescription className="text-gray-300">
+                <CardDescription className="text-gray-300 text-sm">
                   Quelques informations suffisent pour recevoir votre estimation
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Info */}
-                  <div className="grid md:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  {/* Personal Info - Condensed */}
+                  <div className="grid md:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-1">
                         Nom *
                       </label>
                       <Input
@@ -275,11 +292,11 @@ export default function ContactFormSection() {
                           handleInputChange("lastName", e.target.value)
                         }
                         placeholder="Votre nom"
-                        className="bg-gray-700 border-gray-600 text-white"
+                        className="bg-gray-700 border-gray-600 text-white h-9"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-1">
                         Téléphone *
                       </label>
                       <Input
@@ -290,13 +307,13 @@ export default function ContactFormSection() {
                           handleInputChange("phone", e.target.value)
                         }
                         placeholder="06 12 34 56 78"
-                        className="bg-gray-700 border-gray-600 text-white"
+                        className="bg-gray-700 border-gray-600 text-white h-9"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-1">
                       Email *
                     </label>
                     <Input
@@ -307,27 +324,13 @@ export default function ContactFormSection() {
                         handleInputChange("email", e.target.value)
                       }
                       placeholder="votre@email.com"
-                      className="bg-gray-700 border-gray-600 text-white"
+                      className="bg-gray-700 border-gray-600 text-white h-9"
                     />
                   </div>
 
+                  {/* Service selection */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Ville *
-                    </label>
-                    <Input
-                      required
-                      value={formData.city}
-                      onChange={(e) =>
-                        handleInputChange("city", e.target.value)
-                      }
-                      placeholder="Votre ville"
-                      className="bg-gray-700 border-gray-600 text-white"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-gray-300 mb-1">
                       Type de service *
                     </label>
                     <Select
@@ -336,29 +339,22 @@ export default function ContactFormSection() {
                         handleInputChange("serviceType", value)
                       }
                     >
-                      <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
-                        <SelectValue placeholder="Choisissez un service" />
+                      <SelectTrigger className="bg-gray-700 border-gray-600 text-white h-9">
+                        <SelectValue placeholder="Sélectionnez un service" />
                       </SelectTrigger>
-                      <SelectContent className="bg-gray-700 border-gray-600">
-                        <SelectItem value="toiture" className="text-white">
-                          Nettoyage de toiture
-                        </SelectItem>
-                        <SelectItem value="facade" className="text-white">
-                          Nettoyage de façade
-                        </SelectItem>
-                        <SelectItem value="terrasse" className="text-white">
-                          Nettoyage de terrasse
-                        </SelectItem>
-                        <SelectItem value="multiple" className="text-white">
-                          Plusieurs services
-                        </SelectItem>
+                      <SelectContent>
+                        <SelectItem value="toiture">Nettoyage de toiture</SelectItem>
+                        <SelectItem value="facade">Nettoyage de façade</SelectItem>
+                        <SelectItem value="terrasse">Nettoyage de terrasse</SelectItem>
+                        <SelectItem value="complet">Nettoyage complet</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
+                  {/* Message */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Message (optionnel)
+                    <label className="block text-sm font-medium text-gray-300 mb-1">
+                      Message
                     </label>
                     <Textarea
                       value={formData.message}
@@ -366,86 +362,21 @@ export default function ContactFormSection() {
                         handleInputChange("message", e.target.value)
                       }
                       placeholder="Décrivez votre projet..."
+                      className="bg-gray-700 border-gray-600 text-white min-h-[60px]"
                       rows={3}
-                      className="bg-gray-700 border-gray-600 text-white"
                     />
                   </div>
 
-                  {/* File Upload */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Photos (optionnel)
-                    </label>
-                    <div
-                      className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
-                        dragActive
-                          ? "border-[#59D14C] bg-gray-700"
-                          : "border-gray-600 hover:border-[#59D14C] bg-gray-700"
-                      }`}
-                      onDragEnter={handleDrag}
-                      onDragLeave={handleDrag}
-                      onDragOver={handleDrag}
-                      onDrop={handleDrop}
-                    >
-                      <i className="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
-                      <p className="text-gray-300 mb-2">
-                        Ajoutez des photos de votre projet
-                      </p>
-                      <input
-                        type="file"
-                        multiple
-                        accept="image/*"
-                        onChange={handleFileChange}
-                        className="hidden"
-                        id="file-input"
-                      />
-                      <Button
-                        type="button"
-                        variant="outline"
-                        onClick={() =>
-                          document.getElementById("file-input")?.click()
-                        }
-                        className="border-gray-600 text-gray-300 hover:bg-gray-600"
-                      >
-                        Choisir des fichiers
-                      </Button>
-                    </div>
-
-                    {/* Image Preview */}
-                    {formData.images.length > 0 && (
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {formData.images.map((file, index) => (
-                          <Badge
-                            key={index}
-                            variant="secondary"
-                            className="flex items-center gap-2 px-3 py-2 bg-gray-600 text-white"
-                          >
-                            <i className="fas fa-image"></i>
-                            <span className="text-xs">{file.name}</span>
-                            <button
-                              type="button"
-                              onClick={() => removeImage(index)}
-                              className="ml-1 hover:text-red-400"
-                            >
-                              <i className="fas fa-times"></i>
-                            </button>
-                          </Badge>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Submit */}
                   <Button
                     type="submit"
                     disabled={submitMutation.isPending}
-                    className="w-full bg-[#27851E] hover:bg-[#1F6B15] text-white py-3 text-lg font-semibold"
+                    className="w-full bg-[#27851E] hover:bg-[#1F6B15] text-white h-10"
                   >
                     {submitMutation.isPending ? (
-                      <>
-                        <i className="fas fa-spinner fa-spin mr-2"></i>
-                        Envoi en cours...
-                      </>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                        <span>Envoi en cours...</span>
+                      </div>
                     ) : (
                       <>
                         <i className="fas fa-paper-plane mr-2"></i>
@@ -456,6 +387,18 @@ export default function ContactFormSection() {
                 </form>
               </CardContent>
             </Card>
+
+            {/* Catchy phrase */}
+            <div className="bg-gradient-to-r from-[#27851E] to-[#59D14C] rounded-xl p-6 text-center">
+              <h3 className="text-white font-bold text-lg mb-2">
+                🌟 Transformez vos extérieurs dès aujourd'hui !
+              </h3>
+              <p className="text-white/90 text-sm">
+                Rejoignez plus de 500 clients satisfaits qui ont fait confiance à notre expertise écologique.
+                <br />
+                <strong>Devis gratuit sous 24h • Sans engagement • Résultats garantis</strong>
+              </p>
+            </div>
           </div>
         </div>
       </div>
