@@ -147,6 +147,38 @@ export default function ContactFormSection() {
 
   const [dragActive, setDragActive] = useState(false);
 
+  const handleDrag = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.type === "dragenter" || e.type === "dragover") {
+      setDragActive(true);
+    } else if (e.type === "dragleave") {
+      setDragActive(false);
+    }
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setDragActive(false);
+    
+    const files = Array.from(e.dataTransfer.files);
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    
+    setFormData(prev => ({
+      ...prev,
+      images: [...prev.images, ...imageFiles]
+    }));
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    setFormData(prev => ({
+      ...prev,
+      images: [...prev.images, ...files]
+    }));
+  };
+
   const beforeAfterData = [
     {
       title: "Nettoyage de Toiture",
@@ -220,30 +252,6 @@ export default function ContactFormSection() {
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []);
-    setFormData((prev) => ({ ...prev, images: [...prev.images, ...files] }));
-  };
-
-  const handleDrag = (e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (e.type === "dragenter" || e.type === "dragover") {
-      setDragActive(true);
-    } else if (e.type === "dragleave") {
-      setDragActive(false);
-    }
-  };
-
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-
-    const files = Array.from(e.dataTransfer.files);
-    setFormData((prev) => ({ ...prev, images: [...prev.images, ...files] }));
   };
 
   const removeImage = (index: number) => {
@@ -381,20 +389,68 @@ export default function ContactFormSection() {
                     </Select>
                   </div>
 
-                  {/* Message */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-1">
-                      Message
-                    </label>
-                    <Textarea
-                      value={formData.message}
-                      onChange={(e) =>
-                        handleInputChange("message", e.target.value)
-                      }
-                      placeholder="Décrivez votre projet..."
-                      className="bg-gray-700 border-gray-600 text-white min-h-[60px]"
-                      rows={3}
-                    />
+                  {/* Message and Photos */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {/* Message */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-1">
+                        Message
+                      </label>
+                      <Textarea
+                        value={formData.message}
+                        onChange={(e) =>
+                          handleInputChange("message", e.target.value)
+                        }
+                        placeholder="Décrivez votre projet..."
+                        className="bg-gray-700 border-gray-600 text-white min-h-[60px]"
+                        rows={3}
+                      />
+                    </div>
+
+                    {/* Photo Upload */}
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-1">
+                        Photos (optionnel)
+                      </label>
+                      <div
+                        className={`border-2 border-dashed rounded-lg p-4 text-center transition-colors ${
+                          dragActive
+                            ? "border-[#59D14C] bg-green-50/5"
+                            : "border-gray-600 hover:border-gray-500"
+                        }`}
+                        onDragEnter={handleDrag}
+                        onDragLeave={handleDrag}
+                        onDragOver={handleDrag}
+                        onDrop={handleDrop}
+                      >
+                        <input
+                          type="file"
+                          multiple
+                          accept="image/*"
+                          onChange={handleFileSelect}
+                          className="hidden"
+                          id="file-upload"
+                        />
+                        <label
+                          htmlFor="file-upload"
+                          className="cursor-pointer flex flex-col items-center space-y-2"
+                        >
+                          <i className="fas fa-camera text-2xl text-gray-400"></i>
+                          <span className="text-sm text-gray-300">
+                            Glissez vos photos ici
+                          </span>
+                          <span className="text-xs text-gray-400">
+                            ou cliquez pour sélectionner
+                          </span>
+                        </label>
+                        
+                        {formData.images.length > 0 && (
+                          <div className="mt-3 text-xs text-[#59D14C]">
+                            {formData.images.length} photo(s) sélectionnée(s)
+                          </div>
+                        )}
+                      </div>
+                    </div>
                   </div>
 
                   <Button
