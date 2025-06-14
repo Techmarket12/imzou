@@ -9,11 +9,11 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 // Import images for equipment
-import nacelleImg from "@assets/image_1749911368670.png";
-import vapeurImg from "@assets/image_1749797561345.png";
-import pressionImg from "@assets/image_1749796477890.png";
-import produitsImg from "@assets/image_1749807630149.png";
-import aspirationImg from "@assets/image_1749912077969.png";
+import nacelleImg from "@assets/realisation_079034xlarge.jpg";
+import vapeurImg from "@assets/maxresdefault.jpg";
+import pressionImg from "@assets/natursteinfassade.webp";
+import produitsImg from "@assets/123.jpg";
+import aspirationImg from "@assets/nettoyage-de-gouttieres-sans-monter-sur-le-toit-avec-laspirateur-SKY-Vac.jpg";
 
 const services = [
   {
@@ -84,8 +84,7 @@ export default function ServicesSection() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Nos{" "}
-              <span className="text-[#59D14C]">Services Experts</span>
+              Nos <span className="text-[#59D14C]">Services Experts</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Découvrez notre gamme complète de services de nettoyage
@@ -195,7 +194,8 @@ export default function ServicesSection() {
                 Nos <span className="text-[#59D14C]">Matériaux</span>
               </h3>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Équipements professionnels de dernière génération pour garantir un travail de qualité et en toute sécurité
+                Équipements professionnels de dernière génération pour garantir
+                un travail de qualité et en toute sécurité
               </p>
             </div>
 
@@ -206,13 +206,15 @@ export default function ServicesSection() {
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
                     <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
-                      <img 
-                        src={nacelleImg} 
-                        alt="Nacelle élévatrice" 
+                      <img
+                        src={nacelleImg}
+                        alt="Nacelle élévatrice"
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-base">Nacelle élévatrice</h4>
+                    <h4 className="text-white font-semibold mb-3 text-base">
+                      Nacelle élévatrice
+                    </h4>
                     <p className="text-gray-300 text-sm leading-relaxed">
                       Pour les nettoyages en hauteur jusqu'à 15 m
                     </p>
@@ -223,15 +225,18 @@ export default function ServicesSection() {
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
                     <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
-                      <img 
-                        src={vapeurImg} 
-                        alt="Nettoyeur vapeur" 
+                      <img
+                        src={vapeurImg}
+                        alt="Nettoyeur vapeur"
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-base">Nettoyeur vapeur</h4>
+                    <h4 className="text-white font-semibold mb-3 text-base">
+                      Nettoyeur vapeur
+                    </h4>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Dernière génération pour un nettoyage en douceur et efficace de vos tuiles
+                      Dernière génération pour un nettoyage en douceur et
+                      efficace de vos tuiles
                     </p>
                   </div>
                 </div>
@@ -241,13 +246,15 @@ export default function ServicesSection() {
               <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-60 self-center">
                 <div className="text-center">
                   <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
-                    <img 
-                      src={pressionImg} 
-                      alt="Nettoyeur haute pression" 
+                    <img
+                      src={pressionImg}
+                      alt="Nettoyeur haute pression"
                       className="w-full h-full object-cover rounded-lg"
                     />
                   </div>
-                  <h4 className="text-white font-semibold mb-3 text-base">Nettoyeur haute pression</h4>
+                  <h4 className="text-white font-semibold mb-3 text-base">
+                    Nettoyeur haute pression
+                  </h4>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     À eau chaude pour façades et terrasses
                   </p>
@@ -260,15 +267,18 @@ export default function ServicesSection() {
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
                     <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
-                      <img 
-                        src={produitsImg} 
-                        alt="Produits d'entretien" 
+                      <img
+                        src={produitsImg}
+                        alt="Produits d'entretien"
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-base">Produits d'entretien</h4>
+                    <h4 className="text-white font-semibold mb-3 text-base">
+                      Produits d'entretien
+                    </h4>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Pour toiture, façade et terrasse assurant une longévité maximale
+                      Pour toiture, façade et terrasse assurant une longévité
+                      maximale
                     </p>
                   </div>
                 </div>
@@ -277,13 +287,15 @@ export default function ServicesSection() {
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
                     <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
-                      <img 
-                        src={aspirationImg} 
-                        alt="Système d'aspiration" 
+                      <img
+                        src={aspirationImg}
+                        alt="Système d'aspiration"
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-base">Système d'aspiration</h4>
+                    <h4 className="text-white font-semibold mb-3 text-base">
+                      Système d'aspiration
+                    </h4>
                     <p className="text-gray-300 text-sm leading-relaxed">
                       Pour le nettoyage des gouttières
                     </p>
