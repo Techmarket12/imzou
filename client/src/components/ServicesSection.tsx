@@ -192,38 +192,80 @@ export default function ServicesSection() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-6">
-              {/* Matériau 1 */}
-              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-tools text-[#59D14C] text-2xl"></i>
+            <div className="flex flex-wrap justify-center gap-6">
+              {/* Groupe de gauche - 2 matériaux */}
+              <div className="flex flex-col gap-6">
+                {/* Matériau 1 */}
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="w-full h-full">
+                        <defs>
+                          <linearGradient id="nacelleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style={{stopColor:'#59D14C', stopOpacity:1}} />
+                            <stop offset="100%" style={{stopColor:'#27851E', stopOpacity:1}} />
+                          </linearGradient>
+                        </defs>
+                        <rect width="200" height="200" fill="#1e293b"/>
+                        <rect x="80" y="160" width="40" height="30" fill="url(#nacelleGrad)"/>
+                        <rect x="90" y="150" width="20" height="10" fill="#59D14C"/>
+                        <rect x="95" y="50" width="10" height="100" fill="#374151"/>
+                        <rect x="85" y="40" width="30" height="20" fill="url(#nacelleGrad)"/>
+                        <text x="100" y="25" textAnchor="middle" fill="#59D14C" fontSize="12" fontWeight="bold">NACELLE</text>
+                      </svg>
+                    </div>
+                    <h4 className="text-white font-semibold mb-3 text-sm">Nacelle élévatrice</h4>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      Pour les nettoyages en hauteur jusqu'à 15 m
+                    </p>
                   </div>
-                  <h4 className="text-white font-semibold mb-3 text-sm">Nacelle élévatrice</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed">
-                    Pour les nettoyages en hauteur jusqu'à 15 m
-                  </p>
+                </div>
+
+                {/* Matériau 2 */}
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="w-full h-full">
+                        <defs>
+                          <linearGradient id="vapeurGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style={{stopColor:'#59D14C', stopOpacity:1}} />
+                            <stop offset="100%" style={{stopColor:'#27851E', stopOpacity:1}} />
+                          </linearGradient>
+                        </defs>
+                        <rect width="200" height="200" fill="#1e293b"/>
+                        <rect x="60" y="120" width="80" height="60" rx="10" fill="url(#vapeurGrad)"/>
+                        <rect x="90" y="80" width="20" height="40" fill="#374151"/>
+                        <circle cx="100" cy="70" r="8" fill="#59D14C"/>
+                        <path d="M95 50 Q100 40 105 50 M95 45 Q100 35 105 45 M95 40 Q100 30 105 40" stroke="#59D14C" strokeWidth="2" fill="none"/>
+                        <text x="100" y="200" textAnchor="middle" fill="#59D14C" fontSize="10" fontWeight="bold">VAPEUR</text>
+                      </svg>
+                    </div>
+                    <h4 className="text-white font-semibold mb-3 text-sm">Nettoyeur vapeur</h4>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      Dernière génération pour un nettoyage en douceur et efficace de vos tuiles
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              {/* Matériau 2 */}
-              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
+              {/* Matériau central */}
+              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-spray-can text-[#59D14C] text-2xl"></i>
-                  </div>
-                  <h4 className="text-white font-semibold mb-3 text-sm">Nettoyeur vapeur</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed">
-                    Dernière génération pour un nettoyage en douceur et efficace de vos tuiles
-                  </p>
-                </div>
-              </div>
-
-              {/* Matériau 3 */}
-              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-tint text-[#59D14C] text-2xl"></i>
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="w-full h-full">
+                      <defs>
+                        <linearGradient id="pressionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" style={{stopColor:'#59D14C', stopOpacity:1}} />
+                          <stop offset="100%" style={{stopColor:'#27851E', stopOpacity:1}} />
+                        </linearGradient>
+                      </defs>
+                      <rect width="200" height="200" fill="#1e293b"/>
+                      <rect x="50" y="100" width="100" height="80" rx="15" fill="url(#pressionGrad)"/>
+                      <rect x="80" y="80" width="40" height="20" fill="#374151"/>
+                      <circle cx="100" cy="90" r="5" fill="#59D14C"/>
+                      <path d="M100 70 L95 50 M100 70 L100 50 M100 70 L105 50" stroke="#3b82f6" strokeWidth="3"/>
+                      <text x="100" y="25" textAnchor="middle" fill="#59D14C" fontSize="10" fontWeight="bold">HAUTE PRESSION</text>
+                    </svg>
                   </div>
                   <h4 className="text-white font-semibold mb-3 text-sm">Nettoyeur haute pression</h4>
                   <p className="text-gray-300 text-xs leading-relaxed">
@@ -232,29 +274,61 @@ export default function ServicesSection() {
                 </div>
               </div>
 
-              {/* Matériau 4 */}
-              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-flask text-[#59D14C] text-2xl"></i>
+              {/* Groupe de droite - 2 matériaux */}
+              <div className="flex flex-col gap-6">
+                {/* Matériau 4 */}
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="w-full h-full">
+                        <defs>
+                          <linearGradient id="produitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style={{stopColor:'#59D14C', stopOpacity:1}} />
+                            <stop offset="100%" style={{stopColor:'#27851E', stopOpacity:1}} />
+                          </linearGradient>
+                        </defs>
+                        <rect width="200" height="200" fill="#1e293b"/>
+                        <rect x="60" y="60" width="25" height="120" rx="5" fill="url(#produitGrad)"/>
+                        <rect x="115" y="80" width="25" height="100" rx="5" fill="url(#produitGrad)"/>
+                        <rect x="90" y="100" width="20" height="80" rx="5" fill="#374151"/>
+                        <circle cx="72.5" cy="55" r="8" fill="#59D14C"/>
+                        <circle cx="127.5" cy="75" r="8" fill="#59D14C"/>
+                        <circle cx="100" cy="95" r="8" fill="#59D14C"/>
+                        <text x="100" y="25" textAnchor="middle" fill="#59D14C" fontSize="9" fontWeight="bold">PRODUITS</text>
+                      </svg>
+                    </div>
+                    <h4 className="text-white font-semibold mb-3 text-sm">Produits d'entretien</h4>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      Pour toiture, façade et terrasse assurant une longévité maximale
+                    </p>
                   </div>
-                  <h4 className="text-white font-semibold mb-3 text-sm">Produits d'entretien</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed">
-                    Pour toiture, façade et terrasse assurant une longévité maximale
-                  </p>
                 </div>
-              </div>
 
-              {/* Matériau 5 */}
-              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i className="fas fa-vacuum text-[#59D14C] text-2xl"></i>
+                {/* Matériau 5 */}
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                  <div className="text-center">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" className="w-full h-full">
+                        <defs>
+                          <linearGradient id="aspirationGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style={{stopColor:'#59D14C', stopOpacity:1}} />
+                            <stop offset="100%" style={{stopColor:'#27851E', stopOpacity:1}} />
+                          </linearGradient>
+                        </defs>
+                        <rect width="200" height="200" fill="#1e293b"/>
+                        <rect x="70" y="120" width="60" height="50" rx="10" fill="url(#aspirationGrad)"/>
+                        <rect x="85" y="80" width="30" height="40" fill="#374151"/>
+                        <circle cx="100" cy="75" r="5" fill="#59D14C"/>
+                        <path d="M100 65 Q95 55 90 60 M100 65 Q105 55 110 60 M100 65 Q100 50 100 45" stroke="#59D14C" strokeWidth="2" fill="none"/>
+                        <rect x="40" y="170" width="120" height="10" rx="5" fill="#374151"/>
+                        <text x="100" y="25" textAnchor="middle" fill="#59D14C" fontSize="9" fontWeight="bold">ASPIRATION</text>
+                      </svg>
+                    </div>
+                    <h4 className="text-white font-semibold mb-3 text-sm">Système d'aspiration</h4>
+                    <p className="text-gray-300 text-xs leading-relaxed">
+                      Pour le nettoyage des gouttières
+                    </p>
                   </div>
-                  <h4 className="text-white font-semibold mb-3 text-sm">Système d'aspiration</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed">
-                    Pour le nettoyage des gouttières
-                  </p>
                 </div>
               </div>
             </div>
