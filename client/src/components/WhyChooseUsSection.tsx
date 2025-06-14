@@ -25,7 +25,7 @@ export default function WhyChooseUsSection() {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-white mb-6">Pourquoi Choisir Aqua-BOB-L'éponge ?</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Pourquoi Choisir aqua-toiture-facade ?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Plus de 15 ans d'expérience dans le nettoyage professionnel en Wallonie et à Bruxelles.
             </p>

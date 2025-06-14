@@ -34,7 +34,7 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">
-                  L'entreprise <strong>Aqua-BOB-L'éponge</strong> est votre
+                  L'entreprise <strong>aqua-toiture-facade</strong> est votre
                   prestataire de confiance pour le nettoyage de toiture. Nous
                   vous proposons une solution de nettoyage à l'extérieur à la
                   vapeur et sans produit chimique à Tournai-en-Brie et ses
