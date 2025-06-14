@@ -24,8 +24,6 @@ import { apiRequest } from "@/lib/queryClient";
 // Import images for before/after comparisons
 import beforeToiture from "@assets/toitureaprès.png";
 import afterToiture from "@assets/facadeavant.png";
-import beforeFacade from "";
-import afterFacade from "";
 import beforeTerrasse from "@assets/terrasseavant.png";
 import afterTerrasse from "@assets/terrasseapres.png";
 
