@@ -24,10 +24,10 @@ import { apiRequest } from "@/lib/queryClient";
 // Import images for before/after comparisons
 import beforeToiture from "@assets/toiturebefore.png";
 import afterToiture from "@assets/toitureafter.png";
-import beforeFacade from "@assets/avantfacade.jpg";
-import afterFacade from "@assets/image_1749797965900.png";
-import beforeTerrasse from "@assets/image_1749797669448.png";
-import afterTerrasse from "@assets/image_1749797561345.png";
+import beforeFacade from "@assets/toitureaprès.png";
+import afterFacade from "@assets/facadeavant.png";
+import beforeTerrasse from "@assets/terrasseavant.png";
+import afterTerrasse from "@assets/terrasseapres.png";
 
 interface ContactFormData {
   firstName: string;
@@ -118,7 +118,7 @@ function BeforeAfterComparison({
           Après
         </div>
       </div>
-      
+
       {/* Description text */}
       <p className="text-gray-300 text-sm text-center mt-3 leading-relaxed">
         {description}
@@ -152,19 +152,22 @@ export default function ContactFormSection() {
       title: "Nettoyage de Toiture",
       beforeImg: beforeToiture,
       afterImg: afterToiture,
-      description: "Nettoyage à la vapeur pour préserver l'intégrité de vos tuiles et ardoises sans produits chimiques agressifs."
+      description:
+        "Nettoyage à la vapeur pour préserver l'intégrité de vos tuiles et ardoises sans produits chimiques agressifs.",
     },
     {
       title: "Nettoyage de Façade",
       beforeImg: beforeFacade,
       afterImg: afterFacade,
-      description: "Traitement à l'eau chaude haute pression pour éliminer salissures et mousses tout en respectant vos revêtements."
+      description:
+        "Traitement à l'eau chaude haute pression pour éliminer salissures et mousses tout en respectant vos revêtements.",
     },
     {
       title: "Nettoyage de Terrasse",
       beforeImg: beforeTerrasse,
       afterImg: afterTerrasse,
-      description: "Démoussage professionnel et protection durable pour redonner éclat et sécurité à vos espaces extérieurs."
+      description:
+        "Démoussage professionnel et protection durable pour redonner éclat et sécurité à vos espaces extérieurs.",
     },
   ];
 
