@@ -4,6 +4,7 @@ import ContactFormSection from "@/components/ContactFormSection";
 import ServicesSection from "@/components/ServicesSection";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import DetailedServicesSection from "@/components/DetailedServicesSection";
+import WhyChooseSection from "@/components/WhyChooseSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesSection />
       <ServiceAreasSection />
       <DetailedServicesSection />
+      <WhyChooseSection />
     </div>
   );
 }
