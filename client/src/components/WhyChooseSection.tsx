@@ -7,7 +7,7 @@ export default function WhyChooseSection() {
       color: "from-green-500 to-green-700"
     },
     {
-      icon: "fas fa-shield-check",
+      icon: "fas fa-shield-alt",
       title: "Qualité garantie",
       description: "Nous nous engageons formellement sur la qualité de notre travail, à chaque étape de nos interventions.",
       color: "from-blue-500 to-blue-700"
@@ -55,13 +55,6 @@ export default function WhyChooseSection() {
               <p className="text-gray-300 text-center leading-relaxed">
                 {reason.description}
               </p>
-
-              {/* Decorative element */}
-              <div className="mt-6 pt-6 border-t border-gray-600">
-                <div className="flex justify-center">
-                  <div className="w-12 h-1 bg-gradient-to-r from-[#59D14C] to-transparent rounded-full"></div>
-                </div>
-              </div>
             </div>
           ))}
         </div>
