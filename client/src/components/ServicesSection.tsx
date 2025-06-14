@@ -199,38 +199,38 @@ export default function ServicesSection() {
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center items-start gap-8">
               {/* Groupe de gauche - 2 matériaux */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-8">
                 {/* Matériau 1 */}
-                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={nacelleImg} 
                         alt="Nacelle élévatrice" 
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-sm">Nacelle élévatrice</h4>
-                    <p className="text-gray-300 text-xs leading-relaxed">
+                    <h4 className="text-white font-semibold mb-3 text-base">Nacelle élévatrice</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       Pour les nettoyages en hauteur jusqu'à 15 m
                     </p>
                   </div>
                 </div>
 
                 {/* Matériau 2 */}
-                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={vapeurImg} 
                         alt="Nettoyeur vapeur" 
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-sm">Nettoyeur vapeur</h4>
-                    <p className="text-gray-300 text-xs leading-relaxed">
+                    <h4 className="text-white font-semibold mb-3 text-base">Nettoyeur vapeur</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       Dernière génération pour un nettoyage en douceur et efficace de vos tuiles
                     </p>
                   </div>
@@ -238,53 +238,53 @@ export default function ServicesSection() {
               </div>
 
               {/* Matériau central */}
-              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-60 self-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                     <img 
                       src={pressionImg} 
                       alt="Nettoyeur haute pression" 
                       className="w-full h-full object-cover rounded-lg"
                     />
                   </div>
-                  <h4 className="text-white font-semibold mb-3 text-sm">Nettoyeur haute pression</h4>
-                  <p className="text-gray-300 text-xs leading-relaxed">
-                    À eau chaude pour les façades et terrasses
+                  <h4 className="text-white font-semibold mb-3 text-base">Nettoyeur haute pression</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    À eau chaude pour façades et terrasses
                   </p>
                 </div>
               </div>
 
               {/* Groupe de droite - 2 matériaux */}
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-8">
                 {/* Matériau 4 */}
-                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={produitsImg} 
                         alt="Produits d'entretien" 
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-sm">Produits d'entretien</h4>
-                    <p className="text-gray-300 text-xs leading-relaxed">
+                    <h4 className="text-white font-semibold mb-3 text-base">Produits d'entretien</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       Pour toiture, façade et terrasse assurant une longévité maximale
                     </p>
                   </div>
                 </div>
 
                 {/* Matériau 5 */}
-                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-64">
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-lg overflow-hidden">
+                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={aspirationImg} 
                         alt="Système d'aspiration" 
                         className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <h4 className="text-white font-semibold mb-3 text-sm">Système d'aspiration</h4>
-                    <p className="text-gray-300 text-xs leading-relaxed">
+                    <h4 className="text-white font-semibold mb-3 text-base">Système d'aspiration</h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
                       Pour le nettoyage des gouttières
                     </p>
                   </div>
