@@ -22,10 +22,10 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
 // Import images for before/after comparisons
-import beforeToiture from "@assets/toiturebefore.png";
-import afterToiture from "@assets/toitureafter.png";
-import beforeFacade from "@assets/toitureaprès.png";
-import afterFacade from "@assets/facadeavant.png";
+import beforeToiture from "@assets/toitureaprès.png";
+import afterToiture from "@assets/facadeavant.png";
+import beforeFacade from "";
+import afterFacade from "";
 import beforeTerrasse from "@assets/terrasseavant.png";
 import afterTerrasse from "@assets/terrasseapres.png";
 
@@ -161,21 +161,21 @@ export default function ContactFormSection() {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-    
+
     const files = Array.from(e.dataTransfer.files);
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
-    
-    setFormData(prev => ({
+    const imageFiles = files.filter((file) => file.type.startsWith("image/"));
+
+    setFormData((prev) => ({
       ...prev,
-      images: [...prev.images, ...imageFiles]
+      images: [...prev.images, ...imageFiles],
     }));
   };
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      images: [...prev.images, ...files]
+      images: [...prev.images, ...files],
     }));
   };
 
@@ -443,7 +443,7 @@ export default function ContactFormSection() {
                             ou cliquez pour sélectionner
                           </span>
                         </label>
-                        
+
                         {formData.images.length > 0 && (
                           <div className="mt-3 text-xs text-[#59D14C]">
                             {formData.images.length} photo(s) sélectionnée(s)
