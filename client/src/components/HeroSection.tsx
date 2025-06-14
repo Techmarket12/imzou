@@ -35,9 +35,9 @@ export default function HeroSection() {
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">
                   L'entreprise <strong>aqua-toiture-facade</strong> est votre
-                  prestataire de confiance pour le nettoyage de toiture. Nous
+                  prestataire de confiance pour le nettoyage de toiture. <span className="text-[#59D14C] font-semibold">Nous
                   vous proposons une solution de nettoyage à l'extérieur à la
-                  vapeur et sans produit chimique à Tournai-en-Brie et ses
+                  vapeur et sans produit chimique</span> à Tournai-en-Brie et ses
                   alentours.
                 </p>
               </div>
@@ -87,7 +87,15 @@ export default function HeroSection() {
 
         {/* Video section */}
         <div className="relative h-[50vh] overflow-hidden">
-          <video autoPlay muted loop className="w-full h-full object-cover">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            disablePictureInPicture
+            controlsList="nodownload nofullscreen noremoteplayback"
+            className="w-full h-full object-cover"
+          >
             <source src={videoPath} type="video/mp4" />
             <img
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
@@ -118,8 +126,8 @@ export default function HeroSection() {
               aqua-toiture-facade
             </span>{" "}
             est votre prestataire de confiance pour le nettoyage de toiture.
-            Nous vous proposons une solution de nettoyage à l'extérieur à la
-            vapeur et sans produit chimique à Tournai-en-Brie et ses alentours.
+            <span className="text-[#59D14C] font-semibold"> Nous vous proposons une solution de nettoyage à l'extérieur à la
+            vapeur et sans produit chimique</span> à Tournai-en-Brie et ses alentours.
           </p>
 
           <Button
