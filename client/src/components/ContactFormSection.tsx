@@ -2,20 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
@@ -52,7 +40,7 @@ export default function ContactFormSection() {
     surfaceArea: "",
     message: "",
     urgency: "",
-    images: [],
+    images: []
   });
 
   const [dragActive, setDragActive] = useState(false);
@@ -66,18 +54,17 @@ export default function ContactFormSection() {
         },
         body: JSON.stringify(data),
       });
-
+      
       if (!response.ok) {
         throw new Error("Failed to submit contact form");
       }
-
+      
       return response.json();
     },
     onSuccess: () => {
       toast({
         title: "Demande envoyée !",
-        description:
-          "Nous vous contacterons dans les plus brefs délais pour votre devis gratuit.",
+        description: "Nous vous contacterons dans les plus brefs délais pour votre devis gratuit.",
       });
       setFormData({
         firstName: "",
@@ -92,7 +79,7 @@ export default function ContactFormSection() {
         surfaceArea: "",
         message: "",
         urgency: "",
-        images: [],
+        images: []
       });
     },
     onError: () => {
@@ -105,12 +92,12 @@ export default function ContactFormSection() {
   });
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(e.target.files || []);
-    setFormData((prev) => ({ ...prev, images: [...prev.images, ...files] }));
+    setFormData(prev => ({ ...prev, images: [...prev.images, ...files] }));
   };
 
   const handleDrag = (e: React.DragEvent) => {
@@ -127,15 +114,15 @@ export default function ContactFormSection() {
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
-
+    
     const files = Array.from(e.dataTransfer.files);
-    setFormData((prev) => ({ ...prev, images: [...prev.images, ...files] }));
+    setFormData(prev => ({ ...prev, images: [...prev.images, ...files] }));
   };
 
   const removeImage = (index: number) => {
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      images: prev.images.filter((_, i) => i !== index),
+      images: prev.images.filter((_, i) => i !== index)
     }));
   };
 
@@ -145,88 +132,65 @@ export default function ContactFormSection() {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-16 bg-gradient-to-br from-slate-800 via-gray-900 to-slate-900"
-    >
+    <section id="contact" className="py-16 bg-gradient-to-br from-slate-800 via-gray-900 to-slate-900">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left content */}
           <div className="space-y-8">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Demandez votre{" "}
-                <span className="text-[#59D14C]">devis gratuit</span>
+                Demandez votre <span className="text-[#59D14C]">devis gratuit</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Obtenez une estimation personnalisée pour vos travaux de
-                nettoyage. Notre équipe vous contactera dans les 24h pour une
-                évaluation gratuite.
+                Obtenez une estimation personnalisée pour vos travaux de nettoyage. 
+                Notre équipe vous contactera dans les 24h pour une évaluation gratuite.
               </p>
             </div>
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#27851E] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
                   <i className="fas fa-clock text-white"></i>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#849FE1] mb-2">
-                    Réponse rapide
-                  </h3>
-                  <p className="text-gray-300">
-                    Devis personnalisé sous 24h maximum
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Réponse rapide</h3>
+                  <p className="text-gray-300">Devis personnalisé sous 24h maximum</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#27851E] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
                   <i className="fas fa-calculator text-white"></i>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#849FE1] mb-2">
-                    Estimation gratuite
-                  </h3>
-                  <p className="text-gray-300">
-                    Aucun frais pour l'évaluation de vos besoins
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Estimation gratuite</h3>
+                  <p className="text-gray-300">Aucun frais pour l'évaluation de vos besoins</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#27851E] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
                   <i className="fas fa-handshake text-white"></i>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#849FE1] mb-2">
-                    Sans engagement
-                  </h3>
-                  <p className="text-gray-300">
-                    Aucune obligation d'achat après le devis
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Sans engagement</h3>
+                  <p className="text-gray-300">Aucune obligation d'achat après le devis</p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-[#27851E] rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0">
                   <i className="fas fa-map-marker-alt text-white"></i>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#849FE1] mb-2">
-                    Toute la Belgique
-                  </h3>
-                  <p className="text-gray-300">
-                    Interventions en Wallonie et à Bruxelles
-                  </p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Toute la Belgique</h3>
+                  <p className="text-gray-300">Interventions en Wallonie et à Bruxelles</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-gray-900 p-6 rounded-xl">
-              <h4 className="text-lg font-semibold text-white mb-4">
-                Nos coordonnées
-              </h4>
+              <h4 className="text-lg font-semibold text-white mb-4">Nos coordonnées</h4>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-phone text-[#59D14C]"></i>
@@ -234,15 +198,11 @@ export default function ContactFormSection() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-envelope text-[#59D14C]"></i>
-                  <span className="text-gray-300">
-                    contact@aqua-bob-leponge.be
-                  </span>
+                  <span className="text-gray-300">contact@aqua-bob-leponge.be</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-clock text-[#59D14C]"></i>
-                  <span className="text-gray-300">
-                    Lun-Ven: 8h-18h | Sam: 8h-12h
-                  </span>
+                  <span className="text-gray-300">Lun-Ven: 8h-18h | Sam: 8h-12h</span>
                 </div>
               </div>
             </div>
@@ -270,9 +230,7 @@ export default function ContactFormSection() {
                       <Input
                         required
                         value={formData.lastName}
-                        onChange={(e) =>
-                          handleInputChange("lastName", e.target.value)
-                        }
+                        onChange={(e) => handleInputChange("lastName", e.target.value)}
                         placeholder="Votre nom"
                         className="bg-gray-700 border-gray-600 text-white"
                       />
@@ -285,9 +243,7 @@ export default function ContactFormSection() {
                         type="tel"
                         required
                         value={formData.phone}
-                        onChange={(e) =>
-                          handleInputChange("phone", e.target.value)
-                        }
+                        onChange={(e) => handleInputChange("phone", e.target.value)}
                         placeholder="06 12 34 56 78"
                         className="bg-gray-700 border-gray-600 text-white"
                       />
@@ -302,9 +258,7 @@ export default function ContactFormSection() {
                       type="email"
                       required
                       value={formData.email}
-                      onChange={(e) =>
-                        handleInputChange("email", e.target.value)
-                      }
+                      onChange={(e) => handleInputChange("email", e.target.value)}
                       placeholder="votre@email.com"
                       className="bg-gray-700 border-gray-600 text-white"
                     />
@@ -317,9 +271,7 @@ export default function ContactFormSection() {
                     <Input
                       required
                       value={formData.city}
-                      onChange={(e) =>
-                        handleInputChange("city", e.target.value)
-                      }
+                      onChange={(e) => handleInputChange("city", e.target.value)}
                       placeholder="Votre ville"
                       className="bg-gray-700 border-gray-600 text-white"
                     />
@@ -329,28 +281,15 @@ export default function ContactFormSection() {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Type de service *
                     </label>
-                    <Select
-                      value={formData.serviceType}
-                      onValueChange={(value) =>
-                        handleInputChange("serviceType", value)
-                      }
-                    >
+                    <Select value={formData.serviceType} onValueChange={(value) => handleInputChange("serviceType", value)}>
                       <SelectTrigger className="bg-gray-700 border-gray-600 text-white">
                         <SelectValue placeholder="Choisissez un service" />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-700 border-gray-600">
-                        <SelectItem value="toiture" className="text-white">
-                          Nettoyage de toiture
-                        </SelectItem>
-                        <SelectItem value="facade" className="text-white">
-                          Nettoyage de façade
-                        </SelectItem>
-                        <SelectItem value="terrasse" className="text-white">
-                          Nettoyage de terrasse
-                        </SelectItem>
-                        <SelectItem value="multiple" className="text-white">
-                          Plusieurs services
-                        </SelectItem>
+                        <SelectItem value="toiture" className="text-white">Nettoyage de toiture</SelectItem>
+                        <SelectItem value="facade" className="text-white">Nettoyage de façade</SelectItem>
+                        <SelectItem value="terrasse" className="text-white">Nettoyage de terrasse</SelectItem>
+                        <SelectItem value="multiple" className="text-white">Plusieurs services</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -361,9 +300,7 @@ export default function ContactFormSection() {
                     </label>
                     <Textarea
                       value={formData.message}
-                      onChange={(e) =>
-                        handleInputChange("message", e.target.value)
-                      }
+                      onChange={(e) => handleInputChange("message", e.target.value)}
                       placeholder="Décrivez votre projet..."
                       rows={3}
                       className="bg-gray-700 border-gray-600 text-white"
@@ -377,8 +314,8 @@ export default function ContactFormSection() {
                     </label>
                     <div
                       className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
-                        dragActive
-                          ? "border-[#59D14C] bg-gray-700"
+                        dragActive 
+                          ? "border-[#59D14C] bg-gray-700" 
                           : "border-gray-600 hover:border-[#59D14C] bg-gray-700"
                       }`}
                       onDragEnter={handleDrag}
@@ -401,9 +338,7 @@ export default function ContactFormSection() {
                       <Button
                         type="button"
                         variant="outline"
-                        onClick={() =>
-                          document.getElementById("file-input")?.click()
-                        }
+                        onClick={() => document.getElementById("file-input")?.click()}
                         className="border-gray-600 text-gray-300 hover:bg-gray-600"
                       >
                         Choisir des fichiers
