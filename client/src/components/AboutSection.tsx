@@ -23,7 +23,7 @@ export default function AboutSection() {
           <div>
             <img 
               src={aboutImagePath} 
-              alt="Aqua-BOB-L'éponge - Nettoyage professionnel de toiture"
+              alt="aqua-toiture-facade - Nettoyage professionnel de toiture"
               className="rounded-xl shadow-lg w-full h-auto" 
             />
           </div>

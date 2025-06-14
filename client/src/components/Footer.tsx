@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-[#59D14C] mb-4">
-                Aqua-BOB-L'éponge
+                aqua-toiture-facade
               </h3>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Spécialiste du nettoyage écologique de toitures, terrasses et façades en Wallonie et Bruxelles. 
@@ -176,7 +176,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Aqua-BOB-L'éponge. Tous droits réservés.
+              © 2024 aqua-toiture-facade. Tous droits réservés.
             </div>
             
             <div className="flex flex-wrap gap-6 text-sm">

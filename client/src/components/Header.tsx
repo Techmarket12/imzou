@@ -42,7 +42,7 @@ export default function Header() {
           <div className="flex items-center">
             <img
               src={logoPath}
-              alt="Aqua-BOB-L'éponge"
+              alt="aqua-toiture-facade"
               className="h-12 w-auto"
             />
           </div>
