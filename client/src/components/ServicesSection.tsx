@@ -263,6 +263,23 @@ export default function ServicesSection() {
 
               {/* Groupe de droite - 2 matériaux */}
               <div className="flex flex-col gap-8">
+                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
+                  <div className="text-center">
+                    <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
+                      <img
+                        src={aspirationImg}
+                        alt="Système d'aspiration"
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
+                    <h4 className="text-white font-semibold mb-3 text-base">
+                      Système d'aspiration
+                    </h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Pour le nettoyage des gouttières
+                    </p>
+                  </div>
+                </div>
                 {/* Matériau 4 */}
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
@@ -284,23 +301,6 @@ export default function ServicesSection() {
                 </div>
 
                 {/* Matériau 5 */}
-                <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
-                  <div className="text-center">
-                    <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
-                      <img
-                        src={aspirationImg}
-                        alt="Système d'aspiration"
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                    </div>
-                    <h4 className="text-white font-semibold mb-3 text-base">
-                      Système d'aspiration
-                    </h4>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Pour le nettoyage des gouttières
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -325,9 +325,10 @@ export default function ServicesSection() {
               </Button>
               <Button
                 size="lg"
-                className="bg-[#25D366] text-white hover:bg-[#1eb855] border-0 font-semibold px-8"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-[#59D14C] font-semibold px-8"
               >
-                <i className="fab fa-whatsapp mr-2"></i>
+                <i className="fas fa-whatsapp mr-2"></i>
                 WhatsApp
               </Button>
             </div>
