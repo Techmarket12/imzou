@@ -6,6 +6,7 @@ import ServiceAreasSection from "@/components/ServiceAreasSection";
 import DetailedServicesSection from "@/components/DetailedServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import RealizationsSection from "@/components/RealizationsSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <DetailedServicesSection />
       <WhyChooseSection />
       <RealizationsSection />
+      <Footer />
     </div>
   );
 }
