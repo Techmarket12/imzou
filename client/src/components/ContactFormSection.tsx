@@ -22,9 +22,9 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
 // Import images for before/after comparisons
-import beforeToiture from "@assets/image_1749797801845.png";
-import afterToiture from "@assets/image_1749796907502.png";
-import beforeFacade from "@assets/image_1749797136347.png";
+import beforeToiture from "@assets/toiturebefore.png";
+import afterToiture from "@assets/toitureafter.png";
+import beforeFacade from "@assets/avantfacade.jpg";
 import afterFacade from "@assets/image_1749797965900.png";
 import beforeTerrasse from "@assets/image_1749797669448.png";
 import afterTerrasse from "@assets/image_1749797561345.png";
@@ -46,7 +46,17 @@ interface ContactFormData {
 }
 
 // Component for Before/After image comparison
-function BeforeAfterComparison({ beforeImg, afterImg, title }: { beforeImg: string, afterImg: string, title: string }) {
+function BeforeAfterComparison({
+  beforeImg,
+  afterImg,
+  title,
+  description,
+}: {
+  beforeImg: string;
+  afterImg: string;
+  title: string;
+  description: string;
+}) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
 
@@ -62,36 +72,36 @@ function BeforeAfterComparison({ beforeImg, afterImg, title }: { beforeImg: stri
   };
 
   return (
-    <div className="relative group">
+    <div className="relative group max-w-sm mx-auto">
       <h4 className="text-white font-semibold mb-3 text-center">{title}</h4>
-      <div 
-        className="relative w-full h-48 overflow-hidden rounded-xl cursor-col-resize"
+      <div
+        className="relative w-full h-40 overflow-hidden rounded-xl cursor-col-resize"
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseUp}
       >
         {/* After image (background) */}
-        <img 
-          src={afterImg} 
-          alt="Après" 
+        <img
+          src={afterImg}
+          alt="Après"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        
+
         {/* Before image (clipped) */}
-        <div 
+        <div
           className="absolute inset-0 overflow-hidden"
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
-          <img 
-            src={beforeImg} 
-            alt="Avant" 
+          <img
+            src={beforeImg}
+            alt="Avant"
             className="w-full h-full object-cover"
           />
         </div>
 
         {/* Slider line */}
-        <div 
+        <div
           className="absolute top-0 bottom-0 w-1 bg-white shadow-lg"
           style={{ left: `${sliderPosition}%` }}
         >
@@ -101,13 +111,18 @@ function BeforeAfterComparison({ beforeImg, afterImg, title }: { beforeImg: stri
         </div>
 
         {/* Labels */}
-        <div className="absolute top-4 left-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+        <div className="absolute top-3 left-3 bg-black/70 text-white px-2 py-1 rounded text-xs">
           Avant
         </div>
-        <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
+        <div className="absolute top-3 right-3 bg-black/70 text-white px-2 py-1 rounded text-xs">
           Après
         </div>
       </div>
+      
+      {/* Description text */}
+      <p className="text-gray-300 text-sm text-center mt-3 leading-relaxed">
+        {description}
+      </p>
     </div>
   );
 }
@@ -136,18 +151,21 @@ export default function ContactFormSection() {
     {
       title: "Nettoyage de Toiture",
       beforeImg: beforeToiture,
-      afterImg: afterToiture
+      afterImg: afterToiture,
+      description: "Nettoyage à la vapeur pour préserver l'intégrité de vos tuiles et ardoises sans produits chimiques agressifs."
     },
     {
-      title: "Nettoyage de Façade", 
+      title: "Nettoyage de Façade",
       beforeImg: beforeFacade,
-      afterImg: afterFacade
+      afterImg: afterFacade,
+      description: "Traitement à l'eau chaude haute pression pour éliminer salissures et mousses tout en respectant vos revêtements."
     },
     {
       title: "Nettoyage de Terrasse",
       beforeImg: beforeTerrasse,
-      afterImg: afterTerrasse
-    }
+      afterImg: afterTerrasse,
+      description: "Démoussage professionnel et protection durable pour redonner éclat et sécurité à vos espaces extérieurs."
+    },
   ];
 
   const submitMutation = useMutation({
@@ -261,6 +279,7 @@ export default function ContactFormSection() {
                   beforeImg={item.beforeImg}
                   afterImg={item.afterImg}
                   title={item.title}
+                  description={item.description}
                 />
               ))}
             </div>
@@ -343,10 +362,18 @@ export default function ContactFormSection() {
                         <SelectValue placeholder="Sélectionnez un service" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="toiture">Nettoyage de toiture</SelectItem>
-                        <SelectItem value="facade">Nettoyage de façade</SelectItem>
-                        <SelectItem value="terrasse">Nettoyage de terrasse</SelectItem>
-                        <SelectItem value="complet">Nettoyage complet</SelectItem>
+                        <SelectItem value="toiture">
+                          Nettoyage de toiture
+                        </SelectItem>
+                        <SelectItem value="facade">
+                          Nettoyage de façade
+                        </SelectItem>
+                        <SelectItem value="terrasse">
+                          Nettoyage de terrasse
+                        </SelectItem>
+                        <SelectItem value="complet">
+                          Nettoyage complet
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -394,9 +421,12 @@ export default function ContactFormSection() {
                 🌟 Transformez vos extérieurs dès aujourd'hui !
               </h3>
               <p className="text-white/90 text-sm">
-                Rejoignez plus de 500 clients satisfaits qui ont fait confiance à notre expertise écologique.
+                Rejoignez plus de 500 clients satisfaits qui ont fait confiance
+                à notre expertise écologique.
                 <br />
-                <strong>Devis gratuit sous 24h • Sans engagement • Résultats garantis</strong>
+                <strong>
+                  Devis gratuit sous 24h • Sans engagement • Résultats garantis
+                </strong>
               </p>
             </div>
           </div>
