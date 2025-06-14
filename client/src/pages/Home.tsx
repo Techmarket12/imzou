@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import DetailedServicesSection from "@/components/DetailedServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
+import RealizationsSection from "@/components/RealizationsSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ServiceAreasSection />
       <DetailedServicesSection />
       <WhyChooseSection />
+      <RealizationsSection />
     </div>
   );
 }
