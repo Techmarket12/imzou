@@ -138,8 +138,8 @@ export default function Footer() {
                 <i className="fas fa-envelope text-[#59D14C] mr-3 mt-1"></i>
                 <div>
                   <p className="text-gray-300">Email</p>
-                  <a href="mailto:contact@aqua-bob-eponge.be" className="text-white font-semibold hover:text-[#59D14C] transition-colors">
-                    contact@aqua-bob-eponge.be
+                  <a href="mailto:contact@aqua-toiture-facade.be" className="text-white font-semibold hover:text-[#59D14C] transition-colors">
+                    contact@aqua-toiture-facade.be
                   </a>
                 </div>
               </div>
