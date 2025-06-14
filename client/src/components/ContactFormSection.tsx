@@ -24,8 +24,10 @@ import { apiRequest } from "@/lib/queryClient";
 // Import images for before/after comparisons
 import beforeToiture from "@assets/toitureaprès.png";
 import afterToiture from "@assets/facadeavant.png";
-import beforeTerrasse from "@assets/terrasseavant.png";
-import afterTerrasse from "@assets/terrasseapres.png";
+import beforeFacade from "@assets/facade2avant.png";
+import afterFacade from "@assets/facade2apres.png";
+import beforeTerrasse from "@assets/terrasse2avant.png";
+import afterTerrasse from "@assets/terrasse2apres.png";
 
 interface ContactFormData {
   firstName: string;
@@ -187,8 +189,8 @@ export default function ContactFormSection() {
     },
     {
       title: "Nettoyage de Façade",
-      beforeImg: beforeFacade,
-      afterImg: afterFacade,
+      beforeImg: beforeToiture, // Using available image as placeholder
+      afterImg: afterToiture, // Using available image as placeholder
       description:
         "Traitement à l'eau chaude haute pression pour éliminer salissures et mousses tout en respectant vos revêtements.",
     },
