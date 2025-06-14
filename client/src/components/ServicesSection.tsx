@@ -205,7 +205,7 @@ export default function ServicesSection() {
                 {/* Matériau 1 */}
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
+                    <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={nacelleImg} 
                         alt="Nacelle élévatrice" 
@@ -222,7 +222,7 @@ export default function ServicesSection() {
                 {/* Matériau 2 */}
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
+                    <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={vapeurImg} 
                         alt="Nettoyeur vapeur" 
@@ -240,7 +240,7 @@ export default function ServicesSection() {
               {/* Matériau central */}
               <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-60 self-center">
                 <div className="text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
+                  <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                     <img 
                       src={pressionImg} 
                       alt="Nettoyeur haute pression" 
@@ -259,7 +259,7 @@ export default function ServicesSection() {
                 {/* Matériau 4 */}
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
+                    <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={produitsImg} 
                         alt="Produits d'entretien" 
@@ -276,7 +276,7 @@ export default function ServicesSection() {
                 {/* Matériau 5 */}
                 <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 w-72">
                   <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
+                    <div className="w-full h-48 mx-auto mb-6 rounded-lg overflow-hidden shadow-lg">
                       <img 
                         src={aspirationImg} 
                         alt="Système d'aspiration" 
