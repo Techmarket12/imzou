@@ -181,6 +181,85 @@ export default function ServicesSection() {
             ))}
           </div>
 
+          {/* Nos matériaux Section */}
+          <div className="mt-20 mb-16">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+                Nos <span className="text-[#59D14C]">Matériaux</span>
+              </h3>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Équipements professionnels de dernière génération pour garantir un travail de qualité et en toute sécurité
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 gap-6">
+              {/* Matériau 1 */}
+              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-tools text-[#59D14C] text-2xl"></i>
+                  </div>
+                  <h4 className="text-white font-semibold mb-3 text-sm">Nacelle élévatrice</h4>
+                  <p className="text-gray-300 text-xs leading-relaxed">
+                    Pour les nettoyages en hauteur jusqu'à 15 m
+                  </p>
+                </div>
+              </div>
+
+              {/* Matériau 2 */}
+              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-spray-can text-[#59D14C] text-2xl"></i>
+                  </div>
+                  <h4 className="text-white font-semibold mb-3 text-sm">Nettoyeur vapeur</h4>
+                  <p className="text-gray-300 text-xs leading-relaxed">
+                    Dernière génération pour un nettoyage en douceur et efficace de vos tuiles
+                  </p>
+                </div>
+              </div>
+
+              {/* Matériau 3 */}
+              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-tint text-[#59D14C] text-2xl"></i>
+                  </div>
+                  <h4 className="text-white font-semibold mb-3 text-sm">Nettoyeur haute pression</h4>
+                  <p className="text-gray-300 text-xs leading-relaxed">
+                    À eau chaude pour les façades et terrasses
+                  </p>
+                </div>
+              </div>
+
+              {/* Matériau 4 */}
+              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-flask text-[#59D14C] text-2xl"></i>
+                  </div>
+                  <h4 className="text-white font-semibold mb-3 text-sm">Produits d'entretien</h4>
+                  <p className="text-gray-300 text-xs leading-relaxed">
+                    Pour toiture, façade et terrasse assurant une longévité maximale
+                  </p>
+                </div>
+              </div>
+
+              {/* Matériau 5 */}
+              <div className="bg-gray-700/90 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="fas fa-vacuum text-[#59D14C] text-2xl"></i>
+                  </div>
+                  <h4 className="text-white font-semibold mb-3 text-sm">Système d'aspiration</h4>
+                  <p className="text-gray-300 text-xs leading-relaxed">
+                    Pour le nettoyage des gouttières
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Bottom CTA */}
           <div className="text-center bg-gradient-to-r from-[#59D14C] to-[hsl(160,84%,45%)] rounded-2xl p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">

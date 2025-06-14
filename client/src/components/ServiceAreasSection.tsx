@@ -125,9 +125,9 @@ export default function ServiceAreasSection() {
             Nos Zones d'<span className="text-[#59D14C]">Intervention</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            aqua-toiture-facade intervient dans toute la région de Bruxelles et
-            les deux provinces du Brabant pour vos travaux de nettoyage
-            professionnel.
+            Nous couvrons l'ensemble de ces zones avec une équipe mobile
+            professionnelle. Pour toute demande d'intervention, contactez-nous
+            pour un devis gratuit et personnalisé.
           </p>
         </div>
 
@@ -185,20 +185,6 @@ export default function ServiceAreasSection() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
-            <h4 className="text-xl font-semibold text-white mb-3">
-              <i className="fas fa-info-circle text-[#59D14C] mr-2"></i>
-              Information importante
-            </h4>
-            <p className="text-gray-300">
-              Nous couvrons l'ensemble de ces zones avec une équipe mobile
-              professionnelle. Pour toute demande d'intervention, contactez-nous
-              pour un devis gratuit et personnalisé.
-            </p>
-          </div>
         </div>
       </div>
     </section>
