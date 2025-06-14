@@ -2,20 +2,20 @@ import videoPath from "@assets/okokok.mp4";
 
 export default function DetailedServicesSection() {
   const detailedServices = [
-    "Nettoyage de toiture à la vapeur",
-    "Nettoyage mécanique de toiture",
-    "Nettoyage de skydom",
-    "Traitement hydrofuge incolore de toiture",
-    "Traitement hydrofuge coloré de toiture",
-    "Démoussage de toiture",
-    "Nettoyage de façade",
+    "Nettoyage de toiture à la vapeur (travail en hauteur)",
+    "Nettoyage mécanique de toiture (travail en hauteur)",
+    "Nettoyage de skydom (travail en hauteur)",
+    "Traitement hydrofuge incolore de toiture (travail en hauteur)",
+    "Traitement hydrofuge coloré de toiture (travail en hauteur)",
+    "Démoussage de toiture (travail en hauteur)",
+    "Nettoyage de façade (travail en hauteur)",
     "Nettoyage de sol",
-    "Traitement de toiture réflective",
-    "Nettoyage de monuments historiques",
+    "Traitement de toiture réflective (travail en hauteur)",
+    "Nettoyage de monuments historiques (travail en hauteur)",
     "Nettoyage de mobilier urbain",
-    "Nettoyage de panneaux solaires",
-    "Nettoyage de bâtiments industriels",
-    "Ravalement de façade",
+    "Nettoyage de panneaux solaires (travail en hauteur)",
+    "Nettoyage de bâtiments industriels (travail en hauteur)",
+    "Ravalement de façade (travail en hauteur)",
   ];
 
   return (

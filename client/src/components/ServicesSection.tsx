@@ -13,7 +13,7 @@ const services = [
     id: "toiture",
     title: "Nettoyage de Toiture",
     description:
-      "Redonnez éclat et longévité à votre toiture avec notre technologie vapeur haute pression.",
+      "Redonnez éclat et longévité à votre toiture avec notre technologie vapeur haute pression. Nos experts travaillent en hauteur en toute sécurité.",
     features: [
       "Démoussage complet",
       "Traitement anti-mousse",
@@ -30,7 +30,7 @@ const services = [
     id: "facade",
     title: "Nettoyage de Façade",
     description:
-      "Ravivez l'aspect neuf de votre façade grâce à nos techniques de nettoyage respectueuses.",
+      "Ravivez l'aspect neuf de votre façade grâce à nos techniques de nettoyage respectueuses. Nos experts travaillent en hauteur en toute sécurité.",
     features: [
       "Nettoyage haute pression",
       "Traitement des traces",
@@ -47,7 +47,7 @@ const services = [
     id: "terrasse",
     title: "Nettoyage de Terrasse",
     description:
-      "Retrouvez une terrasse impeccable et sécurisée pour profiter pleinement de vos extérieurs.",
+      "Retrouvez une terrasse impeccable et sécurisée pour profiter pleinement de vos extérieurs. Nos experts travaillent en hauteur en toute sécurité.",
     features: [
       "Démoussage profond",
       "Nettoyage joints",
