@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import DetailedServicesSection from "@/components/DetailedServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
+import AboutSection from "@/components/AboutSection";
 import RealizationsSection from "@/components/RealizationsSection";
 import Footer from "@/components/Footer";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <ServiceAreasSection />
       <DetailedServicesSection />
       <WhyChooseSection />
+      <AboutSection />
       <RealizationsSection />
       <Footer />
     </div>
