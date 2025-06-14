@@ -17,8 +17,8 @@ export default function Home() {
       <ContactFormSection />
       <ServicesSection />
       <ServiceAreasSection />
-      <DetailedServicesSection />
       <WhyChooseSection />
+      <DetailedServicesSection />
       <AboutSection />
       <RealizationsSection />
       <Footer />

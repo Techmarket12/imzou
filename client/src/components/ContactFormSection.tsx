@@ -189,8 +189,9 @@ export default function ContactFormSection() {
     },
     {
       title: "Nettoyage de Façade",
-      beforeImg: beforeToiture, // Using available image as placeholder
-      afterImg: afterToiture, // Using available image as placeholder
+
+      beforeImg: beforeFacade,
+      afterImg: afterFacade,
       description:
         "Traitement à l'eau chaude haute pression pour éliminer salissures et mousses tout en respectant vos revêtements.",
     },
