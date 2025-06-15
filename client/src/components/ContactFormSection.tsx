@@ -63,7 +63,11 @@ function BeforeAfterComparison({
   const handleStart = () => setIsDragging(true);
   const handleEnd = () => setIsDragging(false);
 
-  const updatePosition = (clientX: number, element: HTMLElement, forceUpdate = false) => {
+  const updatePosition = (
+    clientX: number,
+    element: HTMLElement,
+    forceUpdate = false,
+  ) => {
     if (!isDragging && !forceUpdate) return;
     const rect = element.getBoundingClientRect();
     const x = clientX - rect.left;
@@ -320,8 +324,8 @@ export default function ContactFormSection() {
           <div className="space-y-6">
             <Card className="bg-gray-800 border-gray-700 shadow-xl">
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl text-white">
-                  Demandez votre devis gratuit
+                <CardTitle className="text-5xl text-center text-[#59D14C]">
+                  Devis gratuit
                 </CardTitle>
                 <CardDescription className="text-gray-300 text-sm">
                   Quelques informations suffisent pour recevoir votre estimation
