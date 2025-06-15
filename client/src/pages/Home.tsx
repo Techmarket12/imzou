@@ -21,6 +21,7 @@ export default function Home() {
       <DetailedServicesSection />
       <AboutSection />
       <RealizationsSection />
+      <Footer />
     </div>
   );
 }
