@@ -12,32 +12,26 @@ export default function B2BServicesSection() {
   const enterprises = [
     {
       name: "Carrefour",
-      logo: "🛒",
       sector: "Grande distribution"
     },
     {
       name: "Delhaize",
-      logo: "🏪",
       sector: "Supermarché"
     },
     {
       name: "Aldi",
-      logo: "🛍️",
       sector: "Commerce"
     },
     {
       name: "Lidl",
-      logo: "🏬",
       sector: "Distribution"
     },
     {
       name: "Colruyt",
-      logo: "🛒",
       sector: "Retail"
     },
     {
       name: "Brico",
-      logo: "🔨",
       sector: "Bricolage"
     }
   ];
@@ -100,9 +94,8 @@ export default function B2BServicesSection() {
                   key={index}
                   className="bg-gray-700/50 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 text-center"
                 >
-                  <div className="text-4xl mb-3">{enterprise.logo}</div>
-                  <h4 className="text-white font-semibold text-sm mb-1">{enterprise.name}</h4>
-                  <p className="text-gray-400 text-xs">{enterprise.sector}</p>
+                  <h4 className="text-white font-semibold text-lg mb-2">{enterprise.name}</h4>
+                  <p className="text-gray-400 text-sm">{enterprise.sector}</p>
                 </div>
               ))}
             </div>
