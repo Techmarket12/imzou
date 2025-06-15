@@ -1,4 +1,4 @@
-import videoPath from "@assets/okokok.mp4";
+import videoPath from "@assets/video2.mp4";
 
 export default function DetailedServicesSection() {
   const detailedServices = [
@@ -83,7 +83,7 @@ export default function DetailedServicesSection() {
               >
                 <source src={videoPath} type="video/mp4" />
                 <img
-                  src="attached_assets/okokok.mp4"
+                  src="attached_assets/video2.mp4"
                   alt="Équipement professionnel de nettoyage"
                   className="w-full h-[600px] object-cover"
                 />
