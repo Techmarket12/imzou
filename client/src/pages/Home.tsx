@@ -5,6 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ServiceAreasSection from "@/components/ServiceAreasSection";
 import DetailedServicesSection from "@/components/DetailedServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
+import B2BServicesSection from "@/components/B2BServicesSection";
 import AboutSection from "@/components/AboutSection";
 import RealizationsSection from "@/components/RealizationsSection";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
       <ServicesSection />
       <ServiceAreasSection />
       <WhyChooseSection />
+      <B2BServicesSection />
       <DetailedServicesSection />
       <AboutSection />
       <RealizationsSection />
