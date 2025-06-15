@@ -9,6 +9,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 
 // Import images for equipment
+import toitureImg from "@assets/toiture2.png";
+import facadeImg from "@assets/facade2.png";
+import terrasseImge from "@assets/terrasse2.png";
 import nacelleImg from "@assets/realisation_079034xlarge.jpg";
 import vapeurImg from "@assets/maxresdefault.jpg";
 import pressionImg from "@assets/natursteinfassade.webp";
@@ -27,8 +30,7 @@ const services = [
       "Nettoyage des gouttières",
       "Inspection gratuite",
     ],
-    image:
-      "https://media.discordapp.net/attachments/1086348722159484928/1382706144056967359/AJfQ9KS2eqv_ZV1aRHu0gDN4P46BqovFZjvlcQAHU3n7HPrlGpKOEEtM58LnvLHuQ1O7InuSH_SWbeQkEJ7GJtd286991CYzpaog7qm0qc6qIWFQuWEYtRA_S45SaLlSsYGSS4pKPUeLDgWe7ScMZRMarfxTbGVTgcTPmqR09H_r02gVbuSnlQs1024.png?ex=684cc9b2&is=684b7832&hm=68c97c0bb355e4021f492477f01a05edd010bed7e2b813c8c9aa748a906a47e8&=&format=webp&quality=lossless&width=930&height=930",
+    image: toitureImg,
     price: "À partir de 8€/m²",
     duration: "1-2 jours",
     icon: "fas fa-home",
@@ -44,8 +46,7 @@ const services = [
       "Protection anti-salissure",
       "Tous types de matériaux",
     ],
-    image:
-      "https://cdn.discordapp.com/attachments/1086348722159484928/1383009818767261696/AJfQ9KTYs8lp2SUNrq00ZDv9mJ6GERIfkMldtQz375-ed577Ya92Ps2BrL4hxfO0oDkBOa6SQMaClIX3qIpMBjr_0pVsCxYfwnERUM3oeYxqETGW2SVwL0RvBQdHJrMctJGnH7qELMQiEXhLY9bBd7lwJBMlC1Jr6MGWpjnpfj9cJi1W2WcK9Qs1024.png?ex=684d3bc3&is=684bea43&hm=f402a98b3cdb37be3bd3d1ba65972f84feba365de3acf0bf1858d5031baa6b7e&",
+    image: facadeImg,
     price: "À partir de 12€/m²",
     duration: "1-3 jours",
     icon: "fas fa-building",
@@ -61,8 +62,7 @@ const services = [
       "Traitement anti-glisse",
       "Finition protective",
     ],
-    image:
-      "https://media.discordapp.net/attachments/1086348722159484928/1382734753773387786/AJfQ9KTVkAFGgspGYpN6Zpn2DuRljdDkCDItMRAlvrR15T9mdtEU3QhUGN-rxix74o3xArtjtfUiBJtDfxc9HieGFgDN68HNtxMdTu-MoW_mnPsg9Z5Ly20rYSI-lP6eThOWpLhdfrm7OFkdPwmaPQg12ajlZWcApCO55afDijK9kARe38qG3Qs1024.png?ex=684ce457&is=684b92d7&hm=496119527350e8ee803fdfd214b20acccce45d0b30b93351cc69128b53e49d11&=&format=webp&quality=lossless&width=930&height=930",
+    image: terrasseImge,
     price: "À partir de 15€/m²",
     duration: "1 jour",
     icon: "fas fa-th-large",
@@ -327,8 +327,12 @@ export default function ServicesSection() {
                 size="lg"
                 className="bg-[#25D366] text-white hover:bg-[#1eb855] border-0 font-semibold px-8 shadow-lg"
               >
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                <svg
+                  className="w-5 h-5 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
                 </svg>
                 WhatsApp
               </Button>
