@@ -60,26 +60,45 @@ function BeforeAfterComparison({
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleMouseDown = () => setIsDragging(true);
-  const handleMouseUp = () => setIsDragging(false);
+  const handleStart = () => setIsDragging(true);
+  const handleEnd = () => setIsDragging(false);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!isDragging) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
+  const updatePosition = (clientX: number, element: HTMLElement, forceUpdate = false) => {
+    if (!isDragging && !forceUpdate) return;
+    const rect = element.getBoundingClientRect();
+    const x = clientX - rect.left;
     const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100));
     setSliderPosition(percentage);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    updatePosition(e.clientX, e.currentTarget);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    if (e.touches.length > 0) {
+      updatePosition(e.touches[0].clientX, e.currentTarget, true);
+    }
+  };
+
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    updatePosition(e.clientX, e.currentTarget, true);
   };
 
   return (
     <div className="relative group max-w-sm mx-auto">
       <h4 className="text-white font-semibold mb-3 text-center">{title}</h4>
       <div
-        className="relative w-full h-40 overflow-hidden rounded-xl cursor-col-resize"
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
+        className="relative w-full h-40 overflow-hidden rounded-xl cursor-col-resize touch-none select-none"
+        onMouseDown={handleStart}
+        onMouseUp={handleEnd}
         onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseUp}
+        onMouseLeave={handleEnd}
+        onTouchStart={handleStart}
+        onTouchEnd={handleEnd}
+        onTouchMove={handleTouchMove}
+        onClick={handleClick}
       >
         {/* After image (background) */}
         <img
