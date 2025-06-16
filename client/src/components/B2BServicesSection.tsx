@@ -1,4 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Card,
   CardContent,
@@ -7,8 +17,30 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+
+interface B2BFormData {
+  companyName: string;
+  contactName: string;
+  email: string;
+  phone: string;
+  serviceType: string;
+  message: string;
+}
 
 export default function B2BServicesSection() {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState<B2BFormData>({
+    companyName: "",
+    contactName: "",
+    email: "",
+    phone: "",
+    serviceType: "",
+    message: "",
+  });
+
   const enterprises = [
     {
       name: "Carrefour",
@@ -36,6 +68,64 @@ export default function B2BServicesSection() {
     }
   ];
 
+  const submitMutation = useMutation({
+    mutationFn: async (data: B2BFormData) => {
+      const response = await fetch("/api/contact-b2b", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit B2B request");
+      }
+
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Demande envoyée !",
+        description: "Nous vous recontacterons dans les plus brefs délais.",
+      });
+      setFormData({
+        companyName: "",
+        contactName: "",
+        email: "",
+        phone: "",
+        serviceType: "",
+        message: "",
+      });
+    },
+    onError: () => {
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!formData.companyName || !formData.contactName || !formData.email || !formData.phone) {
+      toast({
+        title: "Champs requis manquants",
+        description: "Veuillez remplir tous les champs obligatoires.",
+        variant: "destructive",
+      });
+      return;
+    }
+    submitMutation.mutate(formData);
+  };
+
+  const handleInputChange = (field: keyof B2BFormData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+
+
   const b2bServices = [
     {
       icon: "fas fa-building",
@@ -57,13 +147,6 @@ export default function B2BServicesSection() {
     }
   ];
 
-  const scrollToContact = () => {
-    const element = document.getElementById("contact");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900">
       <div className="container mx-auto px-4">
@@ -83,19 +166,45 @@ export default function B2BServicesSection() {
             </p>
           </div>
 
-          {/* Logos des entreprises */}
+          {/* Logos des entreprises - 6 emplacements pour logos */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Ils nous font confiance
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {enterprises.map((enterprise, index) => (
+              {[1, 2, 3, 4, 5, 6].map((index) => (
                 <div 
                   key={index}
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 text-center"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 flex items-center justify-center aspect-square"
                 >
-                  <h4 className="text-white font-semibold text-lg mb-2">{enterprise.name}</h4>
-                  <p className="text-gray-400 text-sm">{enterprise.sector}</p>
+                  {/* Emplacement pour logo {index} - Remplacez par <img src="path/to/logo{index}.png" alt="Logo entreprise {index}" className="w-full h-full object-contain" /> */}
+                  <div className="text-gray-400 text-center">
+                    <div className="text-3xl mb-2">📋</div>
+                    <span className="text-xs">Logo {index}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Section images - 3 emplacements pour images */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white text-center mb-8">
+              Nos réalisations B2B
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[1, 2, 3].map((index) => (
+                <div 
+                  key={index}
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600 hover:border-[#59D14C]/50 transition-all duration-300 aspect-video"
+                >
+                  {/* Emplacement pour image {index} - Remplacez par <img src="path/to/image{index}.jpg" alt="Réalisation B2B {index}" className="w-full h-full object-cover" /> */}
+                  <div className="w-full h-full flex items-center justify-center bg-gray-800/50">
+                    <div className="text-gray-400 text-center">
+                      <div className="text-4xl mb-2">🖼️</div>
+                      <span className="text-sm">Image {index}</span>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -193,32 +302,91 @@ export default function B2BServicesSection() {
                 </div>
               </div>
               
-              <div className="text-center">
+              <div>
                 <div className="bg-[#59D14C]/10 rounded-2xl p-8 border border-[#59D14C]/20">
-                  <h4 className="text-2xl font-bold text-white mb-4">
+                  <h4 className="text-2xl font-bold text-white mb-4 text-center">
                     Devis personnalisé
                   </h4>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-gray-300 mb-6 text-center">
                     Obtenez une offre adaptée à vos besoins spécifiques
                   </p>
-                  <div className="space-y-3">
+                  
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <Input
+                        placeholder="Nom de l'entreprise *"
+                        value={formData.companyName}
+                        onChange={(e) => handleInputChange('companyName', e.target.value)}
+                        className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
+                        required
+                      />
+                      <Input
+                        placeholder="Nom du contact *"
+                        value={formData.contactName}
+                        onChange={(e) => handleInputChange('contactName', e.target.value)}
+                        className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
+                        required
+                      />
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <Input
+                        type="email"
+                        placeholder="Email professionnel *"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
+                        required
+                      />
+                      <Input
+                        type="tel"
+                        placeholder="Téléphone *"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
+                        required
+                      />
+                    </div>
+                    
+                    <Select onValueChange={(value) => handleInputChange('serviceType', value)}>
+                      <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
+                        <SelectValue placeholder="Type de service" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="facade">Nettoyage de façades</SelectItem>
+                        <SelectItem value="toiture">Nettoyage de toitures</SelectItem>
+                        <SelectItem value="espaces-exterieurs">Espaces extérieurs</SelectItem>
+                        <SelectItem value="contrat-entretien">Contrat d'entretien</SelectItem>
+                        <SelectItem value="autre">Autre</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    
+                    <Textarea
+                      placeholder="Message (besoins spécifiques, fréquence...)"
+                      value={formData.message}
+                      onChange={(e) => handleInputChange('message', e.target.value)}
+                      className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 min-h-[80px]"
+                    />
+                    
                     <Button
+                      type="submit"
                       size="lg"
+                      disabled={submitMutation.isPending}
                       className="w-full bg-[#59D14C] hover:bg-[#27851E] text-white font-semibold"
-                      onClick={scrollToContact}
                     >
-                      <i className="fas fa-envelope mr-2"></i>
-                      Demander un devis B2B
+                      {submitMutation.isPending ? (
+                        <>
+                          <i className="fas fa-spinner fa-spin mr-2"></i>
+                          Envoi en cours...
+                        </>
+                      ) : (
+                        <>
+                          <i className="fas fa-paper-plane mr-2"></i>
+                          Envoyer la demande
+                        </>
+                      )}
                     </Button>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="w-full border-[#59D14C] text-[#59D14C] hover:bg-[#59D14C] hover:text-white"
-                    >
-                      <i className="fas fa-phone mr-2"></i>
-                      Appel commercial
-                    </Button>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
