@@ -22,12 +22,12 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
 // Import des images directement
-import gallerie1 from "@assets/gallerie1.png";
-import gallerie2 from "@assets/gallerie2.png";
-import gallerie3 from "@assets/gallerie3.png";
-import gallerie4 from "@assets/gallerie4.png";
-import gallerie5 from "@assets/gallerie5.png";
-import gallerie6 from "@assets/gallerie6.png";
+import gallerie1 from "@assets/carrefour.png";
+import gallerie2 from "@assets/delhaize.png";
+import gallerie3 from "@assets/brico.png";
+import gallerie4 from "@assets/hubo.png";
+import gallerie5 from "@assets/totalenergies.png";
+import gallerie6 from "@assets/Q8.png";
 
 interface B2BFormData {
   companyName: string;
@@ -51,19 +51,19 @@ export default function B2BServicesSection() {
 
   // LOGOS DES ENTREPRISES - Remplacez les chemins par vos vrais logos
   const companyLogos = [
-    gallerie1, // Logo 1 
-    gallerie2, // Logo 2  
+    gallerie1, // Logo 1
+    gallerie2, // Logo 2
     gallerie3, // Logo 3
     gallerie4, // Logo 4
     gallerie5, // Logo 5
-    gallerie6  // Logo 6
+    gallerie6, // Logo 6
   ];
 
   // IMAGES DES RÉALISATIONS B2B - Utilisez vos vraies images
   const realizationImages = [
     gallerie1, // Image 1 - changez par votre vraie image
     gallerie2, // Image 2 - changez par votre vraie image
-    gallerie3  // Image 3 - changez par votre vraie image
+    gallerie3, // Image 3 - changez par votre vraie image
   ];
 
   const enterprises = [
