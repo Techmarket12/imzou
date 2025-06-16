@@ -41,6 +41,23 @@ export default function B2BServicesSection() {
     message: "",
   });
 
+  // LOGOS DES ENTREPRISES - Remplacez les chemins par vos vrais logos
+  const companyLogos = [
+    "/path/to/logo1.png", // Logo 1 - remplacez par le vrai chemin
+    "/path/to/logo2.png", // Logo 2 - remplacez par le vrai chemin
+    "/path/to/logo3.png", // Logo 3 - remplacez par le vrai chemin
+    "/path/to/logo4.png", // Logo 4 - remplacez par le vrai chemin
+    "/path/to/logo5.png", // Logo 5 - remplacez par le vrai chemin
+    "/path/to/logo6.png"  // Logo 6 - remplacez par le vrai chemin
+  ];
+
+  // IMAGES DES RÉALISATIONS B2B - Remplacez les chemins par vos vraies images
+  const realizationImages = [
+    "/path/to/realisation1.jpg", // Image 1 - remplacez par le vrai chemin
+    "/path/to/realisation2.jpg", // Image 2 - remplacez par le vrai chemin
+    "/path/to/realisation3.jpg"  // Image 3 - remplacez par le vrai chemin
+  ];
+
   const enterprises = [
     {
       name: "Carrefour",
@@ -172,16 +189,28 @@ export default function B2BServicesSection() {
               Ils nous font confiance
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {[1, 2, 3, 4, 5, 6].map((index) => (
+              {companyLogos.map((logoPath, index) => (
                 <div 
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 flex items-center justify-center aspect-square"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 flex items-center justify-center aspect-square"
                 >
-                  {/* Emplacement pour logo {index} - Remplacez par <img src="path/to/logo{index}.png" alt="Logo entreprise {index}" className="w-full h-full object-contain" /> */}
-                  <div className="text-gray-400 text-center">
-                    <div className="text-3xl mb-2">📋</div>
-                    <span className="text-xs">Logo {index}</span>
-                  </div>
+                  <img 
+                    src={logoPath} 
+                    alt={`Logo entreprise ${index + 1}`} 
+                    className="w-full h-full object-contain max-w-full max-h-full"
+                    onError={(e) => {
+                      // Si l'image ne se charge pas, afficher un placeholder
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent && !parent.querySelector('.placeholder-text')) {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'placeholder-text text-gray-400 text-center';
+                        placeholder.innerHTML = `<div class="text-2xl mb-2">🏢</div><span class="text-xs">Logo ${index + 1}</span>`;
+                        parent.appendChild(placeholder);
+                      }
+                    }}
+                  />
                 </div>
               ))}
             </div>
@@ -193,18 +222,28 @@ export default function B2BServicesSection() {
               Nos réalisations B2B
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((index) => (
+              {realizationImages.map((imagePath, index) => (
                 <div 
                   key={index}
                   className="bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600 hover:border-[#59D14C]/50 transition-all duration-300 aspect-video"
                 >
-                  {/* Emplacement pour image {index} - Remplacez par <img src="path/to/image{index}.jpg" alt="Réalisation B2B {index}" className="w-full h-full object-cover" /> */}
-                  <div className="w-full h-full flex items-center justify-center bg-gray-800/50">
-                    <div className="text-gray-400 text-center">
-                      <div className="text-4xl mb-2">🖼️</div>
-                      <span className="text-sm">Image {index}</span>
-                    </div>
-                  </div>
+                  <img 
+                    src={imagePath} 
+                    alt={`Réalisation B2B ${index + 1}`} 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Si l'image ne se charge pas, afficher un placeholder
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent && !parent.querySelector('.placeholder-text')) {
+                        const placeholder = document.createElement('div');
+                        placeholder.className = 'placeholder-text w-full h-full flex items-center justify-center bg-gray-800/50';
+                        placeholder.innerHTML = `<div class="text-gray-400 text-center"><div class="text-3xl mb-2">🖼️</div><span class="text-sm">Réalisation ${index + 1}</span></div>`;
+                        parent.appendChild(placeholder);
+                      }
+                    }}
+                  />
                 </div>
               ))}
             </div>
