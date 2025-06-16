@@ -21,6 +21,14 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
+// Import des images directement
+import gallerie1 from "@assets/gallerie1.png";
+import gallerie2 from "@assets/gallerie2.png";
+import gallerie3 from "@assets/gallerie3.png";
+import gallerie4 from "@assets/gallerie4.png";
+import gallerie5 from "@assets/gallerie5.png";
+import gallerie6 from "@assets/gallerie6.png";
+
 interface B2BFormData {
   companyName: string;
   contactName: string;
@@ -43,46 +51,46 @@ export default function B2BServicesSection() {
 
   // LOGOS DES ENTREPRISES - Remplacez les chemins par vos vrais logos
   const companyLogos = [
-    "/path/to/logo1.png", // Logo 1 - remplacez par le vrai chemin
-    "/path/to/logo2.png", // Logo 2 - remplacez par le vrai chemin
-    "/path/to/logo3.png", // Logo 3 - remplacez par le vrai chemin
-    "/path/to/logo4.png", // Logo 4 - remplacez par le vrai chemin
-    "/path/to/logo5.png", // Logo 5 - remplacez par le vrai chemin
-    "/path/to/logo6.png"  // Logo 6 - remplacez par le vrai chemin
+    gallerie1, // Logo 1 
+    gallerie2, // Logo 2  
+    gallerie3, // Logo 3
+    gallerie4, // Logo 4
+    gallerie5, // Logo 5
+    gallerie6  // Logo 6
   ];
 
-  // IMAGES DES RÉALISATIONS B2B - Remplacez les chemins par vos vraies images
+  // IMAGES DES RÉALISATIONS B2B - Utilisez vos vraies images
   const realizationImages = [
-    "/path/to/realisation1.jpg", // Image 1 - remplacez par le vrai chemin
-    "/path/to/realisation2.jpg", // Image 2 - remplacez par le vrai chemin
-    "/path/to/realisation3.jpg"  // Image 3 - remplacez par le vrai chemin
+    gallerie1, // Image 1 - changez par votre vraie image
+    gallerie2, // Image 2 - changez par votre vraie image
+    gallerie3  // Image 3 - changez par votre vraie image
   ];
 
   const enterprises = [
     {
       name: "Carrefour",
-      sector: "Grande distribution"
+      sector: "Grande distribution",
     },
     {
       name: "Delhaize",
-      sector: "Supermarché"
+      sector: "Supermarché",
     },
     {
       name: "Aldi",
-      sector: "Commerce"
+      sector: "Commerce",
     },
     {
       name: "Lidl",
-      sector: "Distribution"
+      sector: "Distribution",
     },
     {
       name: "Colruyt",
-      sector: "Retail"
+      sector: "Retail",
     },
     {
       name: "Brico",
-      sector: "Bricolage"
-    }
+      sector: "Bricolage",
+    },
   ];
 
   const submitMutation = useMutation({
@@ -126,7 +134,12 @@ export default function B2BServicesSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.companyName || !formData.contactName || !formData.email || !formData.phone) {
+    if (
+      !formData.companyName ||
+      !formData.contactName ||
+      !formData.email ||
+      !formData.phone
+    ) {
       toast({
         title: "Champs requis manquants",
         description: "Veuillez remplir tous les champs obligatoires.",
@@ -138,30 +151,28 @@ export default function B2BServicesSection() {
   };
 
   const handleInputChange = (field: keyof B2BFormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
-
-
 
   const b2bServices = [
     {
       icon: "fas fa-building",
       title: "Nettoyage de façades commerciales",
       description: "Redonnez une image professionnelle à vos points de vente",
-      features: ["Devantures", "Vitres", "Enseignes", "Murs extérieurs"]
+      features: ["Devantures", "Vitres", "Enseignes", "Murs extérieurs"],
     },
     {
       icon: "fas fa-home",
       title: "Entretien de toitures professionnelles",
       description: "Préservez l'intégrité de vos bâtiments commerciaux",
-      features: ["Centres commerciaux", "Entrepôts", "Bureaux", "Usines"]
+      features: ["Centres commerciaux", "Entrepôts", "Bureaux", "Usines"],
     },
     {
       icon: "fas fa-road",
       title: "Nettoyage d'espaces extérieurs",
       description: "Maintenez la propreté de vos zones de passage",
-      features: ["Parkings", "Terrasses", "Cours", "Aires de livraison"]
-    }
+      features: ["Parkings", "Terrasses", "Cours", "Aires de livraison"],
+    },
   ];
 
   return (
@@ -178,8 +189,9 @@ export default function B2BServicesSection() {
               <span className="text-[#59D14C]">entreprises</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-              Faites confiance à notre expertise pour l'entretien de vos locaux commerciaux. 
-              Nous intervenons pour les grandes enseignes, PME et collectivités.
+              Faites confiance à notre expertise pour l'entretien de vos locaux
+              commerciaux. Nous intervenons pour les grandes enseignes, PME et
+              collectivités.
             </p>
           </div>
 
@@ -190,22 +202,26 @@ export default function B2BServicesSection() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {companyLogos.map((logoPath, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 flex items-center justify-center aspect-square"
                 >
-                  <img 
-                    src={logoPath} 
-                    alt={`Logo entreprise ${index + 1}`} 
+                  <img
+                    src={logoPath}
+                    alt={`Logo entreprise ${index + 1}`}
                     className="w-full h-full object-contain max-w-full max-h-full"
                     onError={(e) => {
                       // Si l'image ne se charge pas, afficher un placeholder
                       const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
+                      target.style.display = "none";
                       const parent = target.parentElement;
-                      if (parent && !parent.querySelector('.placeholder-text')) {
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'placeholder-text text-gray-400 text-center';
+                      if (
+                        parent &&
+                        !parent.querySelector(".placeholder-text")
+                      ) {
+                        const placeholder = document.createElement("div");
+                        placeholder.className =
+                          "placeholder-text text-gray-400 text-center";
                         placeholder.innerHTML = `<div class="text-2xl mb-2">🏢</div><span class="text-xs">Logo ${index + 1}</span>`;
                         parent.appendChild(placeholder);
                       }
@@ -223,22 +239,26 @@ export default function B2BServicesSection() {
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               {realizationImages.map((imagePath, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600 hover:border-[#59D14C]/50 transition-all duration-300 aspect-video"
                 >
-                  <img 
-                    src={imagePath} 
-                    alt={`Réalisation B2B ${index + 1}`} 
+                  <img
+                    src={imagePath}
+                    alt={`Réalisation B2B ${index + 1}`}
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       // Si l'image ne se charge pas, afficher un placeholder
                       const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
+                      target.style.display = "none";
                       const parent = target.parentElement;
-                      if (parent && !parent.querySelector('.placeholder-text')) {
-                        const placeholder = document.createElement('div');
-                        placeholder.className = 'placeholder-text w-full h-full flex items-center justify-center bg-gray-800/50';
+                      if (
+                        parent &&
+                        !parent.querySelector(".placeholder-text")
+                      ) {
+                        const placeholder = document.createElement("div");
+                        placeholder.className =
+                          "placeholder-text w-full h-full flex items-center justify-center bg-gray-800/50";
                         placeholder.innerHTML = `<div class="text-gray-400 text-center"><div class="text-3xl mb-2">🖼️</div><span class="text-sm">Réalisation ${index + 1}</span></div>`;
                         parent.appendChild(placeholder);
                       }
@@ -258,7 +278,9 @@ export default function B2BServicesSection() {
               >
                 <CardHeader className="text-center pb-4">
                   <div className="w-20 h-20 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <i className={`${service.icon} text-[#59D14C] text-3xl`}></i>
+                    <i
+                      className={`${service.icon} text-[#59D14C] text-3xl`}
+                    ></i>
                   </div>
                   <CardTitle className="text-2xl text-white group-hover:text-[#59D14C] transition-colors">
                     {service.title}
@@ -304,43 +326,59 @@ export default function B2BServicesSection() {
                       <i className="fas fa-calendar-alt text-white text-sm"></i>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Interventions planifiées</h4>
-                      <p className="text-gray-300 text-sm">Contrats d'entretien régulier adaptés à vos besoins</p>
+                      <h4 className="text-white font-semibold mb-1">
+                        Interventions planifiées
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        Contrats d'entretien régulier adaptés à vos besoins
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-8 h-8 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <i className="fas fa-clock text-white text-sm"></i>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Horaires flexibles</h4>
-                      <p className="text-gray-300 text-sm">Intervention en dehors des heures d'ouverture</p>
+                      <h4 className="text-white font-semibold mb-1">
+                        Horaires flexibles
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        Intervention en dehors des heures d'ouverture
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-8 h-8 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <i className="fas fa-file-invoice text-white text-sm"></i>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Facturation simplifiée</h4>
-                      <p className="text-gray-300 text-sm">Devis détaillés et facturation mensuelle</p>
+                      <h4 className="text-white font-semibold mb-1">
+                        Facturation simplifiée
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        Devis détaillés et facturation mensuelle
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4">
                     <div className="w-8 h-8 bg-[#59D14C] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <i className="fas fa-shield-alt text-white text-sm"></i>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1">Assurance complète</h4>
-                      <p className="text-gray-300 text-sm">Couverture professionnelle pour tous nos services</p>
+                      <h4 className="text-white font-semibold mb-1">
+                        Assurance complète
+                      </h4>
+                      <p className="text-gray-300 text-sm">
+                        Couverture professionnelle pour tous nos services
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <div className="bg-[#59D14C]/10 rounded-2xl p-8 border border-[#59D14C]/20">
                   <h4 className="text-2xl font-bold text-white mb-4 text-center">
@@ -349,31 +387,37 @@ export default function B2BServicesSection() {
                   <p className="text-gray-300 mb-6 text-center">
                     Obtenez une offre adaptée à vos besoins spécifiques
                   </p>
-                  
+
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid md:grid-cols-2 gap-4">
                       <Input
                         placeholder="Nom de l'entreprise *"
                         value={formData.companyName}
-                        onChange={(e) => handleInputChange('companyName', e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("companyName", e.target.value)
+                        }
                         className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                         required
                       />
                       <Input
                         placeholder="Nom du contact *"
                         value={formData.contactName}
-                        onChange={(e) => handleInputChange('contactName', e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("contactName", e.target.value)
+                        }
                         className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                         required
                       />
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-4">
                       <Input
                         type="email"
                         placeholder="Email professionnel *"
                         value={formData.email}
-                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
                         className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                         required
                       />
@@ -381,32 +425,48 @@ export default function B2BServicesSection() {
                         type="tel"
                         placeholder="Téléphone *"
                         value={formData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("phone", e.target.value)
+                        }
                         className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                         required
                       />
                     </div>
-                    
-                    <Select onValueChange={(value) => handleInputChange('serviceType', value)}>
+
+                    <Select
+                      onValueChange={(value) =>
+                        handleInputChange("serviceType", value)
+                      }
+                    >
                       <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
                         <SelectValue placeholder="Type de service" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="facade">Nettoyage de façades</SelectItem>
-                        <SelectItem value="toiture">Nettoyage de toitures</SelectItem>
-                        <SelectItem value="espaces-exterieurs">Espaces extérieurs</SelectItem>
-                        <SelectItem value="contrat-entretien">Contrat d'entretien</SelectItem>
+                        <SelectItem value="facade">
+                          Nettoyage de façades
+                        </SelectItem>
+                        <SelectItem value="toiture">
+                          Nettoyage de toitures
+                        </SelectItem>
+                        <SelectItem value="espaces-exterieurs">
+                          Espaces extérieurs
+                        </SelectItem>
+                        <SelectItem value="contrat-entretien">
+                          Contrat d'entretien
+                        </SelectItem>
                         <SelectItem value="autre">Autre</SelectItem>
                       </SelectContent>
                     </Select>
-                    
+
                     <Textarea
                       placeholder="Message (besoins spécifiques, fréquence...)"
                       value={formData.message}
-                      onChange={(e) => handleInputChange('message', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("message", e.target.value)
+                      }
                       className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 min-h-[80px]"
                     />
-                    
+
                     <Button
                       type="submit"
                       size="lg"
