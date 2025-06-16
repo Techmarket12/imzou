@@ -28,6 +28,9 @@ import gallerie3 from "@assets/brico.png";
 import gallerie4 from "@assets/hubo.png";
 import gallerie5 from "@assets/totalenergies.png";
 import gallerie6 from "@assets/Q8.png";
+import gallerie7 from "@assets/brico.webp";
+import gallerie8 from "@assets/station.jpg";
+import gallerie9 from "@assets/commerce.webp";
 
 interface B2BFormData {
   companyName: string;
@@ -61,9 +64,9 @@ export default function B2BServicesSection() {
 
   // IMAGES DES RÉALISATIONS B2B - Utilisez vos vraies images
   const realizationImages = [
-    gallerie1, // Image 1 - changez par votre vraie image
-    gallerie2, // Image 2 - changez par votre vraie image
-    gallerie3, // Image 3 - changez par votre vraie image
+    gallerie7, // Image 1 - changez par votre vraie image
+    gallerie8, // Image 2 - changez par votre vraie image
+    gallerie9, // Image 3 - changez par votre vraie image
   ];
 
   const enterprises = [
