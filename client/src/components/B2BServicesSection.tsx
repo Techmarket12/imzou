@@ -21,16 +21,8 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
-// Import des images directement
-import gallerie1 from "@assets/carrefour.png";
-import gallerie2 from "@assets/delhaize.png";
-import gallerie3 from "@assets/Brico_logo.svg.png";
-import gallerie4 from "@assets/hubo.png";
-import gallerie5 from "@assets/totalenergies.png";
-import gallerie6 from "@assets/Q8.png";
-import gallerie7 from "@assets/brico.png";
-import gallerie8 from "@assets/station.jpg";
-import gallerie9 from "@assets/commerce.webp";
+// Placeholder paths for company logos and images
+// Replace these with actual image URLs when available
 
 interface B2BFormData {
   companyName: string;
@@ -52,21 +44,21 @@ export default function B2BServicesSection() {
     message: "",
   });
 
-  // LOGOS DES ENTREPRISES - Remplacez les chemins par vos vrais logos
+  // LOGOS DES ENTREPRISES - Remplacez les URLs par vos vrais logos
   const companyLogos = [
-    gallerie1, // Logo 1
-    gallerie2, // Logo 2
-    gallerie3, // Logo 3
-    gallerie4, // Logo 4
-    gallerie5, // Logo 5
-    gallerie6, // Logo 6
+    "https://via.placeholder.com/150x150/59D14C/ffffff?text=Logo+1", // Logo 1
+    "https://via.placeholder.com/150x150/59D14C/ffffff?text=Logo+2", // Logo 2
+    "https://via.placeholder.com/150x150/59D14C/ffffff?text=Logo+3", // Logo 3
+    "https://via.placeholder.com/150x150/59D14C/ffffff?text=Logo+4", // Logo 4
+    "https://via.placeholder.com/150x150/59D14C/ffffff?text=Logo+5", // Logo 5
+    "https://via.placeholder.com/150x150/59D14C/ffffff?text=Logo+6", // Logo 6
   ];
 
   // IMAGES DES RÉALISATIONS B2B - Utilisez vos vraies images
   const realizationImages = [
-    gallerie7, // Image 1 - changez par votre vraie image
-    gallerie8, // Image 2 - changez par votre vraie image
-    gallerie9, // Image 3 - changez par votre vraie image
+    "https://via.placeholder.com/400x300/334155/ffffff?text=Réalisation+1", // Image 1 - changez par votre vraie image
+    "https://via.placeholder.com/400x300/334155/ffffff?text=Réalisation+2", // Image 2 - changez par votre vraie image
+    "https://via.placeholder.com/400x300/334155/ffffff?text=Réalisation+3", // Image 3 - changez par votre vraie image
   ];
 
   const enterprises = [
@@ -347,7 +339,7 @@ export default function B2BServicesSection() {
                         Horaires flexibles
                       </h4>
                       <p className="text-gray-300 text-sm">
-                        Intervention en dehors des heures d'ouverture
+                        Interventions en dehors des heures d'ouverture
                       </p>
                     </div>
                   </div>
@@ -446,19 +438,34 @@ export default function B2BServicesSection() {
                         <SelectValue placeholder="Type de service souhaité" />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-700 border-gray-600">
-                        <SelectItem value="facades" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="facades"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Nettoyage de façades
                         </SelectItem>
-                        <SelectItem value="toitures" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="toitures"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Entretien de toitures
                         </SelectItem>
-                        <SelectItem value="exterieurs" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="exterieurs"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Nettoyage d'espaces extérieurs
                         </SelectItem>
-                        <SelectItem value="contrat" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="contrat"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Contrat d'entretien régulier
                         </SelectItem>
-                        <SelectItem value="autre" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="autre"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Autre demande
                         </SelectItem>
                       </SelectContent>
