@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 // Import images for equipment
 import toitureImg from "@assets/toiture2.png";
 import facadeImg from "@assets/facade2.png";
-import terrasseImge from "@assets/terrasse2.png";
+import terrasseImge from "@assets/terrasse3.jpg";
 import nacelleImg from "@assets/realisation_079034xlarge.jpg";
 import vapeurImg from "@assets/maxresdefault.jpg";
 import pressionImg from "@assets/natursteinfassade.webp";

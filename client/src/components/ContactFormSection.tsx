@@ -26,8 +26,8 @@ import beforeToiture from "@assets/toitureaprès.png";
 import afterToiture from "@assets/facadeavant.png";
 import beforeFacade from "@assets/facade2avant.png";
 import afterFacade from "@assets/facade2apres.png";
-import beforeTerrasse from "@assets/terrasse2avant.png";
-import afterTerrasse from "@assets/terrasse2apres.png";
+import beforeTerrasse from "@assets/terrasseavant.png";
+import afterTerrasse from "@assets/terrasseapres.png";
 
 interface ContactFormData {
   firstName: string;

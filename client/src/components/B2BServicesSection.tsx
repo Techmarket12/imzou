@@ -22,12 +22,15 @@ import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 
 // Import des images directement
-import gallerie1 from "@assets/gallerie1.png";
-import gallerie2 from "@assets/gallerie2.png";
-import gallerie3 from "@assets/gallerie3.png";
-import gallerie4 from "@assets/gallerie4.png";
-import gallerie5 from "@assets/gallerie5.png";
-import gallerie6 from "@assets/gallerie6.png";
+import gallerie1 from "@assets/carrefour.png";
+import gallerie2 from "@assets/delhaize.png";
+import gallerie3 from "@assets/Brico_logo.svg.png";
+import gallerie4 from "@assets/hubo.png";
+import gallerie5 from "@assets/totalenergies.png";
+import gallerie6 from "@assets/Q8.png";
+import gallerie7 from "@assets/brico.png";
+import gallerie8 from "@assets/station.jpg";
+import gallerie9 from "@assets/commerce.webp";
 
 interface B2BFormData {
   companyName: string;
@@ -51,19 +54,19 @@ export default function B2BServicesSection() {
 
   // LOGOS DES ENTREPRISES - Remplacez les chemins par vos vrais logos
   const companyLogos = [
-    gallerie1, // Logo 1 
-    gallerie2, // Logo 2  
+    gallerie1, // Logo 1
+    gallerie2, // Logo 2
     gallerie3, // Logo 3
     gallerie4, // Logo 4
     gallerie5, // Logo 5
-    gallerie6  // Logo 6
+    gallerie6, // Logo 6
   ];
 
   // IMAGES DES RÉALISATIONS B2B - Utilisez vos vraies images
   const realizationImages = [
-    gallerie1, // Image 1 - changez par votre vraie image
-    gallerie2, // Image 2 - changez par votre vraie image
-    gallerie3  // Image 3 - changez par votre vraie image
+    gallerie7, // Image 1 - changez par votre vraie image
+    gallerie8, // Image 2 - changez par votre vraie image
+    gallerie9, // Image 3 - changez par votre vraie image
   ];
 
   const enterprises = [
@@ -241,7 +244,7 @@ export default function B2BServicesSection() {
               {realizationImages.map((imagePath, index) => (
                 <div
                   key={index}
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600 hover:border-[#59D14C]/50 transition-all duration-300 aspect-video"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600 hover:border-[#59D14C]/50 transition-all duration-300 h-80"
                 >
                   <img
                     src={imagePath}
