@@ -24,11 +24,11 @@ import { apiRequest } from "@/lib/queryClient";
 // Import des images directement
 import gallerie1 from "@assets/carrefour.png";
 import gallerie2 from "@assets/delhaize.png";
-import gallerie3 from "@assets/brico.png";
+import gallerie3 from "@assets/Brico_logo.svg.png";
 import gallerie4 from "@assets/hubo.png";
 import gallerie5 from "@assets/totalenergies.png";
 import gallerie6 from "@assets/Q8.png";
-import gallerie7 from "@assets/brico.webp";
+import gallerie7 from "@assets/brico.png";
 import gallerie8 from "@assets/station.jpg";
 import gallerie9 from "@assets/commerce.webp";
 
@@ -244,7 +244,7 @@ export default function B2BServicesSection() {
               {realizationImages.map((imagePath, index) => (
                 <div
                   key={index}
-                  className="bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600 hover:border-[#59D14C]/50 transition-all duration-300 aspect-video"
+                  className="bg-gray-700/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-600 hover:border-[#59D14C]/50 transition-all duration-300 h-80"
                 >
                   <img
                     src={imagePath}
