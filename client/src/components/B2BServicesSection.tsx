@@ -437,32 +437,35 @@ export default function B2BServicesSection() {
                     </div>
 
                     <Select
+                      value={formData.serviceType}
                       onValueChange={(value) =>
                         handleInputChange("serviceType", value)
                       }
                     >
                       <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
-                        <SelectValue placeholder="Type de service" />
+                        <SelectValue placeholder="Type de service souhaité" />
                       </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="facade">
+                      <SelectContent className="bg-gray-700 border-gray-600">
+                        <SelectItem value="facades" className="text-white hover:bg-gray-600">
                           Nettoyage de façades
                         </SelectItem>
-                        <SelectItem value="toiture">
-                          Nettoyage de toitures
+                        <SelectItem value="toitures" className="text-white hover:bg-gray-600">
+                          Entretien de toitures
                         </SelectItem>
-                        <SelectItem value="espaces-exterieurs">
-                          Espaces extérieurs
+                        <SelectItem value="exterieurs" className="text-white hover:bg-gray-600">
+                          Nettoyage d'espaces extérieurs
                         </SelectItem>
-                        <SelectItem value="contrat-entretien">
-                          Contrat d'entretien
+                        <SelectItem value="contrat" className="text-white hover:bg-gray-600">
+                          Contrat d'entretien régulier
                         </SelectItem>
-                        <SelectItem value="autre">Autre</SelectItem>
+                        <SelectItem value="autre" className="text-white hover:bg-gray-600">
+                          Autre demande
+                        </SelectItem>
                       </SelectContent>
                     </Select>
 
                     <Textarea
-                      placeholder="Message (besoins spécifiques, fréquence...)"
+                      placeholder="Message (optionnel)"
                       value={formData.message}
                       onChange={(e) =>
                         handleInputChange("message", e.target.value)
@@ -472,9 +475,8 @@ export default function B2BServicesSection() {
 
                     <Button
                       type="submit"
-                      size="lg"
                       disabled={submitMutation.isPending}
-                      className="w-full bg-[#59D14C] hover:bg-[#27851E] text-white font-semibold"
+                      className="w-full bg-[#59D14C] hover:bg-[#4AC93D] text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50"
                     >
                       {submitMutation.isPending ? (
                         <>
