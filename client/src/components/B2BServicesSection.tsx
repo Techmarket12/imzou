@@ -347,7 +347,7 @@ export default function B2BServicesSection() {
                         Horaires flexibles
                       </h4>
                       <p className="text-gray-300 text-sm">
-                        Intervention en dehors des heures d'ouverture
+                        Interventions en dehors des heures d'ouverture
                       </p>
                     </div>
                   </div>
@@ -446,19 +446,34 @@ export default function B2BServicesSection() {
                         <SelectValue placeholder="Type de service souhaité" />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-700 border-gray-600">
-                        <SelectItem value="facades" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="facades"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Nettoyage de façades
                         </SelectItem>
-                        <SelectItem value="toitures" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="toitures"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Entretien de toitures
                         </SelectItem>
-                        <SelectItem value="exterieurs" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="exterieurs"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Nettoyage d'espaces extérieurs
                         </SelectItem>
-                        <SelectItem value="contrat" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="contrat"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Contrat d'entretien régulier
                         </SelectItem>
-                        <SelectItem value="autre" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="autre"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Autre demande
                         </SelectItem>
                       </SelectContent>
