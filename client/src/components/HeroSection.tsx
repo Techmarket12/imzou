@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import logoPath from "@assets/image_1749795372312.png";
-import videoPath from "@assets/Toiture_Nettoyage_Haute_Pression_1749794531300.webm";
+import videoPath from "@assets/video_hero.mp4";
+import fallbackImage from "@assets/toiture2.png";
 
 export default function HeroSection() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -40,7 +44,8 @@ export default function HeroSection() {
                     Nous vous proposons une solution de nettoyage à l'extérieur
                     à la vapeur et sans produit chimique
                   </span>{" "}
-                  à Tournai-en-Brie et ses alentours.
+                  à Bruxelles capitale, Brabant Wallon, Braband Flamand et ses
+                  alentours.
                 </p>
               </div>
 
@@ -62,15 +67,21 @@ export default function HeroSection() {
                     autoPlay
                     muted
                     loop
+                    preload="metadata"
                     className="w-full h-full object-cover"
+                    poster={fallbackImage}
+                    onLoadedData={() => setVideoLoaded(true)}
+                    onError={() => setVideoLoaded(false)}
                   >
                     <source src={videoPath} type="video/mp4" />
-                    <img
-                      src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
-                      alt="Vue aérienne d'un nettoyage de toiture avec tuiles oranges"
-                      className="w-full h-full object-cover"
-                    />
                   </video>
+                  {!videoLoaded && (
+                    <img
+                      src={fallbackImage}
+                      alt="Nettoyage de toiture professionnel"
+                      className="w-full h-full object-cover absolute inset-0"
+                    />
+                  )}
                 </div>
               </div>
             </div>
@@ -92,17 +103,23 @@ export default function HeroSection() {
             muted
             loop
             playsInline
+            preload="metadata"
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback"
             className="w-full h-full object-cover"
+            poster={fallbackImage}
+            onLoadedData={() => setVideoLoaded(true)}
+            onError={() => setVideoLoaded(false)}
           >
             <source src={videoPath} type="video/mp4" />
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
-              alt="Vue aérienne d'un nettoyage de toiture avec tuiles oranges"
-              className="w-full h-full object-cover"
-            />
           </video>
+          {!videoLoaded && (
+            <img
+              src={fallbackImage}
+              alt="Nettoyage de toiture professionnel"
+              className="w-full h-full object-cover absolute inset-0"
+            />
+          )}
 
           {/* Play button */}
 
@@ -131,7 +148,8 @@ export default function HeroSection() {
               Nous vous proposons une solution de nettoyage à l'extérieur à la
               vapeur et sans produit chimique
             </span>{" "}
-            à Tournai-en-Brie et ses alentours.
+            à Bruxelles capitale, Brabant Wallon, Braband Flamand et ses
+            Alentours.
           </p>
 
           <Button

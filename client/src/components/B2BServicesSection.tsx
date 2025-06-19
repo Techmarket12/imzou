@@ -30,7 +30,7 @@ import gallerie5 from "@assets/totalenergies.png";
 import gallerie6 from "@assets/Q8.png";
 import gallerie7 from "@assets/brico.png";
 import gallerie8 from "@assets/q8_img.png";
-import gallerie9 from "@assets/delhaize_img.png";
+import gallerie9 from "@assets/delhaize_img2.png.jpg";
 
 interface B2BFormData {
   companyName: string;
