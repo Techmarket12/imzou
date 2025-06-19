@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import logoPath from "@assets/image_1749795372312.png";
-import videoPath from "@assets/Toiture_Nettoyage_Haute_Pression_1749794531300.mp4";
+import videoPath from "@assets/Toiture_Nettoyage_Haute_Pression_1749794531300.webm";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -35,10 +35,12 @@ export default function HeroSection() {
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">
                   L'entreprise <strong>aqua-toiture-facade</strong> est votre
-                  prestataire de confiance pour le nettoyage de toiture. <span className="text-[#59D14C] font-semibold">Nous
-                  vous proposons une solution de nettoyage à l'extérieur à la
-                  vapeur et sans produit chimique</span> à Tournai-en-Brie et ses
-                  alentours.
+                  prestataire de confiance pour le nettoyage de toiture.{" "}
+                  <span className="text-[#59D14C] font-semibold">
+                    Nous vous proposons une solution de nettoyage à l'extérieur
+                    à la vapeur et sans produit chimique
+                  </span>{" "}
+                  à Tournai-en-Brie et ses alentours.
                 </p>
               </div>
 
@@ -69,8 +71,6 @@ export default function HeroSection() {
                       className="w-full h-full object-cover"
                     />
                   </video>
-
-
                 </div>
               </div>
             </div>
@@ -87,10 +87,10 @@ export default function HeroSection() {
 
         {/* Video section */}
         <div className="relative h-[50vh] overflow-hidden">
-          <video 
-            autoPlay 
-            muted 
-            loop 
+          <video
+            autoPlay
+            muted
+            loop
             playsInline
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback"
@@ -126,8 +126,12 @@ export default function HeroSection() {
               aqua-toiture-facade
             </span>{" "}
             est votre prestataire de confiance pour le nettoyage de toiture.
-            <span className="text-[#59D14C] font-semibold"> Nous vous proposons une solution de nettoyage à l'extérieur à la
-            vapeur et sans produit chimique</span> à Tournai-en-Brie et ses alentours.
+            <span className="text-[#59D14C] font-semibold">
+              {" "}
+              Nous vous proposons une solution de nettoyage à l'extérieur à la
+              vapeur et sans produit chimique
+            </span>{" "}
+            à Tournai-en-Brie et ses alentours.
           </p>
 
           <Button
