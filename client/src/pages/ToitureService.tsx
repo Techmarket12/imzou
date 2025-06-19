@@ -188,7 +188,7 @@ export default function ToitureService() {
       
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${toitureHero})` }}
@@ -198,11 +198,11 @@ export default function ToitureService() {
             <Badge className="bg-[#59D14C] text-white px-6 py-3 mb-8 text-lg font-semibold">
               SERVICE SPÉCIALISÉ TOITURE
             </Badge>
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               Nettoyage et Entretien de{" "}
-              <span className="text-[#59D14C]">Toiture</span>
+              <span className="text-[#59D14C] drop-shadow-2xl">Toiture</span>
             </h1>
-            <p className="text-xl text-gray-200 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
               Prolongez la durée de vie de votre toiture avec nos services professionnels. 
               Démoussage, nettoyage des gouttières et traitement préventif par des experts certifiés.
             </p>
