@@ -113,7 +113,6 @@ export default function ToitureService() {
     e.preventDefault();
     if (
       !formData.firstName ||
-      !formData.lastName ||
       !formData.email ||
       !formData.phone
     ) {
@@ -731,27 +730,9 @@ export default function ToitureService() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <Input
-                    placeholder="Prénom *"
+                    placeholder="Nom complet *"
                     value={formData.firstName}
                     onChange={(e) => handleInputChange("firstName", e.target.value)}
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                    required
-                  />
-                  <Input
-                    placeholder="Nom *"
-                    value={formData.lastName}
-                    onChange={(e) => handleInputChange("lastName", e.target.value)}
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                    required
-                  />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Input
-                    type="email"
-                    placeholder="Email *"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
                     className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                     required
                   />
@@ -766,88 +747,26 @@ export default function ToitureService() {
                 </div>
 
                 <Input
-                  placeholder="Adresse"
-                  value={formData.address}
-                  onChange={(e) => handleInputChange("address", e.target.value)}
+                  type="email"
+                  placeholder="Email *"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
+                  className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
+                  required
+                />
+
+                <Input
+                  placeholder="Ville"
+                  value={formData.city}
+                  onChange={(e) => handleInputChange("city", e.target.value)}
                   className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                 />
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Input
-                    placeholder="Ville"
-                    value={formData.city}
-                    onChange={(e) => handleInputChange("city", e.target.value)}
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                  />
-                  <Input
-                    placeholder="Code postal"
-                    value={formData.postalCode}
-                    onChange={(e) => handleInputChange("postalCode", e.target.value)}
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                  />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Select
-                    value={formData.toitureType}
-                    onValueChange={(value) => handleInputChange("toitureType", value)}
-                  >
-                    <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
-                      <SelectValue placeholder="Type de toiture" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-gray-700 border-gray-600">
-                      <SelectItem value="tuiles" className="text-white hover:bg-gray-600">Tuiles</SelectItem>
-                      <SelectItem value="ardoise" className="text-white hover:bg-gray-600">Ardoise</SelectItem>
-                      <SelectItem value="zinc" className="text-white hover:bg-gray-600">Zinc</SelectItem>
-                      <SelectItem value="bac-acier" className="text-white hover:bg-gray-600">Bac acier</SelectItem>
-                      <SelectItem value="autre" className="text-white hover:bg-gray-600">Autre</SelectItem>
-                    </SelectContent>
-                  </Select>
-
-                  <Input
-                    placeholder="Surface approximative (m²)"
-                    value={formData.surfaceArea}
-                    onChange={(e) => handleInputChange("surfaceArea", e.target.value)}
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                  />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Select
-                    value={formData.lastCleaning}
-                    onValueChange={(value) => handleInputChange("lastCleaning", value)}
-                  >
-                    <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
-                      <SelectValue placeholder="Dernier nettoyage" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-gray-700 border-gray-600">
-                      <SelectItem value="jamais" className="text-white hover:bg-gray-600">Jamais</SelectItem>
-                      <SelectItem value="1-2-ans" className="text-white hover:bg-gray-600">Il y a 1-2 ans</SelectItem>
-                      <SelectItem value="3-5-ans" className="text-white hover:bg-gray-600">Il y a 3-5 ans</SelectItem>
-                      <SelectItem value="plus-5-ans" className="text-white hover:bg-gray-600">Plus de 5 ans</SelectItem>
-                    </SelectContent>
-                  </Select>
-
-                  <Select
-                    value={formData.urgency}
-                    onValueChange={(value) => handleInputChange("urgency", value)}
-                  >
-                    <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
-                      <SelectValue placeholder="Urgence" />
-                    </SelectTrigger>
-                    <SelectContent className="bg-gray-700 border-gray-600">
-                      <SelectItem value="pas-urgent" className="text-white hover:bg-gray-600">Pas urgent</SelectItem>
-                      <SelectItem value="dans-le-mois" className="text-white hover:bg-gray-600">Dans le mois</SelectItem>
-                      <SelectItem value="urgent" className="text-white hover:bg-gray-600">Urgent</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
                 <Textarea
-                  placeholder="Message ou détails supplémentaires"
+                  placeholder="Décrivez brièvement votre projet (optionnel)"
                   value={formData.message}
                   onChange={(e) => handleInputChange("message", e.target.value)}
-                  className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 min-h-[120px]"
+                  className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 min-h-[100px]"
                 />
 
                 <Button

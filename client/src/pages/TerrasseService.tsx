@@ -1432,31 +1432,11 @@ export default function TerrasseService() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <Input
-                    placeholder="Prénom *"
+                    placeholder="Nom complet *"
                     value={formData.firstName}
                     onChange={(e) =>
                       handleInputChange("firstName", e.target.value)
                     }
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                    required
-                  />
-                  <Input
-                    placeholder="Nom *"
-                    value={formData.lastName}
-                    onChange={(e) =>
-                      handleInputChange("lastName", e.target.value)
-                    }
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                    required
-                  />
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Input
-                    type="email"
-                    placeholder="Email *"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
                     className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                     required
                   />
@@ -1471,28 +1451,20 @@ export default function TerrasseService() {
                 </div>
 
                 <Input
-                  placeholder="Adresse"
-                  value={formData.address}
-                  onChange={(e) => handleInputChange("address", e.target.value)}
+                  type="email"
+                  placeholder="Email *"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange("email", e.target.value)}
                   className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
+                  required
                 />
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Input
-                    placeholder="Ville"
-                    value={formData.city}
-                    onChange={(e) => handleInputChange("city", e.target.value)}
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                  />
-                  <Input
-                    placeholder="Code postal"
-                    value={formData.postalCode}
-                    onChange={(e) =>
-                      handleInputChange("postalCode", e.target.value)
-                    }
-                    className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
-                  />
-                </div>
+                <Input
+                  placeholder="Ville"
+                  value={formData.city}
+                  onChange={(e) => handleInputChange("city", e.target.value)}
+                  className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
+                />
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <Select
