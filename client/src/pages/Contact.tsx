@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Import des images
 import facadeImg from "@assets/facade2.png";
@@ -76,6 +78,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gray-900">
+      <Header />
       {/* Hero Section */}
       <section 
         className="relative h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
@@ -482,6 +485,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

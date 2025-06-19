@@ -6,6 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { apiRequest } from "@/lib/queryClient";
 
 // Import des images
@@ -86,6 +88,7 @@ export default function B2BServices() {
 
   return (
     <div className="min-h-screen bg-gray-900">
+      <Header />
       {/* Hero Section */}
       <section 
         className="relative h-screen flex items-center justify-center bg-cover bg-center bg-fixed"
@@ -640,6 +643,8 @@ export default function B2BServices() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }
