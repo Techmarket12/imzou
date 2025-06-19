@@ -100,19 +100,11 @@ export default function HeroSection() {
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback"
             className="w-full h-full object-cover"
-            poster={fallbackImage}
             onLoadedData={() => setVideoLoaded(true)}
             onError={() => setVideoLoaded(false)}
           >
             <source src={videoPath} type="video/mp4" />
           </video>
-          {!videoLoaded && (
-            <img
-              src={fallbackImage}
-              alt="Nettoyage de toiture professionnel"
-              className="w-full h-full object-cover absolute inset-0"
-            />
-          )}
 
           {/* Play button */}
 
