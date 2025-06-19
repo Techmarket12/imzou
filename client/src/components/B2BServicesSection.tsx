@@ -29,8 +29,8 @@ import gallerie4 from "@assets/hubo.png";
 import gallerie5 from "@assets/totalenergies.png";
 import gallerie6 from "@assets/Q8.png";
 import gallerie7 from "@assets/brico.png";
-import gallerie8 from "@assets/station.jpg";
-import gallerie9 from "@assets/commerce.webp";
+import gallerie8 from "@assets/q8_img.png";
+import gallerie9 from "@assets/delhaize_img.png";
 
 interface B2BFormData {
   companyName: string;
@@ -446,19 +446,34 @@ export default function B2BServicesSection() {
                         <SelectValue placeholder="Type de service souhaité" />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-700 border-gray-600">
-                        <SelectItem value="facades" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="facades"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Nettoyage de façades
                         </SelectItem>
-                        <SelectItem value="toitures" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="toitures"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Entretien de toitures
                         </SelectItem>
-                        <SelectItem value="exterieurs" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="exterieurs"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Nettoyage d'espaces extérieurs
                         </SelectItem>
-                        <SelectItem value="contrat" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="contrat"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Contrat d'entretien régulier
                         </SelectItem>
-                        <SelectItem value="autre" className="text-white hover:bg-gray-600">
+                        <SelectItem
+                          value="autre"
+                          className="text-white hover:bg-gray-600"
+                        >
                           Autre demande
                         </SelectItem>
                       </SelectContent>
