@@ -242,7 +242,7 @@ export default function TerrasseService() {
       
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/70"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${terrasseHero})` }}
@@ -252,11 +252,11 @@ export default function TerrasseService() {
             <Badge className="bg-[#59D14C] text-white px-6 py-3 mb-8 text-lg font-semibold">
               SERVICE SPÉCIALISÉ TERRASSE
             </Badge>
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               Nettoyage et Entretien de{" "}
-              <span className="text-[#59D14C]">Terrasse</span>
+              <span className="text-[#59D14C] drop-shadow-2xl">Terrasse</span>
             </h1>
-            <p className="text-xl text-gray-200 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
               Retrouvez une terrasse impeccable et sécurisée pour profiter pleinement de vos extérieurs. 
               Démoussage, nettoyage haute pression et traitement anti-glisse par des professionnels.
             </p>
