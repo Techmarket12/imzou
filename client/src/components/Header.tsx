@@ -28,7 +28,8 @@ export default function Header() {
     { label: "Nettoyage Toitures", href: "/services/toiture", id: "nav-toitures", isRoute: true },
     { label: "Nettoyage Façades", href: "/services/facade", id: "nav-facades", isRoute: true },
     { label: "Nettoyage Terrasses", href: "/services/terrasse", id: "nav-terrasses", isRoute: true },
-    { label: "Services B2B", href: "entreprises", id: "nav-entreprises", isRoute: false },
+    { label: "Services B2B", href: "/services/b2b", id: "nav-b2b", isRoute: true },
+    { label: "Contact", href: "/contact", id: "nav-contact", isRoute: true },
   ];
 
   return (
