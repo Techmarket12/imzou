@@ -69,7 +69,7 @@ export default function HeroSection() {
                     loop
                     preload="metadata"
                     className="w-full h-full object-cover"
-                    poster={fallbackImage}
+                  
                     onLoadedData={() => setVideoLoaded(true)}
                     onError={() => setVideoLoaded(false)}
                   >
