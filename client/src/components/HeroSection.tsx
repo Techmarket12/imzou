@@ -75,13 +75,6 @@ export default function HeroSection() {
                   >
                     <source src={videoPath} type="video/mp4" />
                   </video>
-                  {!videoLoaded && (
-                    <img
-                      src={fallbackImage}
-                      alt="Nettoyage de toiture professionnel"
-                      className="w-full h-full object-cover absolute inset-0"
-                    />
-                  )}
                 </div>
               </div>
             </div>
