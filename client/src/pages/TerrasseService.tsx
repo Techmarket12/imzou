@@ -83,7 +83,8 @@ export default function TerrasseService() {
     onSuccess: () => {
       toast({
         title: "Demande envoyée !",
-        description: "Nous vous recontacterons dans les plus brefs délais pour votre devis terrasse.",
+        description:
+          "Nous vous recontacterons dans les plus brefs délais pour votre devis terrasse.",
       });
       setFormData({
         firstName: "",
@@ -135,26 +136,50 @@ export default function TerrasseService() {
     {
       icon: "fas fa-broom",
       title: "Démoussage Profond",
-      description: "Élimination complète des mousses, algues et lichens qui rendent votre terrasse glissante et dangereuse",
-      features: ["Traitement des joints", "Élimination racines", "Action préventive", "Finition soignée"],
+      description:
+        "Élimination complète des mousses, algues et lichens qui rendent votre terrasse glissante et dangereuse",
+      features: [
+        "Traitement des joints",
+        "Élimination racines",
+        "Action préventive",
+        "Finition soignée",
+      ],
     },
     {
       icon: "fas fa-tint",
       title: "Nettoyage Haute Pression",
-      description: "Redonnez éclat et propreté à votre terrasse avec notre équipement professionnel haute performance",
-      features: ["Pression adaptée", "Buses spécialisées", "Respect matériaux", "Séchage optimal"],
+      description:
+        "Redonnez éclat et propreté à votre terrasse avec notre équipement professionnel haute performance",
+      features: [
+        "Pression adaptée",
+        "Buses spécialisées",
+        "Respect matériaux",
+        "Séchage optimal",
+      ],
     },
     {
       icon: "fas fa-shield-alt",
       title: "Traitement Anti-Glisse",
-      description: "Application d'un traitement spécialisé pour une sécurité optimale, même par temps humide",
-      features: ["Sécurité maximale", "Transparence totale", "Durée 3-5 ans", "Tous temps"],
+      description:
+        "Application d'un traitement spécialisé pour une sécurité optimale, même par temps humide",
+      features: [
+        "Sécurité maximale",
+        "Transparence totale",
+        "Durée 3-5 ans",
+        "Tous temps",
+      ],
     },
     {
       icon: "fas fa-tools",
       title: "Réfection Joints",
-      description: "Remplacement des joints dégradés pour une étanchéité parfaite et un aspect esthétique impeccable",
-      features: ["Déjointoyage précis", "Mortier adapté", "Étanchéité garantie", "Finition parfaite"],
+      description:
+        "Remplacement des joints dégradés pour une étanchéité parfaite et un aspect esthétique impeccable",
+      features: [
+        "Déjointoyage précis",
+        "Mortier adapté",
+        "Étanchéité garantie",
+        "Finition parfaite",
+      ],
     },
   ];
 
@@ -177,9 +202,21 @@ export default function TerrasseService() {
   ];
 
   const beforeAfterImages = [
-    { before: avantApres1, after: avantApres2, title: "Nettoyage terrasse carrelage" },
-    { before: avantApres2, after: avantApres3, title: "Démoussage terrasse bois" },
-    { before: avantApres3, after: avantApres1, title: "Rénovation terrasse pierre" },
+    {
+      before: avantApres1,
+      after: avantApres2,
+      title: "Nettoyage terrasse carrelage",
+    },
+    {
+      before: avantApres2,
+      after: avantApres3,
+      title: "Démoussage terrasse bois",
+    },
+    {
+      before: avantApres3,
+      after: avantApres1,
+      title: "Rénovation terrasse pierre",
+    },
   ];
 
   const terrasseTypes = [
@@ -213,25 +250,41 @@ export default function TerrasseService() {
     {
       season: "Printemps",
       icon: "fas fa-seedling",
-      tips: ["Démoussage après l'hiver", "Vérification des joints", "Traitement préventif"],
+      tips: [
+        "Démoussage après l'hiver",
+        "Vérification des joints",
+        "Traitement préventif",
+      ],
       bestTime: "Mars - Mai",
     },
     {
       season: "Été",
       icon: "fas fa-sun",
-      tips: ["Nettoyage en profondeur", "Application anti-glisse", "Entretien régulier"],
+      tips: [
+        "Nettoyage en profondeur",
+        "Application anti-glisse",
+        "Entretien régulier",
+      ],
       bestTime: "Juin - Août",
     },
     {
       season: "Automne",
       icon: "fas fa-leaf",
-      tips: ["Élimination feuilles mortes", "Préparation hiver", "Protection joints"],
+      tips: [
+        "Élimination feuilles mortes",
+        "Préparation hiver",
+        "Protection joints",
+      ],
       bestTime: "Sept - Nov",
     },
     {
       season: "Hiver",
       icon: "fas fa-snowflake",
-      tips: ["Surveillance gel/dégel", "Nettoyage doux", "Planification printemps"],
+      tips: [
+        "Surveillance gel/dégel",
+        "Nettoyage doux",
+        "Planification printemps",
+      ],
       bestTime: "Déc - Fév",
     },
   ];
@@ -239,11 +292,11 @@ export default function TerrasseService() {
   return (
     <div className="min-h-screen bg-gray-900">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 overflow-hidden">
         <div className="absolute inset-0 bg-black/70"></div>
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${terrasseHero})` }}
         ></div>
@@ -252,26 +305,42 @@ export default function TerrasseService() {
             <Badge className="bg-[#59D14C] text-white px-6 py-3 mb-8 text-lg font-semibold">
               SERVICE SPÉCIALISÉ TERRASSE
             </Badge>
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
+            <h1
+              className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl"
+              style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
+            >
               Nettoyage et Entretien de{" "}
               <span className="text-[#59D14C] drop-shadow-2xl">Terrasse</span>
             </h1>
-            <p className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-              Retrouvez une terrasse impeccable et sécurisée pour profiter pleinement de vos extérieurs. 
-              Démoussage, nettoyage haute pression et traitement anti-glisse par des professionnels.
+            <p
+              className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl"
+              style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.8)" }}
+            >
+              Retrouvez une terrasse impeccable et sécurisée pour profiter
+              pleinement de vos extérieurs. Démoussage, nettoyage haute pression
+              et traitement anti-glisse par des professionnels.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button 
-                onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              <Button
+                onClick={() =>
+                  document
+                    .getElementById("contact-form")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 className="bg-[#59D14C] hover:bg-[#4AC93D] text-white font-semibold py-4 px-8 text-lg rounded-xl"
               >
                 <i className="fas fa-calculator mr-3"></i>
                 Devis Gratuit
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-gray-900 py-4 px-8 text-lg rounded-xl"
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              <Button
+                variant="outline"
+                className="border-2 border-white bg-black/30 text-white hover:bg-white hover:text-gray-900 py-4 px-8 text-lg rounded-xl shadow-2xl backdrop-blur-sm"
+                style={{ boxShadow: '0 8px 16px rgba(0,0,0,0.4)', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
+                onClick={() =>
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 <i className="fas fa-info-circle mr-3"></i>
                 Nos Services
@@ -295,7 +364,10 @@ export default function TerrasseService() {
       </section>
 
       {/* Services Detail */}
-      <section id="services" className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section
+        id="services"
+        className="py-20 bg-gradient-to-br from-gray-800 to-gray-900"
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -303,8 +375,9 @@ export default function TerrasseService() {
                 Nos Services <span className="text-[#59D14C]">Terrasse</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Une terrasse propre et entretenue augmente la valeur de votre propriété de 8 à 12%. 
-                Nos techniques préservent vos matériaux tout en garantissant sécurité et esthétique.
+                Une terrasse propre et entretenue augmente la valeur de votre
+                propriété de 8 à 12%. Nos techniques préservent vos matériaux
+                tout en garantissant sécurité et esthétique.
               </p>
             </div>
 
@@ -316,7 +389,9 @@ export default function TerrasseService() {
                 >
                   <CardHeader className="text-center pb-4">
                     <div className="w-20 h-20 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <i className={`${service.icon} text-[#59D14C] text-3xl`}></i>
+                      <i
+                        className={`${service.icon} text-[#59D14C] text-3xl`}
+                      ></i>
                     </div>
                     <CardTitle className="text-2xl text-white group-hover:text-[#59D14C] transition-colors">
                       {service.title}
@@ -364,7 +439,9 @@ export default function TerrasseService() {
                 Tous Types de <span className="text-[#59D14C]">Terrasses</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Chaque matériau de terrasse nécessite une approche spécifique. Nos experts adaptent leurs techniques pour préserver et embellir.
+                Chaque matériau de terrasse nécessite une approche spécifique.
+                Nos experts adaptent leurs techniques pour préserver et
+                embellir.
               </p>
             </div>
 
@@ -384,11 +461,17 @@ export default function TerrasseService() {
                     <div className="space-y-2">
                       <div className="flex justify-between items-center">
                         <span className="text-gray-400 text-xs">Prix</span>
-                        <span className="text-[#59D14C] font-semibold text-sm">{terrasse.price}</span>
+                        <span className="text-[#59D14C] font-semibold text-sm">
+                          {terrasse.price}
+                        </span>
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-gray-400 text-xs">Spécialité</span>
-                        <span className="text-white text-sm">{terrasse.specificity}</span>
+                        <span className="text-gray-400 text-xs">
+                          Spécialité
+                        </span>
+                        <span className="text-white text-sm">
+                          {terrasse.specificity}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -411,7 +494,8 @@ export default function TerrasseService() {
                 Entretien <span className="text-[#59D14C]">Toute l'Année</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Découvrez les meilleures périodes et techniques d'entretien selon les saisons pour une terrasse toujours parfaite.
+                Découvrez les meilleures périodes et techniques d'entretien
+                selon les saisons pour une terrasse toujours parfaite.
               </p>
             </div>
 
@@ -423,14 +507,18 @@ export default function TerrasseService() {
                 >
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-[#59D14C]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <i className={`${season.icon} text-[#59D14C] text-2xl`}></i>
+                      <i
+                        className={`${season.icon} text-[#59D14C] text-2xl`}
+                      ></i>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#59D14C] transition-colors">
                       {season.season}
                     </h3>
-                    <Badge className="bg-gray-700 text-gray-300 text-xs">{season.bestTime}</Badge>
+                    <Badge className="bg-gray-700 text-gray-300 text-xs">
+                      {season.bestTime}
+                    </Badge>
                   </div>
-                  
+
                   <ul className="space-y-2">
                     {season.tips.map((tip, idx) => (
                       <li
@@ -461,7 +549,9 @@ export default function TerrasseService() {
                 Matériel <span className="text-[#59D14C]">Spécialisé</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Nous utilisons exclusivement du matériel professionnel adapté à chaque type de terrasse pour garantir des résultats exceptionnels.
+                Nous utilisons exclusivement du matériel professionnel adapté à
+                chaque type de terrasse pour garantir des résultats
+                exceptionnels.
               </p>
             </div>
 
@@ -506,7 +596,8 @@ export default function TerrasseService() {
                 Avant / <span className="text-[#59D14C]">Après</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Découvrez la transformation spectaculaire de nos interventions terrasse.
+                Découvrez la transformation spectaculaire de nos interventions
+                terrasse.
               </p>
             </div>
 
@@ -524,7 +615,9 @@ export default function TerrasseService() {
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute top-2 left-2">
-                        <Badge className="bg-red-500 text-white text-xs">AVANT</Badge>
+                        <Badge className="bg-red-500 text-white text-xs">
+                          AVANT
+                        </Badge>
                       </div>
                     </div>
                     <div className="relative overflow-hidden">
@@ -534,7 +627,9 @@ export default function TerrasseService() {
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute top-2 right-2">
-                        <Badge className="bg-[#59D14C] text-white text-xs">APRÈS</Badge>
+                        <Badge className="bg-[#59D14C] text-white text-xs">
+                          APRÈS
+                        </Badge>
                       </div>
                     </div>
                   </div>
@@ -559,10 +654,12 @@ export default function TerrasseService() {
                 PROBLÈMES COURANTS
               </Badge>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Solutions aux <span className="text-[#59D14C]">Problèmes</span> Fréquents
+                Solutions aux <span className="text-[#59D14C]">Problèmes</span>{" "}
+                Fréquents
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Identifiez et résolvez les problèmes les plus courants rencontrés sur les terrasses.
+                Identifiez et résolvez les problèmes les plus courants
+                rencontrés sur les terrasses.
               </p>
             </div>
 
@@ -571,70 +668,118 @@ export default function TerrasseService() {
                 {
                   problem: "Terrasse Glissante",
                   severity: "Urgent",
-                  causes: ["Mousse", "Algues", "Humidité stagnante", "Matériau lisse"],
-                  solutions: ["Démoussage complet", "Traitement anti-glisse", "Amélioration drainage", "Texture antidérapante"],
+                  causes: [
+                    "Mousse",
+                    "Algues",
+                    "Humidité stagnante",
+                    "Matériau lisse",
+                  ],
+                  solutions: [
+                    "Démoussage complet",
+                    "Traitement anti-glisse",
+                    "Amélioration drainage",
+                    "Texture antidérapante",
+                  ],
                   prevention: "Nettoyage annuel + traitement préventif",
                   icon: "fas fa-exclamation-triangle",
-                  color: "bg-red-500"
+                  color: "bg-red-500",
                 },
                 {
                   problem: "Taches Tenaces",
                   severity: "Modéré",
                   causes: ["Graisse", "Rouille", "Végétation", "Pollution"],
-                  solutions: ["Détachage spécialisé", "Nettoyage haute pression", "Produits adaptés", "Ponçage léger"],
+                  solutions: [
+                    "Détachage spécialisé",
+                    "Nettoyage haute pression",
+                    "Produits adaptés",
+                    "Ponçage léger",
+                  ],
                   prevention: "Protection hydrofuge + entretien régulier",
                   icon: "fas fa-circle",
-                  color: "bg-orange-500"
+                  color: "bg-orange-500",
                 },
                 {
                   problem: "Joints Dégradés",
                   severity: "Important",
-                  causes: ["Gel/dégel", "Infiltrations", "Usure", "Mauvaise pose"],
-                  solutions: ["Déjointoyage", "Nouveau mortier", "Étanchéité", "Finition soignée"],
+                  causes: [
+                    "Gel/dégel",
+                    "Infiltrations",
+                    "Usure",
+                    "Mauvaise pose",
+                  ],
+                  solutions: [
+                    "Déjointoyage",
+                    "Nouveau mortier",
+                    "Étanchéité",
+                    "Finition soignée",
+                  ],
                   prevention: "Surveillance annuelle + réparations précoces",
                   icon: "fas fa-th-large",
-                  color: "bg-yellow-500"
-                }
+                  color: "bg-yellow-500",
+                },
               ].map((issue, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300">
+                <div
+                  key={index}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300"
+                >
                   <div className="text-center mb-6">
-                    <div className={`w-16 h-16 ${issue.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <div
+                      className={`w-16 h-16 ${issue.color} rounded-full flex items-center justify-center mx-auto mb-4`}
+                    >
                       <i className={`${issue.icon} text-white text-2xl`}></i>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{issue.problem}</h3>
-                    <Badge className={`text-xs text-white ${issue.severity === 'Urgent' ? 'bg-red-600' : issue.severity === 'Important' ? 'bg-yellow-600' : 'bg-orange-600'}`}>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {issue.problem}
+                    </h3>
+                    <Badge
+                      className={`text-xs text-white ${issue.severity === "Urgent" ? "bg-red-600" : issue.severity === "Important" ? "bg-yellow-600" : "bg-orange-600"}`}
+                    >
                       {issue.severity}
                     </Badge>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div>
-                      <h4 className="text-white font-semibold mb-2 text-sm">Causes principales</h4>
+                      <h4 className="text-white font-semibold mb-2 text-sm">
+                        Causes principales
+                      </h4>
                       <ul className="space-y-1">
                         {issue.causes.map((cause, idx) => (
-                          <li key={idx} className="flex items-center text-gray-300 text-xs">
+                          <li
+                            key={idx}
+                            className="flex items-center text-gray-300 text-xs"
+                          >
                             <i className="fas fa-dot-circle text-red-400 mr-2 text-xs"></i>
                             {cause}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div>
-                      <h4 className="text-white font-semibold mb-2 text-sm">Solutions</h4>
+                      <h4 className="text-white font-semibold mb-2 text-sm">
+                        Solutions
+                      </h4>
                       <ul className="space-y-1">
                         {issue.solutions.map((solution, idx) => (
-                          <li key={idx} className="flex items-center text-gray-300 text-xs">
+                          <li
+                            key={idx}
+                            className="flex items-center text-gray-300 text-xs"
+                          >
                             <i className="fas fa-tools text-[#59D14C] mr-2 text-xs"></i>
                             {solution}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div className="p-3 bg-gray-700/50 rounded-lg">
-                      <h4 className="text-[#59D14C] font-semibold mb-1 text-sm">Prévention</h4>
-                      <p className="text-gray-300 text-xs">{issue.prevention}</p>
+                      <h4 className="text-[#59D14C] font-semibold mb-1 text-sm">
+                        Prévention
+                      </h4>
+                      <p className="text-gray-300 text-xs">
+                        {issue.prevention}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -656,57 +801,93 @@ export default function TerrasseService() {
                 Entretien <span className="text-[#59D14C]">Optimal</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Suivez notre guide complet pour maintenir votre terrasse en parfait état toute l'année.
+                Suivez notre guide complet pour maintenir votre terrasse en
+                parfait état toute l'année.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="space-y-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Entretien Quotidien</h3>
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Entretien Quotidien
+                </h3>
                 {[
                   {
                     frequency: "Quotidien",
-                    tasks: ["Balayage des feuilles", "Évacuation eau stagnante", "Nettoyage taches fraîches"],
+                    tasks: [
+                      "Balayage des feuilles",
+                      "Évacuation eau stagnante",
+                      "Nettoyage taches fraîches",
+                    ],
                     duration: "10 min",
-                    tools: ["Balai", "Serpillière", "Eau savonneuse"]
+                    tools: ["Balai", "Serpillière", "Eau savonneuse"],
                   },
                   {
-                    frequency: "Hebdomadaire", 
-                    tasks: ["Lavage eau savonneuse", "Vérification évacuations", "Nettoyage mobilier"],
+                    frequency: "Hebdomadaire",
+                    tasks: [
+                      "Lavage eau savonneuse",
+                      "Vérification évacuations",
+                      "Nettoyage mobilier",
+                    ],
                     duration: "30 min",
-                    tools: ["Seau", "Brosse douce", "Produit neutre"]
+                    tools: ["Seau", "Brosse douce", "Produit neutre"],
                   },
                   {
                     frequency: "Mensuel",
-                    tasks: ["Inspection joints", "Nettoyage en profondeur", "Traitement préventif"],
+                    tasks: [
+                      "Inspection joints",
+                      "Nettoyage en profondeur",
+                      "Traitement préventif",
+                    ],
                     duration: "2h",
-                    tools: ["Brosse dure", "Produits spécialisés", "Pulvérisateur"]
-                  }
+                    tools: [
+                      "Brosse dure",
+                      "Produits spécialisés",
+                      "Pulvérisateur",
+                    ],
+                  },
                 ].map((schedule, index) => (
-                  <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
+                  <div
+                    key={index}
+                    className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700"
+                  >
                     <div className="flex items-center justify-between mb-4">
-                      <h4 className="text-xl font-bold text-white">{schedule.frequency}</h4>
-                      <Badge className="bg-[#59D14C] text-white text-xs">{schedule.duration}</Badge>
+                      <h4 className="text-xl font-bold text-white">
+                        {schedule.frequency}
+                      </h4>
+                      <Badge className="bg-[#59D14C] text-white text-xs">
+                        {schedule.duration}
+                      </Badge>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <h5 className="text-white font-semibold mb-2 text-sm">Tâches</h5>
+                        <h5 className="text-white font-semibold mb-2 text-sm">
+                          Tâches
+                        </h5>
                         <ul className="space-y-1">
                           {schedule.tasks.map((task, idx) => (
-                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                            <li
+                              key={idx}
+                              className="flex items-center text-gray-300 text-sm"
+                            >
                               <i className="fas fa-check text-[#59D14C] mr-2"></i>
                               {task}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
-                        <h5 className="text-white font-semibold mb-2 text-sm">Outils nécessaires</h5>
+                        <h5 className="text-white font-semibold mb-2 text-sm">
+                          Outils nécessaires
+                        </h5>
                         <ul className="space-y-1">
                           {schedule.tools.map((tool, idx) => (
-                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                            <li
+                              key={idx}
+                              className="flex items-center text-gray-300 text-sm"
+                            >
                               <i className="fas fa-tools text-[#59D14C] mr-2"></i>
                               {tool}
                             </li>
@@ -717,30 +898,59 @@ export default function TerrasseService() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="space-y-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Entretien Professionnel</h3>
-                
+                <h3 className="text-2xl font-bold text-white mb-6">
+                  Entretien Professionnel
+                </h3>
+
                 <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
-                  <h4 className="text-xl font-bold text-white mb-4">Planning Annuel Recommandé</h4>
-                  
+                  <h4 className="text-xl font-bold text-white mb-4">
+                    Planning Annuel Recommandé
+                  </h4>
+
                   <div className="space-y-4">
                     {[
-                      { month: "Mars", action: "Nettoyage complet printemps", price: "150-250€" },
-                      { month: "Juin", action: "Traitement anti-mousse", price: "80-120€" },
-                      { month: "Septembre", action: "Préparation hiver", price: "100-180€" },
-                      { month: "Décembre", action: "Inspection et maintenance", price: "50-80€" }
+                      {
+                        month: "Mars",
+                        action: "Nettoyage complet printemps",
+                        price: "150-250€",
+                      },
+                      {
+                        month: "Juin",
+                        action: "Traitement anti-mousse",
+                        price: "80-120€",
+                      },
+                      {
+                        month: "Septembre",
+                        action: "Préparation hiver",
+                        price: "100-180€",
+                      },
+                      {
+                        month: "Décembre",
+                        action: "Inspection et maintenance",
+                        price: "50-80€",
+                      },
                     ].map((schedule, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg">
+                      <div
+                        key={index}
+                        className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg"
+                      >
                         <div>
-                          <span className="text-[#59D14C] font-semibold">{schedule.month}</span>
-                          <p className="text-gray-300 text-sm">{schedule.action}</p>
+                          <span className="text-[#59D14C] font-semibold">
+                            {schedule.month}
+                          </span>
+                          <p className="text-gray-300 text-sm">
+                            {schedule.action}
+                          </p>
                         </div>
-                        <Badge className="bg-gray-600 text-white text-xs">{schedule.price}</Badge>
+                        <Badge className="bg-gray-600 text-white text-xs">
+                          {schedule.price}
+                        </Badge>
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="mt-6 p-4 bg-[#59D14C]/10 rounded-lg border border-[#59D14C]/20">
                     <p className="text-[#59D14C] font-semibold text-center">
                       <i className="fas fa-calculator mr-2"></i>
@@ -748,23 +958,54 @@ export default function TerrasseService() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
-                  <h4 className="text-xl font-bold text-white mb-4">Signes d'Alerte</h4>
-                  
+                  <h4 className="text-xl font-bold text-white mb-4">
+                    Signes d'Alerte
+                  </h4>
+
                   <div className="space-y-3">
                     {[
-                      { sign: "Glissance anormale", urgency: "Immédiat", icon: "fas fa-exclamation-triangle", color: "text-red-400" },
-                      { sign: "Taches qui s'étendent", urgency: "Sous 1 semaine", icon: "fas fa-circle", color: "text-orange-400" },
-                      { sign: "Joints qui s'effritent", urgency: "Sous 1 mois", icon: "fas fa-th-large", color: "text-yellow-400" },
-                      { sign: "Mousse qui revient vite", urgency: "Planifier", icon: "fas fa-leaf", color: "text-green-400" }
+                      {
+                        sign: "Glissance anormale",
+                        urgency: "Immédiat",
+                        icon: "fas fa-exclamation-triangle",
+                        color: "text-red-400",
+                      },
+                      {
+                        sign: "Taches qui s'étendent",
+                        urgency: "Sous 1 semaine",
+                        icon: "fas fa-circle",
+                        color: "text-orange-400",
+                      },
+                      {
+                        sign: "Joints qui s'effritent",
+                        urgency: "Sous 1 mois",
+                        icon: "fas fa-th-large",
+                        color: "text-yellow-400",
+                      },
+                      {
+                        sign: "Mousse qui revient vite",
+                        urgency: "Planifier",
+                        icon: "fas fa-leaf",
+                        color: "text-green-400",
+                      },
                     ].map((alert, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg">
+                      <div
+                        key={index}
+                        className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg"
+                      >
                         <div className="flex items-center">
-                          <i className={`${alert.icon} ${alert.color} mr-3`}></i>
-                          <span className="text-gray-300 text-sm">{alert.sign}</span>
+                          <i
+                            className={`${alert.icon} ${alert.color} mr-3`}
+                          ></i>
+                          <span className="text-gray-300 text-sm">
+                            {alert.sign}
+                          </span>
                         </div>
-                        <Badge className="bg-gray-600 text-white text-xs">{alert.urgency}</Badge>
+                        <Badge className="bg-gray-600 text-white text-xs">
+                          {alert.urgency}
+                        </Badge>
                       </div>
                     ))}
                   </div>
@@ -784,10 +1025,12 @@ export default function TerrasseService() {
                 SOLUTIONS AVANCÉES
               </Badge>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Innovations <span className="text-[#59D14C]">Technologiques</span>
+                Innovations{" "}
+                <span className="text-[#59D14C]">Technologiques</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Découvrez nos solutions technologiques de pointe pour l'entretien moderne des terrasses.
+                Découvrez nos solutions technologiques de pointe pour
+                l'entretien moderne des terrasses.
               </p>
             </div>
 
@@ -796,37 +1039,72 @@ export default function TerrasseService() {
                 {
                   title: "Traitement Nano-Protection",
                   subtitle: "Protection invisible longue durée",
-                  description: "Application d'un revêtement nanotechnologique invisible qui repousse l'eau, les taches et facilite l'entretien. Protection efficace 5-7 ans.",
-                  benefits: ["Effet autonettoyant", "Anti-taches intégré", "Préserve l'aspect naturel", "Résistance UV renforcée"],
-                  process: ["Nettoyage complet", "Séchage 24h", "Application nano-coating", "Polymérisation 48h"],
+                  description:
+                    "Application d'un revêtement nanotechnologique invisible qui repousse l'eau, les taches et facilite l'entretien. Protection efficace 5-7 ans.",
+                  benefits: [
+                    "Effet autonettoyant",
+                    "Anti-taches intégré",
+                    "Préserve l'aspect naturel",
+                    "Résistance UV renforcée",
+                  ],
+                  process: [
+                    "Nettoyage complet",
+                    "Séchage 24h",
+                    "Application nano-coating",
+                    "Polymérisation 48h",
+                  ],
                   warranty: "7 ans",
                   price: "25-35€/m²",
-                  image: pressionImg
+                  image: pressionImg,
                 },
                 {
                   title: "Système Anti-Mousse Préventif",
                   subtitle: "Prévention automatique intelligente",
-                  description: "Installation d'un système préventif avec diffuseurs intégrés qui libèrent automatiquement des agents anti-mousse selon l'humidité.",
-                  benefits: ["Prévention automatique", "Dosage intelligent", "Économie long terme", "Zéro intervention manuelle"],
-                  process: ["Étude faisabilité", "Installation discrète", "Programmation système", "Maintenance annuelle"],
+                  description:
+                    "Installation d'un système préventif avec diffuseurs intégrés qui libèrent automatiquement des agents anti-mousse selon l'humidité.",
+                  benefits: [
+                    "Prévention automatique",
+                    "Dosage intelligent",
+                    "Économie long terme",
+                    "Zéro intervention manuelle",
+                  ],
+                  process: [
+                    "Étude faisabilité",
+                    "Installation discrète",
+                    "Programmation système",
+                    "Maintenance annuelle",
+                  ],
                   warranty: "5 ans",
-                  price: "150-300€ installation",
-                  image: vapeurImg
-                }
+                  price: "150-300er� installation",
+                  image: vapeurImg,
+                },
               ].map((solution, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300">
+                <div
+                  key={index}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300"
+                >
                   <div className="aspect-video relative overflow-hidden">
-                    <img src={solution.image} alt={solution.title} className="w-full h-full object-cover" />
+                    <img
+                      src={solution.image}
+                      alt={solution.title}
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                     <div className="absolute bottom-4 left-4">
-                      <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
-                      <p className="text-[#59D14C] font-semibold">{solution.subtitle}</p>
+                      <h3 className="text-2xl font-bold text-white">
+                        {solution.title}
+                      </h3>
+                      <p className="text-[#59D14C] font-semibold">
+                        {solution.subtitle}
+                      </p>
                     </div>
                   </div>
-                  
+
                   <div className="p-8">
-                    <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
-                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {solution.description}
+                    </p>
+
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
                       <div>
                         <h4 className="text-white font-semibold mb-3 flex items-center">
@@ -835,14 +1113,17 @@ export default function TerrasseService() {
                         </h4>
                         <ul className="space-y-2">
                           {solution.benefits.map((benefit, idx) => (
-                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                            <li
+                              key={idx}
+                              className="flex items-center text-gray-300 text-sm"
+                            >
                               <i className="fas fa-check text-[#59D14C] mr-2"></i>
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
                         <h4 className="text-white font-semibold mb-3 flex items-center">
                           <i className="fas fa-cogs text-[#59D14C] mr-2"></i>
@@ -850,19 +1131,26 @@ export default function TerrasseService() {
                         </h4>
                         <ul className="space-y-2">
                           {solution.process.map((step, idx) => (
-                            <li key={idx} className="flex items-start text-gray-300 text-sm">
-                              <span className="text-[#59D14C] font-bold mr-2 mt-0.5">{idx + 1}.</span>
+                            <li
+                              key={idx}
+                              className="flex items-start text-gray-300 text-sm"
+                            >
+                              <span className="text-[#59D14C] font-bold mr-2 mt-0.5">
+                                {idx + 1}.
+                              </span>
                               {step}
                             </li>
                           ))}
                         </ul>
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-700">
                       <div className="text-center">
                         <p className="text-gray-400 text-xs">Garantie</p>
-                        <p className="text-[#59D14C] font-bold">{solution.warranty}</p>
+                        <p className="text-[#59D14C] font-bold">
+                          {solution.warranty}
+                        </p>
                       </div>
                       <div className="text-center">
                         <p className="text-gray-400 text-xs">Tarif</p>
@@ -899,68 +1187,107 @@ export default function TerrasseService() {
                   name: "Express",
                   price: "12€/m²",
                   description: "Nettoyage rapide pour entretien régulier",
-                  features: ["Balayage + lavage", "Démoussage léger", "Rinçage soigné"],
+                  features: [
+                    "Balayage + lavage",
+                    "Démoussage léger",
+                    "Rinçage soigné",
+                  ],
                   duration: "2-3h",
                   ideal: "Terrasses bien entretenues",
-                  color: "border-gray-600"
+                  color: "border-gray-600",
                 },
                 {
                   name: "Standard",
                   price: "18€/m²",
                   description: "Solution complète pour terrasses courantes",
-                  features: ["Nettoyage complet", "Démoussage profond", "Traitement joints", "Rinçage haute pression"],
+                  features: [
+                    "Nettoyage complet",
+                    "Démoussage profond",
+                    "Traitement joints",
+                    "Rinçage haute pression",
+                  ],
                   duration: "4-6h",
                   ideal: "Entretien annuel recommandé",
                   color: "border-[#59D14C]",
-                  popular: true
+                  popular: true,
                 },
                 {
                   name: "Premium",
                   price: "25€/m²",
                   description: "Prestation haut de gamme avec protection",
-                  features: ["Nettoyage expert", "Rénovation joints", "Traitement anti-mousse", "Protection hydrofuge"],
+                  features: [
+                    "Nettoyage expert",
+                    "Rénovation joints",
+                    "Traitement anti-mousse",
+                    "Protection hydrofuge",
+                  ],
                   duration: "6-8h",
                   ideal: "Terrasses dégradées",
-                  color: "border-yellow-500"
+                  color: "border-yellow-500",
                 },
                 {
                   name: "Luxury",
                   price: "35€/m²",
                   description: "Service excellence avec innovations",
-                  features: ["Tout Premium inclus", "Nano-protection", "Garantie 5 ans", "Suivi personnalisé"],
+                  features: [
+                    "Tout Premium inclus",
+                    "Nano-protection",
+                    "Garantie 5 ans",
+                    "Suivi personnalisé",
+                  ],
                   duration: "8-12h",
                   ideal: "Terrasses de prestige",
-                  color: "border-purple-500"
-                }
+                  color: "border-purple-500",
+                },
               ].map((formula, index) => (
-                <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border-2 ${formula.color} relative ${formula.popular ? 'scale-105 z-10' : ''}`}>
+                <div
+                  key={index}
+                  className={`bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border-2 ${formula.color} relative ${formula.popular ? "scale-105 z-10" : ""}`}
+                >
                   {formula.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-[#59D14C] text-white px-4 py-1">RECOMMANDÉE</Badge>
+                      <Badge className="bg-[#59D14C] text-white px-4 py-1">
+                        RECOMMANDÉE
+                      </Badge>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-white mb-2">{formula.name}</h3>
-                    <div className="text-3xl font-bold text-[#59D14C] mb-2">{formula.price}</div>
-                    <p className="text-gray-300 text-sm">{formula.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {formula.name}
+                    </h3>
+                    <div className="text-3xl font-bold text-[#59D14C] mb-2">
+                      {formula.price}
+                    </div>
+                    <p className="text-gray-300 text-sm">
+                      {formula.description}
+                    </p>
                   </div>
-                  
+
                   <ul className="space-y-2 mb-6">
                     {formula.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300 text-sm">
+                      <li
+                        key={idx}
+                        className="flex items-center text-gray-300 text-sm"
+                      >
                         <i className="fas fa-check-circle text-[#59D14C] mr-2"></i>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  
+
                   <div className="space-y-2 text-center">
-                    <p className="text-gray-400 text-xs">Durée: {formula.duration}</p>
-                    <p className="text-[#59D14C] text-xs font-semibold">{formula.ideal}</p>
+                    <p className="text-gray-400 text-xs">
+                      Durée: {formula.duration}
+                    </p>
+                    <p className="text-[#59D14C] text-xs font-semibold">
+                      {formula.ideal}
+                    </p>
                   </div>
-                  
-                  <Button className={`w-full mt-4 ${formula.popular ? 'bg-[#59D14C] hover:bg-[#4AC93D]' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>
+
+                  <Button
+                    className={`w-full mt-4 ${formula.popular ? "bg-[#59D14C] hover:bg-[#4AC93D]" : "bg-gray-700 hover:bg-gray-600"} text-white`}
+                  >
                     Choisir {formula.name}
                   </Button>
                 </div>
@@ -971,23 +1298,39 @@ export default function TerrasseService() {
               <div className="grid md:grid-cols-4 gap-6 text-center">
                 <div>
                   <i className="fas fa-calculator text-[#59D14C] text-3xl mb-4"></i>
-                  <h3 className="text-lg font-bold text-white mb-2">Devis Précis</h3>
-                  <p className="text-gray-300 text-sm">Estimation détaillée gratuite sous 24h</p>
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    Devis Précis
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Estimation détaillée gratuite sous 24h
+                  </p>
                 </div>
                 <div>
                   <i className="fas fa-clock text-[#59D14C] text-3xl mb-4"></i>
-                  <h3 className="text-lg font-bold text-white mb-2">Intervention Rapide</h3>
-                  <p className="text-gray-300 text-sm">Rendez-vous sous 48h en urgence</p>
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    Intervention Rapide
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Rendez-vous sous 48h en urgence
+                  </p>
                 </div>
                 <div>
                   <i className="fas fa-shield-alt text-[#59D14C] text-3xl mb-4"></i>
-                  <h3 className="text-lg font-bold text-white mb-2">Garantie Résultat</h3>
-                  <p className="text-gray-300 text-sm">Satisfaction 100% ou nouvelle intervention</p>
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    Garantie Résultat
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Satisfaction 100% ou nouvelle intervention
+                  </p>
                 </div>
                 <div>
                   <i className="fas fa-credit-card text-[#59D14C] text-3xl mb-4"></i>
-                  <h3 className="text-lg font-bold text-white mb-2">Paiement Souple</h3>
-                  <p className="text-gray-300 text-sm">Facilités de paiement disponibles</p>
+                  <h3 className="text-lg font-bold text-white mb-2">
+                    Paiement Souple
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Facilités de paiement disponibles
+                  </p>
                 </div>
               </div>
             </div>
@@ -1064,7 +1407,10 @@ export default function TerrasseService() {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+      <section
+        id="contact-form"
+        className="py-20 bg-gradient-to-br from-gray-800 to-gray-900"
+      >
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -1072,11 +1418,13 @@ export default function TerrasseService() {
                 DEMANDE DE DEVIS
               </Badge>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Obtenez votre <span className="text-[#59D14C]">Devis Gratuit</span>
+                Obtenez votre{" "}
+                <span className="text-[#59D14C]">Devis Gratuit</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Remplissez ce formulaire pour recevoir votre devis personnalisé sous 24h. 
-                Nos experts évalueront précisément les besoins de votre terrasse.
+                Remplissez ce formulaire pour recevoir votre devis personnalisé
+                sous 24h. Nos experts évalueront précisément les besoins de
+                votre terrasse.
               </p>
             </div>
 
@@ -1086,14 +1434,18 @@ export default function TerrasseService() {
                   <Input
                     placeholder="Prénom *"
                     value={formData.firstName}
-                    onChange={(e) => handleInputChange("firstName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("firstName", e.target.value)
+                    }
                     className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                     required
                   />
                   <Input
                     placeholder="Nom *"
                     value={formData.lastName}
-                    onChange={(e) => handleInputChange("lastName", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("lastName", e.target.value)
+                    }
                     className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                     required
                   />
@@ -1135,7 +1487,9 @@ export default function TerrasseService() {
                   <Input
                     placeholder="Code postal"
                     value={formData.postalCode}
-                    onChange={(e) => handleInputChange("postalCode", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("postalCode", e.target.value)
+                    }
                     className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                   />
                 </div>
@@ -1143,24 +1497,53 @@ export default function TerrasseService() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <Select
                     value={formData.terrasseType}
-                    onValueChange={(value) => handleInputChange("terrasseType", value)}
+                    onValueChange={(value) =>
+                      handleInputChange("terrasseType", value)
+                    }
                   >
                     <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
                       <SelectValue placeholder="Type de terrasse" />
                     </SelectTrigger>
                     <SelectContent className="bg-gray-700 border-gray-600">
-                      <SelectItem value="carrelage" className="text-white hover:bg-gray-600">Carrelage</SelectItem>
-                      <SelectItem value="pierre-naturelle" className="text-white hover:bg-gray-600">Pierre naturelle</SelectItem>
-                      <SelectItem value="bois-composite" className="text-white hover:bg-gray-600">Bois composite</SelectItem>
-                      <SelectItem value="beton-dalle" className="text-white hover:bg-gray-600">Béton/Dalle</SelectItem>
-                      <SelectItem value="autre" className="text-white hover:bg-gray-600">Autre</SelectItem>
+                      <SelectItem
+                        value="carrelage"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Carrelage
+                      </SelectItem>
+                      <SelectItem
+                        value="pierre-naturelle"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Pierre naturelle
+                      </SelectItem>
+                      <SelectItem
+                        value="bois-composite"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Bois composite
+                      </SelectItem>
+                      <SelectItem
+                        value="beton-dalle"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Béton/Dalle
+                      </SelectItem>
+                      <SelectItem
+                        value="autre"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Autre
+                      </SelectItem>
                     </SelectContent>
                   </Select>
 
                   <Input
                     placeholder="Surface approximative (m²)"
                     value={formData.surfaceArea}
-                    onChange={(e) => handleInputChange("surfaceArea", e.target.value)}
+                    onChange={(e) =>
+                      handleInputChange("surfaceArea", e.target.value)
+                    }
                     className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400"
                   />
                 </div>
@@ -1168,30 +1551,69 @@ export default function TerrasseService() {
                 <div className="grid md:grid-cols-2 gap-6">
                   <Select
                     value={formData.terrasseState}
-                    onValueChange={(value) => handleInputChange("terrasseState", value)}
+                    onValueChange={(value) =>
+                      handleInputChange("terrasseState", value)
+                    }
                   >
                     <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
                       <SelectValue placeholder="État de la terrasse" />
                     </SelectTrigger>
                     <SelectContent className="bg-gray-700 border-gray-600">
-                      <SelectItem value="bon-etat" className="text-white hover:bg-gray-600">Bon état</SelectItem>
-                      <SelectItem value="legere-mousse" className="text-white hover:bg-gray-600">Légère mousse</SelectItem>
-                      <SelectItem value="tres-moussue" className="text-white hover:bg-gray-600">Très moussue</SelectItem>
-                      <SelectItem value="joints-abimes" className="text-white hover:bg-gray-600">Joints abîmés</SelectItem>
+                      <SelectItem
+                        value="bon-etat"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Bon état
+                      </SelectItem>
+                      <SelectItem
+                        value="legere-mousse"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Légère mousse
+                      </SelectItem>
+                      <SelectItem
+                        value="tres-moussue"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Très moussue
+                      </SelectItem>
+                      <SelectItem
+                        value="joints-abimes"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Joints abîmés
+                      </SelectItem>
                     </SelectContent>
                   </Select>
 
                   <Select
                     value={formData.urgency}
-                    onValueChange={(value) => handleInputChange("urgency", value)}
+                    onValueChange={(value) =>
+                      handleInputChange("urgency", value)
+                    }
                   >
                     <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white">
                       <SelectValue placeholder="Urgence" />
                     </SelectTrigger>
                     <SelectContent className="bg-gray-700 border-gray-600">
-                      <SelectItem value="pas-urgent" className="text-white hover:bg-gray-600">Pas urgent</SelectItem>
-                      <SelectItem value="dans-le-mois" className="text-white hover:bg-gray-600">Dans le mois</SelectItem>
-                      <SelectItem value="urgent" className="text-white hover:bg-gray-600">Urgent</SelectItem>
+                      <SelectItem
+                        value="pas-urgent"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Pas urgent
+                      </SelectItem>
+                      <SelectItem
+                        value="dans-le-mois"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Dans le mois
+                      </SelectItem>
+                      <SelectItem
+                        value="urgent"
+                        className="text-white hover:bg-gray-600"
+                      >
+                        Urgent
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
