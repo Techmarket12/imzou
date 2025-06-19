@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 
 // Import images for equipment
 import toitureImg from "@assets/toiture2.png";
@@ -174,13 +175,15 @@ export default function ServicesSection() {
                       <i className="fas fa-envelope mr-2"></i>
                       Demander un devis
                     </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#27851E] text-[#27851E] hover:bg-[#27851E] hover:text-white"
-                    >
-                      <i className="fas fa-info-circle mr-2"></i>
-                      En savoir plus
-                    </Button>
+                    <Link href={`/services/${service.id}`}>
+                      <Button
+                        variant="outline"
+                        className="w-full border-[#59D14C] text-[#59D14C] hover:bg-[#59D14C] hover:text-white"
+                      >
+                        <i className="fas fa-info-circle mr-2"></i>
+                        En savoir plus
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
