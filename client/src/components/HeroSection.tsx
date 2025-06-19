@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logoPath from "@assets/image_1749795372312.png";
+import logoPath from "@assets/logo2.png";
 import videoPath from "@assets/video_hero.mp4";
 import fallbackImage from "@assets/toiture2.png";
 
@@ -69,7 +69,6 @@ export default function HeroSection() {
                     loop
                     preload="metadata"
                     className="w-full h-full object-cover"
-                  
                     onLoadedData={() => setVideoLoaded(true)}
                     onError={() => setVideoLoaded(false)}
                   >
@@ -90,7 +89,7 @@ export default function HeroSection() {
         </div>
 
         {/* Video section */}
-        <div className="relative h-[50vh] overflow-hidden">
+        <div className="relative h-[55vh] overflow-hidden bg-gray-900">
           <video
             autoPlay
             muted
@@ -99,9 +98,10 @@ export default function HeroSection() {
             preload="metadata"
             disablePictureInPicture
             controlsList="nodownload nofullscreen noremoteplayback"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
             onLoadedData={() => setVideoLoaded(true)}
             onError={() => setVideoLoaded(false)}
+            style={{ objectPosition: "center" }}
           >
             <source src={videoPath} type="video/mp4" />
           </video>
@@ -112,7 +112,7 @@ export default function HeroSection() {
         </div>
 
         {/* Bottom section with content */}
-        <div className="relative bg-gray-900 p-6 min-h-[50vh] flex flex-col justify-center">
+        <div className="relative bg-gray-900 p-6 min-h-[45vh] flex flex-col justify-center">
           <h1 className="text-3xl font-bold leading-tight mb-4">
             <span className="text-white">Votre Habitat vous</span>
             <br />
