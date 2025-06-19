@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import logoPath from "@assets/image_1749795372312.png";
-import videoPath from "@assets/Toiture_Nettoyage_Haute_Pression_1749794531300.webm";
+import videoPath from "@assets/video_hero.mp4";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
