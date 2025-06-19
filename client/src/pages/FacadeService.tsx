@@ -243,7 +243,8 @@ export default function FacadeService() {
               </Button>
               <Button 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-gray-900 py-4 px-8 text-lg rounded-xl"
+                className="border-2 border-white bg-black/30 text-white hover:bg-white hover:text-gray-900 py-4 px-8 text-lg rounded-xl shadow-2xl backdrop-blur-sm"
+                style={{ boxShadow: '0 8px 16px rgba(0,0,0,0.4)', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <i className="fas fa-info-circle mr-3"></i>
