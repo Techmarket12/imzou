@@ -40,7 +40,8 @@ export default function HeroSection() {
                     Nous vous proposons une solution de nettoyage à l'extérieur
                     à la vapeur et sans produit chimique
                   </span>{" "}
-                  à Tournai-en-Brie et ses alentours.
+                  à Bruxelles capitale, Brabant Wallon, Braband Flamand et ses
+                  alentours.
                 </p>
               </div>
 
@@ -131,7 +132,8 @@ export default function HeroSection() {
               Nous vous proposons une solution de nettoyage à l'extérieur à la
               vapeur et sans produit chimique
             </span>{" "}
-            à Tournai-en-Brie et ses alentours.
+            à Bruxelles capitale, Brabant Wallon, Braband Flamand et ses
+            Alentours.
           </p>
 
           <Button
