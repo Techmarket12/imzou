@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "wouter";
-import logoPath from "@assets/image_1749795372312.png";
+import logoPath from "@assets/logo2.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,10 +25,30 @@ export default function Header() {
 
   const navigationItems = [
     { label: "Accueil", href: "/", id: "nav-accueil", isRoute: true },
-    { label: "Nettoyage Toitures", href: "/services/toiture", id: "nav-toitures", isRoute: true },
-    { label: "Nettoyage Façades", href: "/services/facade", id: "nav-facades", isRoute: true },
-    { label: "Nettoyage Terrasses", href: "/services/terrasse", id: "nav-terrasses", isRoute: true },
-    { label: "Services B2B", href: "/services/b2b", id: "nav-b2b", isRoute: true },
+    {
+      label: "Nettoyage Toitures",
+      href: "/services/toiture",
+      id: "nav-toitures",
+      isRoute: true,
+    },
+    {
+      label: "Nettoyage Façades",
+      href: "/services/facade",
+      id: "nav-facades",
+      isRoute: true,
+    },
+    {
+      label: "Nettoyage Terrasses",
+      href: "/services/terrasse",
+      id: "nav-terrasses",
+      isRoute: true,
+    },
+    {
+      label: "Services B2B",
+      href: "/services/b2b",
+      id: "nav-b2b",
+      isRoute: true,
+    },
     { label: "Contact", href: "/contact", id: "nav-contact", isRoute: true },
   ];
 
@@ -45,13 +65,13 @@ export default function Header() {
             <img
               src={logoPath}
               alt="aqua-toiture-facade"
-              className="h-12 w-auto"
+              className="w-20 h-auto"
             />
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigationItems.map((item) =>
               item.isRoute ? (
                 <Link
                   key={item.id}
@@ -70,8 +90,8 @@ export default function Header() {
                   {item.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#59D14C] transition-all group-hover:w-full"></span>
                 </button>
-              )
-            ))}
+              ),
+            )}
           </div>
 
           {/* Right side buttons */}
@@ -105,7 +125,7 @@ export default function Header() {
               className="bg-black/95 border-l border-white/10"
             >
               <div className="flex flex-col space-y-6 mt-8">
-                {navigationItems.map((item) => (
+                {navigationItems.map((item) =>
                   item.isRoute ? (
                     <Link
                       key={item.id}
@@ -122,8 +142,8 @@ export default function Header() {
                     >
                       {item.label}
                     </button>
-                  )
-                ))}
+                  ),
+                )}
                 <Button
                   className="bg-[#59D14C] hover:bg-[#4AC93D] text-white mt-4"
                   onClick={() => scrollToSection("contact")}
