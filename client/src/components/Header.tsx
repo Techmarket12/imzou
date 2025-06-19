@@ -24,11 +24,11 @@ export default function Header() {
   };
 
   const navigationItems = [
-    { label: "Accueil", href: "accueil", id: "nav-accueil" },
-    { label: "Nettoyage Toitures", href: "services", id: "nav-toitures" },
-    { label: "Nettoyage Façades", href: "realisations", id: "nav-facades" },
-    { label: "Nettoyage Terrasses", href: "terrasses", id: "nav-terrasses" },
-    { label: "Nettoyage extérieur Entreprises", href: "entreprises", id: "nav-entreprises" },
+    { label: "Accueil", href: "/", id: "nav-accueil", isRoute: true },
+    { label: "Nettoyage Toitures", href: "/services/toiture", id: "nav-toitures", isRoute: true },
+    { label: "Nettoyage Façades", href: "/services/facade", id: "nav-facades", isRoute: true },
+    { label: "Nettoyage Terrasses", href: "/services/terrasse", id: "nav-terrasses", isRoute: true },
+    { label: "Services B2B", href: "entreprises", id: "nav-entreprises", isRoute: false },
   ];
 
   return (
@@ -51,14 +51,25 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.href)}
-                className="text-white/90 hover:text-white text-lg font-medium transition-colors relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#27851E] transition-all group-hover:w-full"></span>
-              </button>
+              item.isRoute ? (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className="text-white/90 hover:text-white text-lg font-medium transition-colors relative group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#59D14C] transition-all group-hover:w-full"></span>
+                </Link>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-white/90 hover:text-white text-lg font-medium transition-colors relative group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#59D14C] transition-all group-hover:w-full"></span>
+                </button>
+              )
             ))}
           </div>
 
@@ -94,16 +105,26 @@ export default function Header() {
             >
               <div className="flex flex-col space-y-6 mt-8">
                 {navigationItems.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.href)}
-                    className="text-white hover:text-[#59D14C] transition-colors text-left"
-                  >
-                    {item.label}
-                  </button>
+                  item.isRoute ? (
+                    <Link
+                      key={item.id}
+                      href={item.href}
+                      className="text-white hover:text-[#59D14C] transition-colors text-left"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.href)}
+                      className="text-white hover:text-[#59D14C] transition-colors text-left"
+                    >
+                      {item.label}
+                    </button>
+                  )
                 ))}
                 <Button
-                  className="bg-[#27851E] hover:bg-[#1F6B15] text-white mt-4"
+                  className="bg-[#59D14C] hover:bg-[#4AC93D] text-white mt-4"
                   onClick={() => scrollToSection("contact")}
                 >
                   Contactez-nous
