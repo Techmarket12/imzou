@@ -550,6 +550,451 @@ export default function TerrasseService() {
         </div>
       </section>
 
+      {/* Problem Solving Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
+                PROBLÈMES COURANTS
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Solutions aux <span className="text-[#59D14C]">Problèmes</span> Fréquents
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Identifiez et résolvez les problèmes les plus courants rencontrés sur les terrasses.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8">
+              {[
+                {
+                  problem: "Terrasse Glissante",
+                  severity: "Urgent",
+                  causes: ["Mousse", "Algues", "Humidité stagnante", "Matériau lisse"],
+                  solutions: ["Démoussage complet", "Traitement anti-glisse", "Amélioration drainage", "Texture antidérapante"],
+                  prevention: "Nettoyage annuel + traitement préventif",
+                  icon: "fas fa-exclamation-triangle",
+                  color: "bg-red-500"
+                },
+                {
+                  problem: "Taches Tenaces",
+                  severity: "Modéré",
+                  causes: ["Graisse", "Rouille", "Végétation", "Pollution"],
+                  solutions: ["Détachage spécialisé", "Nettoyage haute pression", "Produits adaptés", "Ponçage léger"],
+                  prevention: "Protection hydrofuge + entretien régulier",
+                  icon: "fas fa-circle",
+                  color: "bg-orange-500"
+                },
+                {
+                  problem: "Joints Dégradés",
+                  severity: "Important",
+                  causes: ["Gel/dégel", "Infiltrations", "Usure", "Mauvaise pose"],
+                  solutions: ["Déjointoyage", "Nouveau mortier", "Étanchéité", "Finition soignée"],
+                  prevention: "Surveillance annuelle + réparations précoces",
+                  icon: "fas fa-th-large",
+                  color: "bg-yellow-500"
+                }
+              ].map((issue, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300">
+                  <div className="text-center mb-6">
+                    <div className={`w-16 h-16 ${issue.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <i className={`${issue.icon} text-white text-2xl`}></i>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{issue.problem}</h3>
+                    <Badge className={`text-xs text-white ${issue.severity === 'Urgent' ? 'bg-red-600' : issue.severity === 'Important' ? 'bg-yellow-600' : 'bg-orange-600'}`}>
+                      {issue.severity}
+                    </Badge>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-white font-semibold mb-2 text-sm">Causes principales</h4>
+                      <ul className="space-y-1">
+                        {issue.causes.map((cause, idx) => (
+                          <li key={idx} className="flex items-center text-gray-300 text-xs">
+                            <i className="fas fa-dot-circle text-red-400 mr-2 text-xs"></i>
+                            {cause}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-white font-semibold mb-2 text-sm">Solutions</h4>
+                      <ul className="space-y-1">
+                        {issue.solutions.map((solution, idx) => (
+                          <li key={idx} className="flex items-center text-gray-300 text-xs">
+                            <i className="fas fa-tools text-[#59D14C] mr-2 text-xs"></i>
+                            {solution}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="p-3 bg-gray-700/50 rounded-lg">
+                      <h4 className="text-[#59D14C] font-semibold mb-1 text-sm">Prévention</h4>
+                      <p className="text-gray-300 text-xs">{issue.prevention}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Maintenance Guide Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
+                GUIDE D'ENTRETIEN
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Entretien <span className="text-[#59D14C]">Optimal</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Suivez notre guide complet pour maintenir votre terrasse en parfait état toute l'année.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div className="space-y-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Entretien Quotidien</h3>
+                {[
+                  {
+                    frequency: "Quotidien",
+                    tasks: ["Balayage des feuilles", "Évacuation eau stagnante", "Nettoyage taches fraîches"],
+                    duration: "10 min",
+                    tools: ["Balai", "Serpillière", "Eau savonneuse"]
+                  },
+                  {
+                    frequency: "Hebdomadaire", 
+                    tasks: ["Lavage eau savonneuse", "Vérification évacuations", "Nettoyage mobilier"],
+                    duration: "30 min",
+                    tools: ["Seau", "Brosse douce", "Produit neutre"]
+                  },
+                  {
+                    frequency: "Mensuel",
+                    tasks: ["Inspection joints", "Nettoyage en profondeur", "Traitement préventif"],
+                    duration: "2h",
+                    tools: ["Brosse dure", "Produits spécialisés", "Pulvérisateur"]
+                  }
+                ].map((schedule, index) => (
+                  <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-xl font-bold text-white">{schedule.frequency}</h4>
+                      <Badge className="bg-[#59D14C] text-white text-xs">{schedule.duration}</Badge>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <h5 className="text-white font-semibold mb-2 text-sm">Tâches</h5>
+                        <ul className="space-y-1">
+                          {schedule.tasks.map((task, idx) => (
+                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                              <i className="fas fa-check text-[#59D14C] mr-2"></i>
+                              {task}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h5 className="text-white font-semibold mb-2 text-sm">Outils nécessaires</h5>
+                        <ul className="space-y-1">
+                          {schedule.tools.map((tool, idx) => (
+                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                              <i className="fas fa-tools text-[#59D14C] mr-2"></i>
+                              {tool}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="space-y-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Entretien Professionnel</h3>
+                
+                <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
+                  <h4 className="text-xl font-bold text-white mb-4">Planning Annuel Recommandé</h4>
+                  
+                  <div className="space-y-4">
+                    {[
+                      { month: "Mars", action: "Nettoyage complet printemps", price: "150-250€" },
+                      { month: "Juin", action: "Traitement anti-mousse", price: "80-120€" },
+                      { month: "Septembre", action: "Préparation hiver", price: "100-180€" },
+                      { month: "Décembre", action: "Inspection et maintenance", price: "50-80€" }
+                    ].map((schedule, index) => (
+                      <div key={index} className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg">
+                        <div>
+                          <span className="text-[#59D14C] font-semibold">{schedule.month}</span>
+                          <p className="text-gray-300 text-sm">{schedule.action}</p>
+                        </div>
+                        <Badge className="bg-gray-600 text-white text-xs">{schedule.price}</Badge>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-[#59D14C]/10 rounded-lg border border-[#59D14C]/20">
+                    <p className="text-[#59D14C] font-semibold text-center">
+                      <i className="fas fa-calculator mr-2"></i>
+                      Économie jusqu'à 40% avec contrat annuel
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
+                  <h4 className="text-xl font-bold text-white mb-4">Signes d'Alerte</h4>
+                  
+                  <div className="space-y-3">
+                    {[
+                      { sign: "Glissance anormale", urgency: "Immédiat", icon: "fas fa-exclamation-triangle", color: "text-red-400" },
+                      { sign: "Taches qui s'étendent", urgency: "Sous 1 semaine", icon: "fas fa-circle", color: "text-orange-400" },
+                      { sign: "Joints qui s'effritent", urgency: "Sous 1 mois", icon: "fas fa-th-large", color: "text-yellow-400" },
+                      { sign: "Mousse qui revient vite", urgency: "Planifier", icon: "fas fa-leaf", color: "text-green-400" }
+                    ].map((alert, index) => (
+                      <div key={index} className="flex items-center justify-between p-3 bg-gray-700/50 rounded-lg">
+                        <div className="flex items-center">
+                          <i className={`${alert.icon} ${alert.color} mr-3`}></i>
+                          <span className="text-gray-300 text-sm">{alert.sign}</span>
+                        </div>
+                        <Badge className="bg-gray-600 text-white text-xs">{alert.urgency}</Badge>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Solutions Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
+                SOLUTIONS AVANCÉES
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Innovations <span className="text-[#59D14C]">Technologiques</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Découvrez nos solutions technologiques de pointe pour l'entretien moderne des terrasses.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12">
+              {[
+                {
+                  title: "Traitement Nano-Protection",
+                  subtitle: "Protection invisible longue durée",
+                  description: "Application d'un revêtement nanotechnologique invisible qui repousse l'eau, les taches et facilite l'entretien. Protection efficace 5-7 ans.",
+                  benefits: ["Effet autonettoyant", "Anti-taches intégré", "Préserve l'aspect naturel", "Résistance UV renforcée"],
+                  process: ["Nettoyage complet", "Séchage 24h", "Application nano-coating", "Polymérisation 48h"],
+                  warranty: "7 ans",
+                  price: "25-35€/m²",
+                  image: pressionImg
+                },
+                {
+                  title: "Système Anti-Mousse Préventif",
+                  subtitle: "Prévention automatique intelligente",
+                  description: "Installation d'un système préventif avec diffuseurs intégrés qui libèrent automatiquement des agents anti-mousse selon l'humidité.",
+                  benefits: ["Prévention automatique", "Dosage intelligent", "Économie long terme", "Zéro intervention manuelle"],
+                  process: ["Étude faisabilité", "Installation discrète", "Programmation système", "Maintenance annuelle"],
+                  warranty: "5 ans",
+                  price: "150-300€ installation",
+                  image: vapeurImg
+                }
+              ].map((solution, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300">
+                  <div className="aspect-video relative overflow-hidden">
+                    <img src={solution.image} alt={solution.title} className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
+                      <p className="text-[#59D14C] font-semibold">{solution.subtitle}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="p-8">
+                    <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
+                    
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h4 className="text-white font-semibold mb-3 flex items-center">
+                          <i className="fas fa-star text-[#59D14C] mr-2"></i>
+                          Avantages
+                        </h4>
+                        <ul className="space-y-2">
+                          {solution.benefits.map((benefit, idx) => (
+                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                              <i className="fas fa-check text-[#59D14C] mr-2"></i>
+                              {benefit}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-white font-semibold mb-3 flex items-center">
+                          <i className="fas fa-cogs text-[#59D14C] mr-2"></i>
+                          Processus
+                        </h4>
+                        <ul className="space-y-2">
+                          {solution.process.map((step, idx) => (
+                            <li key={idx} className="flex items-start text-gray-300 text-sm">
+                              <span className="text-[#59D14C] font-bold mr-2 mt-0.5">{idx + 1}.</span>
+                              {step}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-700">
+                      <div className="text-center">
+                        <p className="text-gray-400 text-xs">Garantie</p>
+                        <p className="text-[#59D14C] font-bold">{solution.warranty}</p>
+                      </div>
+                      <div className="text-center">
+                        <p className="text-gray-400 text-xs">Tarif</p>
+                        <p className="text-white font-bold">{solution.price}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section with Packages */}
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
+                OFFRES PERSONNALISÉES
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Nos <span className="text-[#59D14C]">Formules</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Choisissez la formule adaptée à vos besoins et votre budget.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-4 gap-6 mb-12">
+              {[
+                {
+                  name: "Express",
+                  price: "12€/m²",
+                  description: "Nettoyage rapide pour entretien régulier",
+                  features: ["Balayage + lavage", "Démoussage léger", "Rinçage soigné"],
+                  duration: "2-3h",
+                  ideal: "Terrasses bien entretenues",
+                  color: "border-gray-600"
+                },
+                {
+                  name: "Standard",
+                  price: "18€/m²",
+                  description: "Solution complète pour terrasses courantes",
+                  features: ["Nettoyage complet", "Démoussage profond", "Traitement joints", "Rinçage haute pression"],
+                  duration: "4-6h",
+                  ideal: "Entretien annuel recommandé",
+                  color: "border-[#59D14C]",
+                  popular: true
+                },
+                {
+                  name: "Premium",
+                  price: "25€/m²",
+                  description: "Prestation haut de gamme avec protection",
+                  features: ["Nettoyage expert", "Rénovation joints", "Traitement anti-mousse", "Protection hydrofuge"],
+                  duration: "6-8h",
+                  ideal: "Terrasses dégradées",
+                  color: "border-yellow-500"
+                },
+                {
+                  name: "Luxury",
+                  price: "35€/m²",
+                  description: "Service excellence avec innovations",
+                  features: ["Tout Premium inclus", "Nano-protection", "Garantie 5 ans", "Suivi personnalisé"],
+                  duration: "8-12h",
+                  ideal: "Terrasses de prestige",
+                  color: "border-purple-500"
+                }
+              ].map((formula, index) => (
+                <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border-2 ${formula.color} relative ${formula.popular ? 'scale-105 z-10' : ''}`}>
+                  {formula.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <Badge className="bg-[#59D14C] text-white px-4 py-1">RECOMMANDÉE</Badge>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">{formula.name}</h3>
+                    <div className="text-3xl font-bold text-[#59D14C] mb-2">{formula.price}</div>
+                    <p className="text-gray-300 text-sm">{formula.description}</p>
+                  </div>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {formula.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300 text-sm">
+                        <i className="fas fa-check-circle text-[#59D14C] mr-2"></i>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="space-y-2 text-center">
+                    <p className="text-gray-400 text-xs">Durée: {formula.duration}</p>
+                    <p className="text-[#59D14C] text-xs font-semibold">{formula.ideal}</p>
+                  </div>
+                  
+                  <Button className={`w-full mt-4 ${formula.popular ? 'bg-[#59D14C] hover:bg-[#4AC93D]' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>
+                    Choisir {formula.name}
+                  </Button>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+              <div className="grid md:grid-cols-4 gap-6 text-center">
+                <div>
+                  <i className="fas fa-calculator text-[#59D14C] text-3xl mb-4"></i>
+                  <h3 className="text-lg font-bold text-white mb-2">Devis Précis</h3>
+                  <p className="text-gray-300 text-sm">Estimation détaillée gratuite sous 24h</p>
+                </div>
+                <div>
+                  <i className="fas fa-clock text-[#59D14C] text-3xl mb-4"></i>
+                  <h3 className="text-lg font-bold text-white mb-2">Intervention Rapide</h3>
+                  <p className="text-gray-300 text-sm">Rendez-vous sous 48h en urgence</p>
+                </div>
+                <div>
+                  <i className="fas fa-shield-alt text-[#59D14C] text-3xl mb-4"></i>
+                  <h3 className="text-lg font-bold text-white mb-2">Garantie Résultat</h3>
+                  <p className="text-gray-300 text-sm">Satisfaction 100% ou nouvelle intervention</p>
+                </div>
+                <div>
+                  <i className="fas fa-credit-card text-[#59D14C] text-3xl mb-4"></i>
+                  <h3 className="text-lg font-bold text-white mb-2">Paiement Souple</h3>
+                  <p className="text-gray-300 text-sm">Facilités de paiement disponibles</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Safety Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">

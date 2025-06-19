@@ -399,10 +399,227 @@ export default function ToitureService() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* FAQ Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
+                QUESTIONS FRÉQUENTES
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Vos <span className="text-[#59D14C]">Questions</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Toutes les réponses aux questions que vous vous posez sur l'entretien de votre toiture.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {[
+                {
+                  question: "À quelle fréquence faut-il nettoyer sa toiture ?",
+                  answer: "Il est recommandé de nettoyer sa toiture tous les 2 à 3 ans selon l'exposition (arbres, pollution). Une inspection annuelle permet de détecter les problèmes précocement."
+                },
+                {
+                  question: "Le nettoyage haute pression peut-il endommager ma toiture ?",
+                  answer: "Non, nos experts ajustent la pression selon le type de matériau. Nous utilisons des techniques douces pour les tuiles fragiles et réservons la haute pression aux matériaux résistants."
+                },
+                {
+                  question: "Faut-il traiter la toiture après le nettoyage ?",
+                  answer: "Oui, l'application d'un traitement anti-mousse prolonge significativement l'efficacité du nettoyage (3-5 ans) et protège votre toiture des nouvelles contaminations."
+                },
+                {
+                  question: "Intervenez-vous sur tous types de toitures ?",
+                  answer: "Nous travaillons sur tuiles, ardoises, zinc, bac acier, fibrociment. Chaque matériau nécessite une approche spécifique que nos experts maîtrisent parfaitement."
+                },
+                {
+                  question: "Le nettoyage de toiture est-il déductible fiscalement ?",
+                  answer: "Oui, l'entretien de toiture peut bénéficier d'un crédit d'impôt de 30% dans certaines conditions. Nous fournissons tous les justificatifs nécessaires."
+                }
+              ].map((faq, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700">
+                  <h3 className="text-xl font-bold text-white mb-3 flex items-center">
+                    <div className="w-8 h-8 bg-[#59D14C] rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                      <span className="text-white font-bold text-sm">{index + 1}</span>
+                    </div>
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed pl-11">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seasonal Calendar Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
+                CALENDRIER SAISONNIER
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Quand Nettoyer sa <span className="text-[#59D14C]">Toiture</span> ?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Chaque saison a ses avantages pour l'entretien de votre toiture. Découvrez les meilleures périodes d'intervention.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  season: "Printemps",
+                  icon: "fas fa-seedling",
+                  months: "Mars - Mai",
+                  benefits: "Bilan après l'hiver",
+                  tasks: ["Inspection complète", "Démoussage préventif", "Nettoyage gouttières", "Traitement anti-mousse"],
+                  color: "bg-green-500"
+                },
+                {
+                  season: "Été", 
+                  icon: "fas fa-sun",
+                  months: "Juin - Août",
+                  benefits: "Conditions optimales",
+                  tasks: ["Nettoyage complet", "Séchage rapide", "Traitement longue durée", "Réparations diverses"],
+                  color: "bg-yellow-500"
+                },
+                {
+                  season: "Automne",
+                  icon: "fas fa-leaf", 
+                  months: "Sept - Nov",
+                  benefits: "Préparation hiver",
+                  tasks: ["Évacuation feuilles", "Vérification étanchéité", "Nettoyage gouttières", "Dernières réparations"],
+                  color: "bg-orange-500"
+                },
+                {
+                  season: "Hiver",
+                  icon: "fas fa-snowflake",
+                  months: "Déc - Fév", 
+                  benefits: "Surveillance renforcée",
+                  tasks: ["Inspection sécurité", "Urgences uniquement", "Planification printemps", "Devis préparatoires"],
+                  color: "bg-blue-500"
+                }
+              ].map((season, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300">
+                  <div className="text-center mb-6">
+                    <div className={`w-16 h-16 ${season.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                      <i className={`${season.icon} text-white text-2xl`}></i>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{season.season}</h3>
+                    <Badge className="bg-gray-700 text-gray-300 text-xs">{season.months}</Badge>
+                    <p className="text-[#59D14C] font-semibold text-sm mt-2">{season.benefits}</p>
+                  </div>
+                  
+                  <ul className="space-y-2">
+                    {season.tasks.map((task, idx) => (
+                      <li key={idx} className="flex items-start text-gray-300 text-sm">
+                        <i className="fas fa-check text-[#59D14C] mr-2 mt-1 text-xs"></i>
+                        {task}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Roof Types Expertise */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
+                EXPERTISE MATÉRIAUX
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Spécialistes de <span className="text-[#59D14C]">Tous Matériaux</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Chaque type de toiture nécessite une approche spécifique. Découvrez notre expertise pour votre matériau.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  material: "Tuiles Béton",
+                  image: toitureHero,
+                  description: "Matériau poreux nécessitant un traitement doux",
+                  techniques: ["Basse pression", "Brossage manuel", "Traitement longue durée"],
+                  durability: "15-20 ans",
+                  maintenance: "Tous les 3 ans"
+                },
+                {
+                  material: "Ardoise Naturelle", 
+                  image: nacelleImg,
+                  description: "Pierre noble demandant un soin particulier",
+                  techniques: ["Nettoyage vapeur", "Produits spécialisés", "Préservation patine"],
+                  durability: "50-100 ans",
+                  maintenance: "Tous les 5 ans"
+                },
+                {
+                  material: "Zinc et Métaux",
+                  image: aspirationImg,
+                  description: "Matériaux résistants à haute performance",
+                  techniques: ["Haute pression", "Dégraissage", "Protection anti-corrosion"],
+                  durability: "30-50 ans", 
+                  maintenance: "Tous les 2 ans"
+                }
+              ].map((roof, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300 group">
+                  <div className="aspect-video relative overflow-hidden">
+                    <img src={roof.image} alt={roof.material} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <h3 className="text-xl font-bold text-white">{roof.material}</h3>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <p className="text-gray-300 mb-4 leading-relaxed">{roof.description}</p>
+                    
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Techniques utilisées</h4>
+                        <ul className="space-y-1">
+                          {roof.techniques.map((technique, idx) => (
+                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                              <i className="fas fa-tools text-[#59D14C] mr-2"></i>
+                              {technique}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-700">
+                        <div>
+                          <p className="text-gray-400 text-xs">Durabilité</p>
+                          <p className="text-white font-semibold text-sm">{roof.durability}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-400 text-xs">Entretien</p>
+                          <p className="text-[#59D14C] font-semibold text-sm">{roof.maintenance}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
                 TARIFS TRANSPARENTS
@@ -410,55 +627,81 @@ export default function ToitureService() {
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
                 Nos <span className="text-[#59D14C]">Tarifs</span>
               </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Prix transparents et compétitifs. Devis gratuit sous 24h avec détail des prestations.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8 mb-12">
+              {[
+                {
+                  title: "Formule Essentiel",
+                  price: "8€/m²",
+                  description: "Nettoyage de base pour toitures en bon état",
+                  features: ["Démoussage manuel", "Nettoyage gouttières", "Inspection visuelle", "Évacuation déchets"],
+                  color: "border-gray-600"
+                },
+                {
+                  title: "Formule Confort",
+                  price: "12€/m²", 
+                  description: "Solution complète avec traitement préventif",
+                  features: ["Démoussage haute pression", "Traitement anti-mousse", "Nettoyage complet gouttières", "Inspection détaillée", "Garantie 2 ans"],
+                  color: "border-[#59D14C]",
+                  popular: true
+                },
+                {
+                  title: "Formule Premium",
+                  price: "18€/m²",
+                  description: "Prestation haut de gamme avec protection maximale", 
+                  features: ["Démoussage professionnel", "Double traitement", "Hydrofuge protection", "Réparations mineures", "Garantie 3 ans", "Suivi annuel"],
+                  color: "border-yellow-500"
+                }
+              ].map((formula, index) => (
+                <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${formula.color} relative ${formula.popular ? 'scale-105' : ''}`}>
+                  {formula.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <Badge className="bg-[#59D14C] text-white px-4 py-1">PLUS POPULAIRE</Badge>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{formula.title}</h3>
+                    <div className="text-4xl font-bold text-[#59D14C] mb-2">{formula.price}</div>
+                    <p className="text-gray-300 text-sm">{formula.description}</p>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {formula.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <i className="fas fa-check-circle text-[#59D14C] mr-3"></i>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Button className={`w-full ${formula.popular ? 'bg-[#59D14C] hover:bg-[#4AC93D]' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>
+                    Choisir cette formule
+                  </Button>
+                </div>
+              ))}
             </div>
 
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-6">Prestations Toiture</h3>
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center p-4 bg-gray-700/50 rounded-lg">
-                      <span className="text-gray-300">Démoussage simple</span>
-                      <span className="text-[#59D14C] font-semibold">8€/m²</span>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-gray-700/50 rounded-lg">
-                      <span className="text-gray-300">Démoussage + traitement</span>
-                      <span className="text-[#59D14C] font-semibold">12€/m²</span>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-gray-700/50 rounded-lg">
-                      <span className="text-gray-300">Nettoyage gouttières</span>
-                      <span className="text-[#59D14C] font-semibold">15€/ml</span>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-gray-700/50 rounded-lg">
-                      <span className="text-gray-300">Inspection complète</span>
-                      <span className="text-[#59D14C] font-semibold">Gratuit</span>
-                    </div>
-                  </div>
+                  <i className="fas fa-calculator text-[#59D14C] text-3xl mb-4"></i>
+                  <h3 className="text-xl font-bold text-white mb-2">Devis Gratuit</h3>
+                  <p className="text-gray-300">Estimation précise sous 24h sans engagement</p>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-6">Avantages Inclus</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center text-gray-300">
-                      <i className="fas fa-check-circle text-[#59D14C] mr-3"></i>
-                      Devis gratuit et sans engagement
-                    </div>
-                    <div className="flex items-center text-gray-300">
-                      <i className="fas fa-check-circle text-[#59D14C] mr-3"></i>
-                      Garantie satisfaction 2 ans
-                    </div>
-                    <div className="flex items-center text-gray-300">
-                      <i className="fas fa-check-circle text-[#59D14C] mr-3"></i>
-                      Assurance responsabilité civile
-                    </div>
-                    <div className="flex items-center text-gray-300">
-                      <i className="fas fa-check-circle text-[#59D14C] mr-3"></i>
-                      Intervention rapide sous 48h
-                    </div>
-                    <div className="flex items-center text-gray-300">
-                      <i className="fas fa-check-circle text-[#59D14C] mr-3"></i>
-                      Produits écologiques certifiés
-                    </div>
-                  </div>
+                  <i className="fas fa-shield-alt text-[#59D14C] text-3xl mb-4"></i>
+                  <h3 className="text-xl font-bold text-white mb-2">Garantie Incluse</h3>
+                  <p className="text-gray-300">Satisfaction garantie ou intervention gratuite</p>
+                </div>
+                <div>
+                  <i className="fas fa-credit-card text-[#59D14C] text-3xl mb-4"></i>
+                  <h3 className="text-xl font-bold text-white mb-2">Paiement Facilité</h3>
+                  <p className="text-gray-300">Possibilité de paiement en plusieurs fois</p>
                 </div>
               </div>
             </div>
