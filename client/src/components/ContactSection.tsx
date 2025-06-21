@@ -79,13 +79,13 @@ export default function ContactSection() {
     {
       icon: "fas fa-phone",
       title: "Téléphone",
-      value: "+32 xx xxx xx xx",
+      value: "0497175556",
       color: "bg-[#59D14C]"
     },
     {
       icon: "fas fa-envelope",
       title: "Email",
-      value: "contact@aqua-bob-eponge.be",
+      value: "info@aquatf.be",
       color: "bg-[hsl(199,89%,48%)]"
     },
     {
