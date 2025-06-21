@@ -165,7 +165,7 @@ export default function Contact() {
                 <CardTitle className="text-white">Téléphone</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 mb-2">+32 123 456 789</p>
+                <p className="text-gray-300 mb-2">0497175556</p>
                 <p className="text-sm text-gray-400">Lun-Ven 8h-18h</p>
                 <p className="text-sm text-gray-400">Sam 8h-12h</p>
               </CardContent>
@@ -179,7 +179,7 @@ export default function Contact() {
                 <CardTitle className="text-white">Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 mb-2">contact@aquabob.be</p>
+                <p className="text-gray-300 mb-2">info@aquatf.be</p>
                 <p className="text-sm text-gray-400">Réponse sous 24h</p>
                 <p className="text-sm text-gray-400">7j/7</p>
               </CardContent>
