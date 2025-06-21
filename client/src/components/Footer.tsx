@@ -181,10 +181,10 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-300">Téléphone</p>
                   <a
-                    href="tel:+32123456789"
+                    href="tel:+32497175556"
                     className="text-white font-semibold hover:text-[#59D14C] transition-colors"
                   >
-                    +32 123 456 789
+                    0497175556
                   </a>
                 </div>
               </div>
@@ -194,10 +194,10 @@ export default function Footer() {
                 <div>
                   <p className="text-gray-300">Email</p>
                   <a
-                    href="mailto:contact@aqua-toiture-facade.be"
+                    href="mailto:info@aquatf.be"
                     className="text-white font-semibold hover:text-[#59D14C] transition-colors"
                   >
-                    contact@aqua-toiture-facade.be
+                    info@aquatf.be
                   </a>
                 </div>
               </div>
