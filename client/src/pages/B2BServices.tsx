@@ -178,7 +178,7 @@ export default function B2BServices() {
             ].map((client, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 flex items-center justify-center hover:scale-105 transition-transform duration-300"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-gray-600 hover:border-[#59D14C]/50 flex items-center justify-center"
               >
                 <img
                   src={client.img}
@@ -682,12 +682,12 @@ export default function B2BServices() {
                   <div>
                     <i className="fas fa-phone text-[#59D14C] text-2xl mb-2"></i>
                     <div className="text-white font-semibold">Téléphone</div>
-                    <div className="text-gray-300">+32 123 456 789</div>
+                    <div className="text-gray-300">0497175556</div>
                   </div>
                   <div>
                     <i className="fas fa-envelope text-[#59D14C] text-2xl mb-2"></i>
                     <div className="text-white font-semibold">Email B2B</div>
-                    <div className="text-gray-300">b2b@aquabob.be</div>
+                    <div className="text-gray-300">info@aquatf.be</div>
                   </div>
                   <div>
                     <i className="fas fa-clock text-[#59D14C] text-2xl mb-2"></i>
