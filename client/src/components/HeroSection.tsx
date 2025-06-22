@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-green-900"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"
     >
       {/* Desktop version */}
       <div className="hidden lg:flex lg:items-center lg:h-screen">
@@ -82,7 +82,7 @@ export default function HeroSection() {
       </div>
 
       {/* Mobile version */}
-      <div className="lg:hidden relative min-h-screen">
+      <div className="lg:hidden relative min-h-screen bg-gray-900">
         {/* Dark navbar at top */}
         <div className="relative bg-gray-900 h-16 flex items-center justify-between px-4 z-30">
           <div className="flex items-center"></div>
