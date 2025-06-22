@@ -112,18 +112,18 @@ export default function Header() {
             <ThemeToggle />
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="text-white dark:text-white light:text-gray-700">
+                <Button variant="ghost" className="text-white dark:text-white">
                   <i className="fas fa-bars text-xl"></i>
                 </Button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="bg-black/95 border-l border-white/10"
+                className="bg-white border-l border-gray-200 dark:bg-black/95 dark:border-white/10"
               >
                 <div className="flex flex-col space-y-6 mt-8">
                   {/* Theme Toggle for Mobile */}
-                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                    <span className="text-white text-sm">Mode d'affichage</span>
+                  <div className="flex items-center justify-between border-b border-gray-200 dark:border-white/10 pb-4">
+                    <span className="text-gray-700 dark:text-white text-sm">Mode d'affichage</span>
                     <ThemeToggle />
                   </div>
                   
@@ -131,13 +131,13 @@ export default function Header() {
                     <Link
                       key={item.id}  
                       href={item.href}
-                      className="text-white hover:text-[#59D14C] transition-colors text-left"
+                      className="text-gray-700 hover:text-[#27851E] dark:text-white dark:hover:text-[#59D14C] transition-colors text-left"
                     >
                       {item.label}
                     </Link>
                   ))}
                   <Button
-                    className="bg-[#59D14C] hover:bg-[#4AC93D] text-white mt-4"
+                    className="bg-[#27851E] hover:bg-[#1F6B15] dark:bg-[#59D14C] dark:hover:bg-[#4AC93D] text-white mt-4"
                     onClick={() => scrollToSection("contact")}
                   >
                     Contactez-nous
