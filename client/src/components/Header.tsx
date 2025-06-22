@@ -15,10 +15,10 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   { id: "home", label: "Accueil", href: "/", isRoute: true },
-  { id: "services", label: "Services", href: "services" },
-  { id: "realizations", label: "Réalisations", href: "realizations" },
-  { id: "about", label: "À propos", href: "about" },
-  { id: "b2b", label: "Services B2B", href: "/b2b", isRoute: true },
+  { id: "toiture", label: "Nettoyage Toitures", href: "/services/toiture", isRoute: true },
+  { id: "facade", label: "Nettoyage Façades", href: "/services/facade", isRoute: true },
+  { id: "terrasse", label: "Nettoyage Terrasses", href: "/services/terrasse", isRoute: true },
+  { id: "b2b", label: "Services B2B", href: "/services/b2b", isRoute: true },
   { id: "contact", label: "Contact", href: "/contact", isRoute: true },
 ];
 
@@ -75,25 +75,15 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) =>
-              item.isRoute ? (
-                <Link
-                  key={item.id}
-                  href={item.href}
-                  className="text-white/90 hover:text-white transition-colors dark:text-white/90 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-white/90 hover:text-white transition-colors dark:text-white/90 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900"
-                >
-                  {item.label}
-                </button>
-              ),
-            )}
+            {navigationItems.map((item) => (
+              <Link
+                key={item.id}
+                href={item.href}
+                className="text-white/90 hover:text-white transition-colors dark:text-white/90 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
 
           {/* Right side buttons */}
@@ -137,25 +127,15 @@ export default function Header() {
                     <ThemeToggle />
                   </div>
                   
-                  {navigationItems.map((item) =>
-                    item.isRoute ? (
-                      <Link
-                        key={item.id}
-                        href={item.href}
-                        className="text-white hover:text-[#59D14C] transition-colors text-left"
-                      >
-                        {item.label}
-                      </Link>
-                    ) : (
-                      <button
-                        key={item.id}
-                        onClick={() => scrollToSection(item.href)}
-                        className="text-white hover:text-[#59D14C] transition-colors text-left"
-                      >
-                        {item.label}
-                      </button>
-                    ),
-                  )}
+                  {navigationItems.map((item) => (
+                    <Link
+                      key={item.id}  
+                      href={item.href}
+                      className="text-white hover:text-[#59D14C] transition-colors text-left"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
                   <Button
                     className="bg-[#59D14C] hover:bg-[#4AC93D] text-white mt-4"
                     onClick={() => scrollToSection("contact")}
