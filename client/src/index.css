@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  /* Light mode colors */
   --background: hsl(0, 0%, 100%);
   --foreground: hsl(20, 14.3%, 4.1%);
   --muted: hsl(60, 4.8%, 95.9%);
@@ -51,6 +52,253 @@
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(0, 0%, 98%);
   --ring: hsl(240, 4.9%, 83.9%);
+}
+
+/* Light mode styles */
+.light {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222.2, 84%, 4.9%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222.2, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222.2, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: #59D14C;
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222.2, 84%, 4.9%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222.2, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222.2, 84%, 4.9%);
+}
+
+/* Global light mode styles */
+.light body {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+/* Light mode main backgrounds */
+.light .bg-gray-900 {
+  background: #ffffff !important;
+}
+
+.light .bg-gray-800 {
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb;
+}
+
+.light .bg-gray-700 {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb;
+}
+
+.light .bg-gray-700\/50 {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb;
+}
+
+.light .bg-gray-800\/50 {
+  background: #f9fafb !important;
+  border: 1px solid #e5e7eb;
+}
+
+/* Light mode text colors */
+.light .text-white {
+  color: #1f2937 !important;
+}
+
+.light .text-gray-300 {
+  color: #6b7280 !important;
+}
+
+.light .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.light .text-gray-200 {
+  color: #4b5563 !important;
+}
+
+.light .text-gray-100 {
+  color: #374151 !important;
+}
+
+/* Light mode borders */
+.light .border-gray-600 {
+  border-color: #d1d5db !important;
+}
+
+.light .border-gray-700 {
+  border-color: #d1d5db !important;
+}
+
+/* Light mode gradients - clean white backgrounds */
+.light .bg-gradient-to-br {
+  background: #ffffff !important;
+}
+
+.light .bg-gradient-to-r {
+  background: #ffffff !important;
+}
+
+/* Light mode header */
+.light header {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(10px);
+}
+
+.light .bg-black\/80 {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.light .bg-black\/70 {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Light mode backdrop and shadows */
+.light .backdrop-blur-sm {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.light .backdrop-blur-md {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.light .shadow-2xl {
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Clean slate backgrounds */
+.light .bg-slate-900 {
+  background: #ffffff !important;
+}
+
+.light .from-slate-900 {
+  background: #ffffff !important;
+}
+
+.light .via-gray-800 {
+  background: #ffffff !important;
+}
+
+.light .to-slate-900 {
+  background: #ffffff !important;
+}
+
+/* Fix gradient backgrounds completely */
+.light [class*="bg-gradient"] {
+  background: #ffffff !important;
+}
+
+.light .from-gray-800 {
+  background: #ffffff !important;
+}
+
+.light .to-gray-900 {
+  background: #ffffff !important;
+}
+
+/* Header logo and navigation fixes */
+.light .text-\[\#59D14C\] {
+  color: #59D14C !important;
+}
+
+/* Button and interactive elements */
+.light .bg-\[\#59D14C\] {
+  background: #59D14C !important;
+  color: white !important;
+}
+
+.light .hover\:bg-\[\#4AC93D\]:hover {
+  background: #4AC93D !important;
+}
+
+/* Fix all green background issues in light mode */
+.light section {
+  background: #ffffff !important;
+}
+
+.light .min-h-screen {
+  background: #ffffff !important;
+}
+
+/* Remove all gradient backgrounds completely */
+.light * {
+  background-image: none !important;
+}
+
+/* Light mode - override specific green background classes */
+.light .to-green-900 {
+  background: #ffffff !important;
+}
+
+/* Light mode cards with subtle shadows */
+.light .bg-gray-700\/50,
+.light .bg-gray-800\/50 {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Light mode hover effects */
+.light .hover\:border-\[\#59D14C\]:hover {
+  border-color: #59D14C !important;
+}
+
+.light .hover\:bg-gray-700:hover {
+  background: #f3f4f6 !important;
+}
+
+/* Clean header in light mode */
+.light .bg-transparent {
+  background: transparent !important;
+}
+
+/* Form inputs in light mode */
+.light input,
+.light textarea,
+.light select {
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  color: #1f2937 !important;
+}
+
+.light input::placeholder,
+.light textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Navigation links adjustments */
+.light .text-\[\#849FE1\] {
+  color: #3b82f6 !important;
+}
+
+/* Light mode navbar text visibility */
+.light .text-white\/90 {
+  color: #374151 !important;
+}
+
+.light .hover\:text-white:hover {
+  color: #1f2937 !important;
+}
+
+/* Override any remaining background colors */
+.light [style*="background"] {
+  background: #ffffff !important;
+}
+
+/* Ensure main content areas are white */
+.light main,
+.light .container {
+  background: #ffffff !important;
 }
 
 @layer base {
