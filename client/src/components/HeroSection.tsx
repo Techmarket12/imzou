@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import logoPath from "@assets/logo2.png";
 import videoPath from "@assets/video_hero.mp4";
@@ -6,6 +6,22 @@ import fallbackImage from "@assets/toiture2.png";
 
 export default function HeroSection() {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [shouldAutoPlay, setShouldAutoPlay] = useState(true);
+  const desktopVideoRef = useRef<HTMLVideoElement>(null);
+  const mobileVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Check if user is navigating to home from another page
+    const navigatingToHome = sessionStorage.getItem('navigatingToHome');
+    if (navigatingToHome) {
+      setShouldAutoPlay(false);
+      // Clear the flag after using it
+      sessionStorage.removeItem('navigatingToHome');
+    } else {
+      // Direct access to home page or refresh - allow autoplay
+      setShouldAutoPlay(true);
+    }
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -64,7 +80,8 @@ export default function HeroSection() {
               <div className="absolute left-16 -top-40 right-0">
                 <div className="w-[900px] h-[900px] rounded-full overflow-hidden shadow-2xl relative">
                   <video
-                    autoPlay
+                    ref={desktopVideoRef}
+                    autoPlay={shouldAutoPlay}
                     muted
                     loop
                     preload="metadata"
@@ -91,7 +108,8 @@ export default function HeroSection() {
         {/* Video section */}
         <div className="relative h-[55vh] overflow-hidden bg-gray-900">
           <video
-            autoPlay
+            ref={mobileVideoRef}
+            autoPlay={shouldAutoPlay}
             muted
             loop
             playsInline
