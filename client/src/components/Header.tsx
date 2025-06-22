@@ -37,6 +37,8 @@ export default function Header() {
 
   const scrollToSection = (sectionId: string) => {
     if (location !== "/") {
+      // Mark that user is navigating to home from another page
+      sessionStorage.setItem('navigatingToHome', 'true');
       window.location.href = `/#${sectionId}`;
       return;
     }
@@ -80,6 +82,12 @@ export default function Header() {
                 key={item.id}
                 href={item.href}
                 className="text-white/90 hover:text-white transition-colors dark:text-white/90 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900"
+                onClick={() => {
+                  if (item.href === "/" && location !== "/") {
+                    // Mark that user is navigating to home from another page
+                    sessionStorage.setItem('navigatingToHome', 'true');
+                  }
+                }}
               >
                 {item.label}
               </Link>
@@ -132,6 +140,12 @@ export default function Header() {
                       key={item.id}  
                       href={item.href}
                       className="text-gray-700 hover:text-[#27851E] dark:text-white dark:hover:text-[#59D14C] transition-colors text-left"
+                      onClick={() => {
+                        if (item.href === "/" && location !== "/") {
+                          // Mark that user is navigating to home from another page
+                          sessionStorage.setItem('navigatingToHome', 'true');
+                        }
+                      }}
                     >
                       {item.label}
                     </Link>
