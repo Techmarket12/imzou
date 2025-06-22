@@ -1,15 +1,34 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Link } from "wouter";
+import ThemeToggle from "./ThemeToggle";
+
 import logoPath from "@assets/logo2.png";
+
+interface NavigationItem {
+  id: string;
+  label: string;
+  href: string;
+  isRoute?: boolean;
+}
+
+const navigationItems: NavigationItem[] = [
+  { id: "home", label: "Accueil", href: "/", isRoute: true },
+  { id: "services", label: "Services", href: "services" },
+  { id: "realizations", label: "Réalisations", href: "realizations" },
+  { id: "about", label: "À propos", href: "about" },
+  { id: "b2b", label: "Services B2B", href: "/b2b", isRoute: true },
+  { id: "contact", label: "Contact", href: "/contact", isRoute: true },
+];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -17,45 +36,30 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (location !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
     }
   };
-
-  const navigationItems = [
-    { label: "Accueil", href: "/", id: "nav-accueil", isRoute: true },
-    {
-      label: "Nettoyage Toitures",
-      href: "/services/toiture",
-      id: "nav-toitures",
-      isRoute: true,
-    },
-    {
-      label: "Nettoyage Façades",
-      href: "/services/facade",
-      id: "nav-facades",
-      isRoute: true,
-    },
-    {
-      label: "Nettoyage Terrasses",
-      href: "/services/terrasse",
-      id: "nav-terrasses",
-      isRoute: true,
-    },
-    {
-      label: "Services B2B",
-      href: "/services/b2b",
-      id: "nav-b2b",
-      isRoute: true,
-    },
-    { label: "Contact", href: "/contact", id: "nav-contact", isRoute: true },
-  ];
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-transparent"
+        isScrolled
+          ? "bg-black/80 backdrop-blur-sm dark:bg-black/80 light:bg-white/95 light:shadow-md" 
+          : "bg-transparent"
       }`}
     >
       <nav className="w-full px-0 py-4">
@@ -76,19 +80,17 @@ export default function Header() {
                 <Link
                   key={item.id}
                   href={item.href}
-                  className="text-white/90 hover:text-white text-lg font-medium transition-colors relative group"
+                  className="text-white/90 hover:text-white transition-colors dark:text-white/90 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#59D14C] transition-all group-hover:w-full"></span>
                 </Link>
               ) : (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-white/90 hover:text-white text-lg font-medium transition-colors relative group"
+                  className="text-white/90 hover:text-white transition-colors dark:text-white/90 dark:hover:text-white light:text-gray-600 light:hover:text-gray-900"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#59D14C] transition-all group-hover:w-full"></span>
                 </button>
               ),
             )}
@@ -98,7 +100,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Button
               variant="outline"
-              className="border border-white/30  hover:bg-white hover:text-black px-4 py-2 text-sm"
+              className="border border-white/30 hover:bg-white hover:text-black px-4 py-2 text-sm dark:border-white/30 dark:hover:bg-white dark:hover:text-black light:border-gray-300 light:text-gray-700 light:hover:bg-gray-100 light:hover:text-gray-900"
             >
               <i className="fas fa-info-circle mr-2"></i>
               Infos pratiques
@@ -111,48 +113,59 @@ export default function Header() {
               <i className="fas fa-phone mr-2"></i>
               Contactez-nous
             </Button>
+
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" className="lg:hidden text-white">
-                <i className="fas fa-bars text-xl"></i>
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="bg-black/95 border-l border-white/10"
-            >
-              <div className="flex flex-col space-y-6 mt-8">
-                {navigationItems.map((item) =>
-                  item.isRoute ? (
-                    <Link
-                      key={item.id}
-                      href={item.href}
-                      className="text-white hover:text-[#59D14C] transition-colors text-left"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <button
-                      key={item.id}
-                      onClick={() => scrollToSection(item.href)}
-                      className="text-white hover:text-[#59D14C] transition-colors text-left"
-                    >
-                      {item.label}
-                    </button>
-                  ),
-                )}
-                <Button
-                  className="bg-[#59D14C] hover:bg-[#4AC93D] text-white mt-4"
-                  onClick={() => scrollToSection("contact")}
-                >
-                  Contactez-nous
+          <div className="lg:hidden flex items-center space-x-3">
+            <ThemeToggle />
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" className="text-white dark:text-white light:text-gray-700">
+                  <i className="fas fa-bars text-xl"></i>
                 </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetTrigger>
+              <SheetContent
+                side="right"
+                className="bg-black/95 border-l border-white/10"
+              >
+                <div className="flex flex-col space-y-6 mt-8">
+                  {/* Theme Toggle for Mobile */}
+                  <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span className="text-white text-sm">Mode d'affichage</span>
+                    <ThemeToggle />
+                  </div>
+                  
+                  {navigationItems.map((item) =>
+                    item.isRoute ? (
+                      <Link
+                        key={item.id}
+                        href={item.href}
+                        className="text-white hover:text-[#59D14C] transition-colors text-left"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <button
+                        key={item.id}
+                        onClick={() => scrollToSection(item.href)}
+                        className="text-white hover:text-[#59D14C] transition-colors text-left"
+                      >
+                        {item.label}
+                      </button>
+                    ),
+                  )}
+                  <Button
+                    className="bg-[#59D14C] hover:bg-[#4AC93D] text-white mt-4"
+                    onClick={() => scrollToSection("contact")}
+                  >
+                    Contactez-nous
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </nav>
     </header>
