@@ -21,6 +21,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead, { seoConfigs } from "@/components/SEOHead";
 import { Link } from "wouter";
 
 // Images spécifiques au service façade
@@ -211,6 +212,7 @@ export default function FacadeService() {
 
   return (
     <div className="min-h-screen bg-gray-900">
+      <SEOHead {...seoConfigs.facade} location="Bruxelles" />
       <Header />
       
       {/* Hero Section */}
@@ -226,12 +228,13 @@ export default function FacadeService() {
               SERVICE SPÉCIALISÉ FAÇADE
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-              Nettoyage et Ravalement de{" "}
-              <span className="text-[#59D14C] drop-shadow-2xl">Façade</span>
+              Nettoyage Façade{" "}
+              <span className="text-[#59D14C] drop-shadow-2xl">Bruxelles</span>
             </h1>
             <p className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-              Redonnez tout son éclat à votre façade avec nos techniques de nettoyage professionnelles. 
-              Haute pression, vapeur écologique et traitements protecteurs pour tous types de matériaux.
+              Spécialiste du <strong>nettoyage façade Bruxelles</strong> et <strong>démoussage façade</strong>. 
+              Service professionnel à Anderlecht, Uccle, Ixelles, Saint-Gilles, Etterbeek, Wavre, Waterloo. 
+              <strong>Nettoyage façade karcher</strong> et <strong>traitement hydrofuge façade</strong>.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
