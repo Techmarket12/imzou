@@ -47,19 +47,18 @@ export default function HeroSection() {
             <div className="lg:col-span-4 space-y-8 pl-2 lg:pl-4">
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-[#849FE1] block">Nettoyage Toiture</span>
-                  <span className="text-[#849FE1] block">Bruxelles &</span>
-                  <span className="text-[#59D14C] block">Démoussage</span>
-                  <span className="text-[#59D14C] block">Professionnel</span>
+                  <span className="text-[#849FE1] block">Votre Habitat</span>
+                  <span className="text-[#849FE1] block">Vous protège</span>
+                  <span className="text-[#59D14C] block">Nous protégeons</span>
+                  <span className="text-[#59D14C] block">Votre Habitat</span>
                 </h1>
 
-                <p className="text-lg text-gray-200 max-w-lg leading-relaxed">
-                  <strong>aqua-toiture-facade</strong> - Spécialiste du{" "}
+                <p className="text-lg text-gray-200 max-w-lg leading-relaxed">L'entreprise
+                  <strong>aqua-toiture-facade</strong> est votre prestataire de confiance pour le nettoyage de toiture.
                   <span className="text-[#59D14C] font-semibold">
-                    nettoyage toiture Bruxelles, démoussage terrasse et nettoyage façade haute pression
+                    Nous vous proposons une solution de nettoyage à l'extérieur à la vapeur et sans produits chimiques
                   </span>{" "}
-                  à Bruxelles, Anderlecht, Uccle, Ixelles, Brabant Wallon, Waterloo, Wavre et Brabant Flamand.
-                  Solution écologique sans produit chimique.
+                  à Bruxelles capitale, Brabant Wallon, Braband Flamand et ses alentours.
                 </p>
               </div>
 
