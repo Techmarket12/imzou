@@ -312,7 +312,6 @@ export default function TerrasseService() {
               style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
             >
               Nettoyage Terrasse{" "}
-              <span className="text-[#59D14C] drop-shadow-2xl">Bruxelles</span>
             </h1>
             <p
               className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl"
