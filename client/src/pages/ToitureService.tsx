@@ -201,7 +201,6 @@ export default function ToitureService() {
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
               Nettoyage Toiture{" "}
-              <span className="text-[#59D14C] drop-shadow-2xl">Bruxelles</span>
             </h1>
             <p className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
               Spécialiste du <strong>nettoyage toiture Bruxelles</strong> et <strong>démoussage toiture</strong>. 
