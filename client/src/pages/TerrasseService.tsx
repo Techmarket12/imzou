@@ -586,67 +586,6 @@ export default function TerrasseService() {
         </div>
       </section>
 
-      {/* Before/After Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <Badge className="bg-[#59D14C] text-white px-4 py-2 mb-6 text-sm font-semibold">
-                TRANSFORMATIONS RÉALISÉES
-              </Badge>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Avant / <span className="text-[#59D14C]">Après</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Découvrez la transformation spectaculaire de nos interventions
-                terrasse.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {beforeAfterImages.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 hover:border-[#59D14C]/50 transition-all duration-300 group"
-                >
-                  <div className="grid grid-cols-2 h-48">
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={item.before}
-                        alt="Avant"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute top-2 left-2">
-                        <Badge className="bg-red-500 text-white text-xs">
-                          AVANT
-                        </Badge>
-                      </div>
-                    </div>
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={item.after}
-                        alt="Après"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute top-2 right-2">
-                        <Badge className="bg-[#59D14C] text-white text-xs">
-                          APRÈS
-                        </Badge>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-[#59D14C] transition-colors">
-                      {item.title}
-                    </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Problem Solving Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
