@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead, { seoConfigs } from "@/components/SEOHead";
 
 // Import des images
 import facadeImg from "@assets/facade2.png";
@@ -84,6 +85,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gray-900">
+      <SEOHead {...seoConfigs.contact} location="Bruxelles" />
       <Header />
       {/* Hero Section */}
       <section
