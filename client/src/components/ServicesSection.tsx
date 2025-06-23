@@ -24,7 +24,7 @@ const services = [
     id: "toiture",
     title: "Nettoyage Toiture",
     description:
-      "Spécialiste du nettoyage toiture Bruxelles et démoussage toiture. Service professionnel à Anderlecht, Uccle, Ixelles, Brabant Wallon et Brabant Flamand. Technologie Karcher haute pression.",
+      "Spécialiste du nettoyage toiture et démoussage toiture à Bruxelles, Braband Wallon, Braband Flamand et ses alentours.Service professionnel à Anderlecht, Uccle, Ixelles, Brabant Wallon et Brabant Flamand. Technologie Karcher haute pression.",
     features: [
       "Démoussage toiture Bruxelles",
       "Traitement hydrofuge toiture",
