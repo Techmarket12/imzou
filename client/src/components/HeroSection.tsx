@@ -48,9 +48,9 @@ export default function HeroSection() {
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                   <span className="text-[#849FE1] block">Votre Habitat</span>
-                  <span className="text-[#849FE1] block">Vous protège</span>
+                  <span className="text-[#849FE1] block">vous protège</span>
                   <span className="text-[#59D14C] block">Nous protégeons</span>
-                  <span className="text-[#59D14C] block">Votre Habitat</span>
+                  <span className="text-[#59D14C] block">votre Habitat</span>
                 </h1>
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">L'entreprise
