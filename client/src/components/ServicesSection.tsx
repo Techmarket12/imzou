@@ -22,7 +22,7 @@ import aspirationImg from "@assets/nettoyage-de-gouttieres-sans-monter-sur-le-to
 const services = [
   {
     id: "toiture",
-    title: "Nettoyage Toiture Bruxelles",
+    title: "Nettoyage Toiture",
     description:
       "Spécialiste du nettoyage toiture Bruxelles et démoussage toiture. Service professionnel à Anderlecht, Uccle, Ixelles, Brabant Wallon et Brabant Flamand. Technologie Karcher haute pression.",
     features: [
@@ -38,9 +38,9 @@ const services = [
   },
   {
     id: "facade",
-    title: "Nettoyage Façade Bruxelles",
+    title: "Nettoyage Façade",
     description:
-      "Expert en nettoyage façade Bruxelles et démoussage façade haute pression. Intervention à Waterloo, Wavre, Etterbeek, Saint-Gilles et toutes communes de Bruxelles.",
+      "Expert en nettoyage façade et démoussage façade haute pression à Bruxelles, Braband Wallon, Braband Flamand et ses alentours. Intervention à Waterloo, Wavre, Etterbeek, Saint-Gilles et toutes communes de Bruxelles.",
     features: [
       "Nettoyage façade karcher Bruxelles",
       "Démoussage façade haute pression",
@@ -54,9 +54,9 @@ const services = [
   },
   {
     id: "terrasse",
-    title: "Nettoyage Terrasse Bruxelles",
+    title: "Nettoyage Terrasse",
     description:
-      "Spécialiste nettoyage terrasse Bruxelles et démoussage terrasse. Service professionnel à Anderlecht, Uccle, Wavre, Waterloo. Nettoyage escalier extérieur et entrée maison.",
+      "Spécialiste nettoyage terrasse  et démoussage terrasse à Bruxelles, Braband Wallon, Braband Flamand et ses alentours. Service professionnel à Anderlecht, Uccle, Wavre, Waterloo. Nettoyage escalier extérieur et entrée maison.",
     features: [
       "Démoussage terrasse Bruxelles",
       "Nettoyage escalier extérieur",
@@ -85,7 +85,7 @@ export default function ServicesSection() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Nettoyage <span className="text-[#59D14C]">Toiture Bruxelles</span>
+              Nettoyage <span className="text-[#59D14C]">Toiture</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Spécialiste du nettoyage toiture Bruxelles, démoussage terrasse et nettoyage façade haute pression. 
