@@ -21,6 +21,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead, { seoConfigs } from "@/components/SEOHead";
 import { Link } from "wouter";
 
 // Images spécifiques au service terrasse
@@ -291,6 +292,7 @@ export default function TerrasseService() {
 
   return (
     <div className="min-h-screen bg-gray-900">
+      <SEOHead {...seoConfigs.terrasse} location="Bruxelles" />
       <Header />
 
       {/* Hero Section */}
@@ -309,16 +311,16 @@ export default function TerrasseService() {
               className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl"
               style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.8)" }}
             >
-              Nettoyage et Entretien de{" "}
-              <span className="text-[#59D14C] drop-shadow-2xl">Terrasse</span>
+              Nettoyage Terrasse{" "}
+              <span className="text-[#59D14C] drop-shadow-2xl">Bruxelles</span>
             </h1>
             <p
               className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl"
               style={{ textShadow: "1px 1px 4px rgba(0,0,0,0.8)" }}
             >
-              Retrouvez une terrasse impeccable et sécurisée pour profiter
-              pleinement de vos extérieurs. Démoussage, nettoyage haute pression
-              et traitement anti-glisse par des professionnels.
+              Spécialiste du <strong>nettoyage terrasse Bruxelles</strong> et <strong>démoussage terrasse</strong>. 
+              Service professionnel à Anderlecht, Uccle, Ixelles, Wavre, Waterloo. 
+              <strong>Nettoyage escalier extérieur</strong> et <strong>nettoyage entrée maison</strong>.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
