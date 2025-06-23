@@ -54,7 +54,7 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">L'entreprise
-                  <strong>aqua-toiture-facade</strong> est votre prestataire de confiance pour le nettoyage de toiture.
+                  <strong> aqua-toiture-facade</strong> est votre prestataire de confiance pour le nettoyage de toiture.
                   <span className="text-[#59D14C] font-semibold">
                     Nous vous proposons une solution de nettoyage à l'extérieur à la vapeur et sans produits chimiques
                   </span>{" "}
