@@ -22,14 +22,14 @@ import aspirationImg from "@assets/nettoyage-de-gouttieres-sans-monter-sur-le-to
 const services = [
   {
     id: "toiture",
-    title: "Nettoyage de Toiture",
+    title: "Nettoyage Toiture Bruxelles",
     description:
-      "Redonnez éclat et longévité à votre toiture avec notre technologie vapeur haute pression. Nos experts travaillent en hauteur en toute sécurité.",
+      "Spécialiste du nettoyage toiture Bruxelles et démoussage toiture. Service professionnel à Anderlecht, Uccle, Ixelles, Brabant Wallon et Brabant Flamand. Technologie Karcher haute pression.",
     features: [
-      "Démoussage complet",
-      "Traitement anti-mousse",
-      "Nettoyage des gouttières",
-      "Inspection gratuite",
+      "Démoussage toiture Bruxelles",
+      "Traitement hydrofuge toiture",
+      "Nettoyage gouttières",
+      "Devis nettoyage toiture gratuit",
     ],
     image: toitureImg,
     price: "À partir de 8€/m²",
@@ -38,14 +38,14 @@ const services = [
   },
   {
     id: "facade",
-    title: "Nettoyage de Façade",
+    title: "Nettoyage Façade Bruxelles",
     description:
-      "Ravivez l'aspect neuf de votre façade grâce à nos techniques de nettoyage respectueuses. Nos experts travaillent en hauteur en toute sécurité.",
+      "Expert en nettoyage façade Bruxelles et démoussage façade haute pression. Intervention à Waterloo, Wavre, Etterbeek, Saint-Gilles et toutes communes de Bruxelles.",
     features: [
-      "Nettoyage haute pression",
-      "Traitement des traces",
-      "Protection anti-salissure",
-      "Tous types de matériaux",
+      "Nettoyage façade karcher Bruxelles",
+      "Démoussage façade haute pression",
+      "Traitement hydrofuge façade",
+      "Prix nettoyage façade compétitif",
     ],
     image: facadeImg,
     price: "À partir de 12€/m²",
@@ -54,14 +54,14 @@ const services = [
   },
   {
     id: "terrasse",
-    title: "Nettoyage de Terrasse",
+    title: "Nettoyage Terrasse Bruxelles",
     description:
-      "Retrouvez une terrasse impeccable et sécurisée pour profiter pleinement de vos extérieurs. Nos experts travaillent en hauteur en toute sécurité.",
+      "Spécialiste nettoyage terrasse Bruxelles et démoussage terrasse. Service professionnel à Anderlecht, Uccle, Wavre, Waterloo. Nettoyage escalier extérieur et entrée maison.",
     features: [
-      "Démoussage profond",
-      "Nettoyage joints",
-      "Traitement anti-glisse",
-      "Finition protective",
+      "Démoussage terrasse Bruxelles",
+      "Nettoyage escalier extérieur",
+      "Nettoyage entrée maison",
+      "Nettoyage allée piétonne",
     ],
     image: terrasseImge,
     price: "À partir de 15€/m²",
@@ -85,12 +85,12 @@ export default function ServicesSection() {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Nos <span className="text-[#59D14C]">Services Experts</span>
+              Nettoyage <span className="text-[#59D14C]">Toiture Bruxelles</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Découvrez notre gamme complète de services de nettoyage
-              écologique. Chaque intervention est réalisée avec des équipements
-              professionnels et des techniques respectueuses de l'environnement.
+              Spécialiste du nettoyage toiture Bruxelles, démoussage terrasse et nettoyage façade haute pression. 
+              Service professionnel à Anderlecht, Uccle, Ixelles, Wavre, Waterloo, Brabant Wallon et Brabant Flamand.
+              Devis gratuit, intervention rapide.
             </p>
           </div>
 
