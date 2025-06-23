@@ -21,6 +21,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEOHead, { seoConfigs } from "@/components/SEOHead";
 import { Link } from "wouter";
 
 // Images spécifiques au service toiture
@@ -133,27 +134,27 @@ export default function ToitureService() {
   const services = [
     {
       icon: "fas fa-broom",
-      title: "Démoussage Complet",
-      description: "Élimination totale des mousses, lichens et champignons qui détériorent votre toiture",
-      features: ["Traitement préventif", "Nettoyage en profondeur", "Protection durable", "Garantie résultat"],
+      title: "Démoussage Toiture Bruxelles",
+      description: "Démoussage toiture Anderlecht, Uccle, Ixelles et toutes communes de Bruxelles. Élimination totale des mousses, lichens et champignons avec traitement hydrofuge toiture.",
+      features: ["Démoussage toiture karcher", "Traitement hydrofuge toiture", "Nettoyage toiture haute pression", "Intervention rapide toiture"],
     },
     {
       icon: "fas fa-tint",
-      title: "Nettoyage Gouttières",
-      description: "Évacuation optimale des eaux pluviales grâce à nos techniques d'aspiration haute performance",
-      features: ["Aspiration puissante", "Débouchage complet", "Vérification étanchéité", "Réparations mineures"],
+      title: "Nettoyage Gouttières Bruxelles",
+      description: "Nettoyage gouttières et corniche à Bruxelles, Brabant Wallon et Brabant Flamand. Aspiration haute performance sans montée sur toit.",
+      features: ["Nettoyage gouttières karcher", "Débouchage complet", "Vérification étanchéité", "Prix nettoyage gouttières"],
     },
     {
       icon: "fas fa-shield-alt",
-      title: "Traitement Préventif",
-      description: "Application de produits anti-mousse longue durée pour protéger durablement votre toiture",
-      features: ["Produits écologiques", "Effet longue durée", "Protection UV", "Respect matériaux"],
+      title: "Traitement Hydrofuge Toiture",
+      description: "Traitement hydrofuge toiture Wavre, Waterloo, Braine-l'Alleud. Protection longue durée contre mousses et intempéries.",
+      features: ["Traitement hydrofuge toit", "Produits écologiques", "Protection UV", "Tarif traitement hydrofuge"],
     },
     {
       icon: "fas fa-search",
-      title: "Inspection Gratuite",
-      description: "Diagnostic complet de l'état de votre toiture avec rapport détaillé et photos",
-      features: ["Rapport détaillé", "Photos avant/après", "Conseils personnalisés", "Devis gratuit"],
+      title: "Devis Nettoyage Toiture Gratuit",
+      description: "Devis gratuit nettoyage toiture Bruxelles et inspection complète. Diagnostic toiture avec rapport détaillé et photos.",
+      features: ["Devis nettoyage toiture", "Tarif nettoyage toiture", "Photos avant/après", "Conseils personnalisés"],
     },
   ];
 
@@ -183,6 +184,7 @@ export default function ToitureService() {
 
   return (
     <div className="min-h-screen bg-gray-900">
+      <SEOHead {...seoConfigs.toiture} location="Bruxelles" />
       <Header />
       
       {/* Hero Section */}
@@ -198,12 +200,13 @@ export default function ToitureService() {
               SERVICE SPÉCIALISÉ TOITURE
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 drop-shadow-2xl" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8)' }}>
-              Nettoyage et Entretien de{" "}
-              <span className="text-[#59D14C] drop-shadow-2xl">Toiture</span>
+              Nettoyage Toiture{" "}
+              <span className="text-[#59D14C] drop-shadow-2xl">Bruxelles</span>
             </h1>
             <p className="text-xl text-gray-100 mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-xl" style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
-              Prolongez la durée de vie de votre toiture avec nos services professionnels. 
-              Démoussage, nettoyage des gouttières et traitement préventif par des experts certifiés.
+              Spécialiste du <strong>nettoyage toiture Bruxelles</strong> et <strong>démoussage toiture</strong>. 
+              Service professionnel à Anderlecht, Uccle, Ixelles, Etterbeek, Saint-Gilles, Schaerbeek, 
+              Brabant Wallon et Brabant Flamand. <strong>Devis nettoyage toiture gratuit</strong>.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button 
@@ -235,7 +238,7 @@ export default function ToitureService() {
               <i className="fas fa-home mr-2"></i>Accueil
             </Link>
             <i className="fas fa-chevron-right text-gray-500"></i>
-            <span className="text-[#59D14C]">Nettoyage de Toiture</span>
+            <span className="text-[#59D14C]">Nettoyage Toiture Bruxelles</span>
           </div>
         </div>
       </section>
@@ -246,7 +249,7 @@ export default function ToitureService() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Nos Services <span className="text-[#59D14C]">Toiture</span>
+                <span className="text-[#59D14C]">Démoussage Toiture</span> Bruxelles
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Une toiture propre et bien entretenue peut durer jusqu'à 30% plus longtemps. 
