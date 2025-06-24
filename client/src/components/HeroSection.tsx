@@ -54,11 +54,11 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">L'entreprise
-                  <strong> aqua-toiture-facade</strong> est votre prestataire de confiance pour le nettoyage de toiture.
+                  <strong> Aqua-toiture-facade</strong> Entreprise spécialisé dans le nettoyage toitures , façades , terrasse en 10 année d’expérience.
                   <span className="text-[#59D14C] font-semibold">
-                    Nous vous proposons une solution de nettoyage à l'extérieur à la vapeur et sans produits chimiques
+                    Nous avons pu développé une solution haute pression écologique sans produite chimique
                   </span>{" "}
-                  à Bruxelles capitale, Brabant Wallon, Braband Flamand et ses alentours.
+                  à Bruxelles capitale, Brabant wallon et le Brabant flamand.
                 </p>
               </div>
 
