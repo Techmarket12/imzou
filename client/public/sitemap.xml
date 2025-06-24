@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Page d'accueil - Priorité maximale -->
+  <url>
+    <loc>https://aqua-toiture-facade.be/</loc>
+    <lastmod>2024-12-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/" />
+    <image:image>
+      <image:loc>https://aqua-toiture-facade.be/assets/hero-video-thumb.jpg</image:loc>
+      <image:title>Nettoyage toiture Bruxelles professionnel</image:title>
+      <image:caption>Service expert nettoyage toiture karcher Bruxelles</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services spécialisés - Haute priorité -->
+  <url>
+    <loc>https://aqua-toiture-facade.be/services/toiture</loc>
+    <lastmod>2024-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/toiture" />
+    <image:image>
+      <image:loc>https://aqua-toiture-facade.be/assets/toiturebefore.png</image:loc>
+      <image:title>Nettoyage toiture avant après Bruxelles</image:title>
+      <image:caption>Démoussage toiture professionnel</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aqua-toiture-facade.be/services/facade</loc>
+    <lastmod>2024-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/facade" />
+    <image:image>
+      <image:loc>https://aqua-toiture-facade.be/assets/facadeavant.png</image:loc>
+      <image:title>Nettoyage façade haute pression Bruxelles</image:title>
+      <image:caption>Nettoyage façade magasin commercial</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aqua-toiture-facade.be/services/terrasse</loc>
+    <lastmod>2024-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/terrasse" />
+    <image:image>
+      <image:loc>https://aqua-toiture-facade.be/assets/terrasseavant.png</image:loc>
+      <image:title>Démoussage terrasse Bruxelles</image:title>
+      <image:caption>Nettoyage terrasse pierre naturelle</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services B2B -->
+  <url>
+    <loc>https://aqua-toiture-facade.be/services/b2b</loc>
+    <lastmod>2024-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/b2b" />
+    <image:image>
+      <image:loc>https://aqua-toiture-facade.be/assets/carrefour.png</image:loc>
+      <image:title>Nettoyage façade supermarché B2B</image:title>
+      <image:caption>Services nettoyage Carrefour Lidl entrepôt</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://aqua-toiture-facade.be/contact</loc>
+    <lastmod>2024-12-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/contact" />
+  </url>
+
+</urlset>

@@ -1,0 +1,42 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://aqua-toiture-facade.be/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1
+
+# Allow all search engines to index images
+User-agent: Googlebot-Image
+Allow: /assets/
+
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Block access to sensitive files (none in this case, but good practice)
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /server/
+
+# Additional SEO optimization
+# Clean URLs preferred
+Disallow: /*?*
+Disallow: /*&
+
+# Allow important CSS and JS for proper rendering
+Allow: /*.css$
+Allow: /*.js$
+Allow: /assets/*.png$
+Allow: /assets/*.jpg$
+Allow: /assets/*.webp$
+Allow: /assets/*.svg$
