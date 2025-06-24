@@ -6,7 +6,7 @@
   <!-- Page d'accueil - Priorité maximale -->
   <url>
     <loc>https://aqua-toiture-facade.be/</loc>
-    <lastmod>2024-12-24</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/" />
@@ -20,7 +20,7 @@
   <!-- Services spécialisés - Haute priorité -->
   <url>
     <loc>https://aqua-toiture-facade.be/services/toiture</loc>
-    <lastmod>2024-12-24</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/toiture" />
@@ -33,7 +33,7 @@
 
   <url>
     <loc>https://aqua-toiture-facade.be/services/facade</loc>
-    <lastmod>2024-12-24</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/facade" />
@@ -46,7 +46,7 @@
 
   <url>
     <loc>https://aqua-toiture-facade.be/services/terrasse</loc>
-    <lastmod>2024-12-24</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/terrasse" />
@@ -60,7 +60,7 @@
   <!-- Services B2B -->
   <url>
     <loc>https://aqua-toiture-facade.be/services/b2b</loc>
-    <lastmod>2024-12-24</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/services/b2b" />
@@ -74,7 +74,7 @@
   <!-- Contact -->
   <url>
     <loc>https://aqua-toiture-facade.be/contact</loc>
-    <lastmod>2024-12-24</lastmod>
+    <lastmod>2025-06-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr-BE" href="https://aqua-toiture-facade.be/contact" />
