@@ -54,7 +54,7 @@ export default function HeroSection() {
                 </h1>
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">L'entreprise
-                  <strong> Aqua-toiture-facade</strong> Entreprise spécialisé dans le nettoyage toitures , façades , terrasse en 10 année d’expérience.
+                  <strong> Aqua-toiture-facade</strong> spécialisé dans le nettoyage toitures , façades , terrasse en 10 année d’expérience.
                   <span className="text-[#59D14C] font-semibold">
                     Nous avons pu développé une solution haute pression écologique sans produite chimique
                   </span>{" "}
@@ -138,7 +138,7 @@ export default function HeroSection() {
           </h1>
 
                 <p className="text-lg text-gray-200 max-w-lg leading-relaxed">L'entreprise
-                  <strong> Aqua-toiture-facade</strong> Entreprise spécialisé dans le nettoyage toitures , façades , terrasse en 10 année d’expérience.
+                  <strong> Aqua-toiture-facade</strong> spécialisé dans le nettoyage toitures , façades , terrasse en 10 année d’expérience.
                   <span className="text-[#59D14C] font-semibold">
                     Nous avons pu développé une solution haute pression écologique sans produite chimique
                   </span>{" "}
