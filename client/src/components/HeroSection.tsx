@@ -129,7 +129,10 @@ export default function HeroSection() {
         {/* Bottom section with content */}
         <div className="relative bg-gray-900 p-6 min-h-[45vh] flex flex-col justify-center">
           <h1 className="text-3xl font-bold leading-tight mb-4">
-            <span className="text-white">Votre habitat vous protège &</span>
+            <span className="text-white">Votre habitat</span>
+            <br/>
+              <span>vous protège & </span>
+            <br/>
             <span className="text-[#59D14C]">Nous vous protégeons</span>
             
           </h1>
