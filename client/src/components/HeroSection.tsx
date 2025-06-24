@@ -137,17 +137,13 @@ export default function HeroSection() {
             
           </h1>
 
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            <span className="font-semibold text-[#59D14C]">
-              aqua-toiture-facade
-            </span>{" "}
-            - Spécialiste du nettoyage toiture Bruxelles, démoussage terrasse et nettoyage façade.
-            <span className="text-[#59D14C] font-semibold">
-              {" "}
-              Solution haute pression écologique sans produit chimique
-            </span>{" "}
-            à Bruxelles, Anderlecht, Uccle, Ixelles, Brabant Wallon, Waterloo et Brabant Flamand.
-          </p>
+                <p className="text-lg text-gray-200 max-w-lg leading-relaxed">L'entreprise
+                  <strong> Aqua-toiture-facade</strong> Entreprise spécialisé dans le nettoyage toitures , façades , terrasse en 10 année d’expérience.
+                  <span className="text-[#59D14C] font-semibold">
+                    Nous avons pu développé une solution haute pression écologique sans produite chimique
+                  </span>{" "}
+                  à Bruxelles capitale, Brabant wallon et le Brabant flamand.
+                </p>
 
           <Button
             className="bg-[#27851E] hover:bg-[#1F6B15] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit"
