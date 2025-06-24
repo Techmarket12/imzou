@@ -9,6 +9,7 @@ import SEOFAQSection from "@/components/SEOFAQSection";
 import StructuredDataFAQ from "@/components/StructuredDataFAQ";
 import SEOOptimizer from "@/components/SEOOptimizer";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import GoogleIndexingOptimizer from "@/components/GoogleIndexingOptimizer";
 import DetailedServicesSection from "@/components/DetailedServicesSection";
 import WhyChooseSection from "@/components/WhyChooseSection";
 import B2BServicesSection from "@/components/B2BServicesSection";
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900">
       <SEOOptimizer />
+      <GoogleIndexingOptimizer />
       <StructuredDataFAQ />
       <LocalBusinessSchema />
       <Header />
