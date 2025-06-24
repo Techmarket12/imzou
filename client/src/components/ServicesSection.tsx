@@ -137,7 +137,7 @@ export default function ServicesSection() {
                   <div className="space-y-3">
                     <h4 className="font-semibold text-white flex items-center">
                       <i className="fas fa-check-circle text-[#59D14C] mr-2"></i>
-                      Prestations incluses
+                      Prestations
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
